@@ -4,7 +4,7 @@
 ### Steps
 
 ## 1) Load the Original v7 TSQL CamelCase Script
-#### Debug the Loading of the Original Source Files before any modifications are made.
+#### Debug Original Source File loading scripts before any modifications are made.
 ##### Tool Used: DbSchema 7.5.2
 1) Create script converted from `UTF-16 BE` into `UTF-8`
 2) `\nGO$` switched to `;\n`
