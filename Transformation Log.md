@@ -13,4 +13,4 @@
 5) Removed semicolons and line-endings in the Element Tables
 6) Confirmed that the Populate scripts were in `Western (Windows 1252)` or converted them.
 
-## 2) Collect All Debugged Files and Convert to SnakeCase
+### 2) Collect All Debugged Files and Convert to SnakeCase
