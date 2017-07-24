@@ -1,11 +1,11 @@
-# Transforming `ceds-nds-v7.sql` and its Element and Ref Populate Scripts into snake_case, Redshift-ready, postgreSQL
+# Transforming `ceds-nds-v7.sql` 
+## and its Element and Ref Populate Scripts into snake_case, Redshift-ready, postgreSQL
+
+### Steps
 
 ## 1) Load the Original v7 TSQL CamelCase Script
-### Debug the Loading of the Original Source Files before any modifications are made.
-##### NB Some modifications are necessary solely to satisfy the needs of the tool used to load the script: DbSchema 7.5.2
-
-#### Steps
-
+#### Debug the Loading of the Original Source Files before any modifications are made.
+##### Tool Used: DbSchema 7.5.2
 1) Create script converted from `UTF-16 BE` into `UTF-8`
 2) `\nGO$` switched to `;\n`
 3) extra white space removed until the interpreter stopped throwing errors on these issues
