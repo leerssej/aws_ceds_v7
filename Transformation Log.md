@@ -14,3 +14,4 @@
 6) Confirmed that the Populate scripts were in `Western (Windows 1252)` or converted them.
 
 ### 2) Collect All Debugged Files and Convert to SnakeCase
+1) load and bind all .sql script blocks - [1.TSQLv7camelCaseLoadScriptCollectBind]()
