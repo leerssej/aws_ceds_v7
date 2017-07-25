@@ -12,6 +12,15 @@
 4) Scripts split into < 10,000 line blocks (parts 1-11)
 5) Removed semicolons and line-endings in the Element Tables
 6) Confirmed that the Populate scripts were in `Western (Windows 1252)` or converted them.
+7) Confirm that all tables have foreign keys attached and are fully loaded.
 
 ### 2) Collect All Debugged Files and Convert to SnakeCase
-1) load and bind all .sql script blocks - [1.TSQLv7camelCaseLoadScriptCollectBind]()
+1) load and bind all .sql script blocks - [1.TSQLv7camelCaseLoadScriptCollectBind](https://github.com/leerssej/aws_ceds_v7/blob/master/1.TSQLv7camelCaseLoadScriptCollectBind.R)
+2) Convert all camelCase and PascalCase into snake_case (the capitalization will disappear in the course of loading into the case insensitive postgres compatible environments)[2.TSQLv7camel2snakeConvert.R](https://github.com/leerssej/aws_ceds_v7/blob/master/2.TSQLv7camel2snakeConvert.R)
+    * Abbreviation collisions and other exceptions handled
+    * Complete script sliced down into <10k line blocks.
+    
+### 3) Load up snake_case version into DatabaseTool
+1) Convert project to alternative SQL flavor.
+2) Check that all files are present
+3) Export data and files
