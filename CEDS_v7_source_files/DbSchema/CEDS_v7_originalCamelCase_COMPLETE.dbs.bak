@@ -23405,5 +23405,14 @@ WHERE ms.RowNumber = es.RowNumber
 		<entity schema="dbo" name="WorkforceProgramParticipation" color="c8daf5" x="5535" y="3315" />
 		<entity schema="dbo" name="vCEDSElementDetails" color="c8daf5" x="5595" y="3300" />
 		<entity schema="dbo" name="vCEDSMapping" color="c8daf5" x="5790" y="3300" />
+		<script name="Sql" id="Query_59f7b01" language="SQL" >
+			<string><![CDATA[SELECT 
+    T.NAME AS 'TABLE NAME',
+    P.[ROWS] AS 'NO OF ROWS'
+FROM SYS.TABLES T 
+INNER JOIN  SYS.PARTITIONS P ON T.OBJECT_ID = P.OBJECT_ID
+WHERE T.NAME like ('Ref%')
+    AND P.[ROWS] = 0; ]]></string>
+		</script>
 	</layout>
 </project>

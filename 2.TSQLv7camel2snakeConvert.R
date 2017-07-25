@@ -35,6 +35,7 @@ tsql_ceds7_sc %<>% gsub("Pre_*K(indergarten)*",  "Pre_K\\1_", ., perl = T, ignor
 tsql_ceds7_sc %<>% gsub("Title_*1",  "Title_1_", ., perl = T, ignore.case = T)
 tsql_ceds7_sc %<>% gsub("CENSUSID",  "CENSUS_ID", ., perl = T, ignore.case = T)
 tsql_ceds7_sc %<>% gsub("Is_User_Table",  "IsUserTable", ., perl = T, ignore.case = T)
+tsql_ceds7_sc %<>% gsub("\\._Value",  ".Value", ., perl = T, ignore.case = T)
 
 # Abbreviation Issues
 sc <- function(dat, ABBR) {
@@ -69,7 +70,7 @@ block_10 <- read_lines(clippablefile_path, skip = 88905, n_max = 10000)
 
 ###### 5. Write Out the Sliced Files ######
 clippablefile_root <- "tsql_ceds_v7_snake_case/tsql_ceds_v7_snake_case_blocks/"
-dir.create(clippablefile_root)
+# dir.create(clippablefile_root)
 # in DbSchema bite sized blocks
 write_lines(block_1, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt1.sql"))
 write_lines(block_2, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt2.sql"))

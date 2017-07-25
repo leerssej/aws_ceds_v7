@@ -6117,7 +6117,7 @@ OUTER APPLY fn_listextendedproperty ('CEDS_Element', 'schema', 'dbo', N'table', 
 OUTER APPLY fn_listextendedproperty ('CEDS_URL', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) ur
 OUTER APPLY fn_listextendedproperty ('CEDS_Global_Id', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) gi
 WHERE t.table_type = 'BASE TABLE'
-	AND me._Value IS NOT NULL
+	AND me.Value IS NOT NULL
 UNION
 SELECT 
 	  t.TABLE_NAME Table_Name
@@ -6136,7 +6136,7 @@ OUTER APPLY fn_listextendedproperty ('CEDS_Element', 'schema', 'dbo', N'table', 
 OUTER APPLY fn_listextendedproperty ('CEDS_URL', 'schema', 'dbo', N'table', t.TABLE_NAME, NULL, DEFAULT) ur
 OUTER APPLY fn_listextendedproperty ('CEDS_Global_Id', 'schema', 'dbo', N'table', t.TABLE_NAME, NULL, DEFAULT) gi
 WHERE t.table_type = 'BASE TABLE'
-	AND me._Value IS NOT NULL
+	AND me.Value IS NOT NULL
 ;
 
 /****** Object:  View [dbo].[v_CEDS_Mapping] ******/
@@ -6159,9 +6159,9 @@ INNER JOIN INFORMATION_SCHEMA.TABLES t ON t.TABLE_NAME = c.TABLE_NAME
 OUTER APPLY fn_listextendedproperty ('CEDS_Global_Id', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) m
 OUTER APPLY fn_listextendedproperty ('CEDS_Element', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) e
 OUTER APPLY fn_listextendedproperty ('CEDS_URL', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) u
-CROSS APPLY dbo.fn_Split(CAST(m._Value AS VARCHAR(MAX)), ',') ms
-CROSS APPLY dbo.fn_Split(CAST(e._Value AS VARCHAR(MAX)), ',') es
-CROSS APPLY dbo.fn_Split(CAST(u._Value AS VARCHAR(MAX)), ',') us
+CROSS APPLY dbo.fn_Split(CAST(m.Value AS VARCHAR(MAX)), ',') ms
+CROSS APPLY dbo.fn_Split(CAST(e.Value AS VARCHAR(MAX)), ',') es
+CROSS APPLY dbo.fn_Split(CAST(u.Value AS VARCHAR(MAX)), ',') us
 WHERE ms._Row_Number = es._Row_Number
 	AND ms._Row_Number = us._Row_Number
 UNION
@@ -6176,9 +6176,9 @@ INNER JOIN INFORMATION_SCHEMA.TABLES t ON t.TABLE_NAME = c.TABLE_NAME
 OUTER APPLY fn_listextendedproperty ('CEDS_Global_Id', 'schema', 'dbo', N'table', c.TABLE_NAME, NULL, DEFAULT) m
 OUTER APPLY fn_listextendedproperty ('CEDS_Element', 'schema', 'dbo', N'table', c.TABLE_NAME, NULL, DEFAULT) e
 OUTER APPLY fn_listextendedproperty ('CEDS_URL', 'schema', 'dbo', N'table', c.TABLE_NAME, NULL, DEFAULT) u
-CROSS APPLY dbo.fn_Split(CAST(m._Value AS VARCHAR(MAX)), ',') ms
-CROSS APPLY dbo.fn_Split(CAST(e._Value AS VARCHAR(MAX)), ',') es
-CROSS APPLY dbo.fn_Split(CAST(u._Value AS VARCHAR(MAX)), ',') us
+CROSS APPLY dbo.fn_Split(CAST(m.Value AS VARCHAR(MAX)), ',') ms
+CROSS APPLY dbo.fn_Split(CAST(e.Value AS VARCHAR(MAX)), ',') es
+CROSS APPLY dbo.fn_Split(CAST(u.Value AS VARCHAR(MAX)), ',') us
 WHERE ms._Row_Number = es._Row_Number
 	AND ms._Row_Number = us._Row_Number
 ;
