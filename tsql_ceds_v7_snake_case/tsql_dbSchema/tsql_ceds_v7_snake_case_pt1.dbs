@@ -113,9 +113,9 @@
 			<column name="Name" type="nvarchar" length="30" decimal="0" jt="12" />
 			<column name="Code" type="nvarchar" length="30" decimal="0" jt="12" />
 			<column name="Start_Date" type="date" length="10" decimal="0" jt="91" />
-			<column name="Start_Time" type="time" length="16" decimal="0" jt="92" />
+			<column name="Start_Time" type="time" length="16" decimal="7" jt="92" />
 			<column name="Finish_Date" type="date" length="10" decimal="0" jt="91" />
-			<column name="Finish_Time" type="time" length="16" decimal="0" jt="92" />
+			<column name="Finish_Time" type="time" length="16" decimal="7" jt="92" />
 			<column name="Ref_Assessment_Reporting_Method_Id" type="int" length="10" decimal="0" jt="4" />
 			<column name="Assessment_Secure_Indicator" type="bit" length="1" decimal="0" jt="-7" />
 			<column name="Assessment_Administration_Period_Description" type="nvarchar" length="300" decimal="0" jt="12" />
@@ -228,7 +228,7 @@
 			<column name="Ref_Assessment_Form_Section_Identification_System_Id" type="int" length="10" decimal="0" jt="4" />
 			<column name="Published_Date" type="date" length="10" decimal="0" jt="91" />
 			<column name="Version" type="nvarchar" length="30" decimal="0" jt="12" />
-			<column name="Section_Time_Limit" type="time" length="16" decimal="0" jt="92" />
+			<column name="Section_Time_Limit" type="time" length="16" decimal="7" jt="92" />
 			<column name="Section_Sealed" type="bit" length="1" decimal="0" jt="-7" />
 			<column name="Section_Reentry" type="bit" length="1" decimal="0" jt="-7" />
 			<column name="Assessment_Item_Bank_Identifier" type="nvarchar" length="40" decimal="0" jt="12" />
@@ -274,7 +274,7 @@
 			<column name="Maximum_Score" type="nvarchar" length="300" decimal="0" jt="12" />
 			<column name="Minimum_Score" type="nvarchar" length="300" decimal="0" jt="12" />
 			<column name="Distractor_Analysis" type="nvarchar" length="100" decimal="0" jt="12" />
-			<column name="Allotted_Time" type="time" length="16" decimal="0" jt="92" />
+			<column name="Allotted_Time" type="time" length="16" decimal="7" jt="92" />
 			<column name="Ref_Naep_Math_Complexity_Level_Id" type="int" length="10" decimal="0" jt="4" />
 			<column name="Ref_Naep_Aspects_Of_Reading_Id" type="int" length="10" decimal="0" jt="4" />
 			<column name="Difficulty" type="decimal" length="5" decimal="2" jt="3" />
@@ -370,9 +370,9 @@
 			<column name="Scaffolding_Item_Flag" type="bit" length="1" decimal="0" jt="-7" />
 			<column name="Hint_Count" type="int" length="10" decimal="0" jt="4" />
 			<column name="Hint_Included_Answer" type="bit" length="1" decimal="0" jt="-7" />
-			<column name="Duration" type="time" length="16" decimal="0" jt="92" />
-			<column name="First_Attempt_Duration" type="time" length="16" decimal="0" jt="92" />
-			<column name="Start_Time" type="time" length="16" decimal="0" jt="92" />
+			<column name="Duration" type="time" length="16" decimal="7" jt="92" />
+			<column name="First_Attempt_Duration" type="time" length="16" decimal="7" jt="92" />
+			<column name="Start_Time" type="time" length="16" decimal="7" jt="92" />
 			<column name="Start_Date" type="date" length="10" decimal="0" jt="91" />
 			<column name="Security_Issue" type="nvarchar" length="300" decimal="0" jt="12" />
 			<column name="Assessment_Item_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -714,7 +714,7 @@
 			<column name="Scheduled_End_Date_Time" type="datetime" length="23" decimal="3" jt="93" />
 			<column name="Actual_Start_Date_Time" type="datetime" length="23" decimal="3" jt="93" />
 			<column name="Actual_End_Date_Time" type="datetime" length="23" decimal="3" jt="93" />
-			<column name="Allotted_Time" type="time" length="16" decimal="0" jt="92" />
+			<column name="Allotted_Time" type="time" length="16" decimal="7" jt="92" />
 			<column name="Ref_Assessment_Session_Type_Id" type="int" length="10" decimal="0" jt="4" />
 			<column name="Security_Issue" type="nvarchar" length="300" decimal="0" jt="12" />
 			<column name="Ref_Assessment_Session_Special_Circumstance_Type_Id" type="int" length="10" decimal="0" jt="4" />
@@ -1028,8 +1028,8 @@
 			<column name="Course_Section_Schedule_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
 			<column name="Organization_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="Class_Meeting_Days" type="nvarchar" length="60" decimal="0" jt="12" />
-			<column name="Class_Beginning_Time" type="time" length="16" decimal="0" jt="92" />
-			<column name="Class_Ending_Time" type="time" length="16" decimal="0" jt="92" />
+			<column name="Class_Beginning_Time" type="time" length="16" decimal="7" jt="92" />
+			<column name="Class_Ending_Time" type="time" length="16" decimal="7" jt="92" />
 			<column name="Class_Period" type="nvarchar" length="30" decimal="0" jt="12" />
 			<column name="Time_Day_Identifier" type="nvarchar" length="40" decimal="0" jt="12" />
 			<index name="PK_Course_Section_Schedule" unique="PRIMARY_KEY" >
@@ -1703,7 +1703,7 @@
 			<column name="Incident_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
 			<column name="Incident_Identifier" type="nvarchar" length="40" decimal="0" jt="12" />
 			<column name="Incident_Date" type="date" length="10" decimal="0" jt="91" />
-			<column name="Incident_Time" type="time" length="16" decimal="0" jt="92" />
+			<column name="Incident_Time" type="time" length="16" decimal="7" jt="92" />
 			<column name="Ref_Incident_Time_Description_Code_Id" type="int" length="10" decimal="0" jt="4" />
 			<column name="Incident_Description" type="nvarchar(max)" decimal="0" jt="12" />
 			<column name="Ref_Incident_Behavior_Id" type="int" length="10" decimal="0" jt="4" />
@@ -2425,7 +2425,7 @@
 			<column name="Maximum_Time_Allowed" type="decimal" length="9" decimal="0" jt="3" />
 			<column name="Ref_Learner_Activity_Maximum_Time_Allowed_Units_Id" type="int" length="10" decimal="0" jt="4" />
 			<column name="Due_Date" type="date" length="10" decimal="0" jt="91" />
-			<column name="Due_Time" type="time" length="16" decimal="0" jt="92" />
+			<column name="Due_Time" type="time" length="16" decimal="7" jt="92" />
 			<column name="Maximum_Attempts_Allowed" type="decimal" length="9" decimal="0" jt="3" />
 			<column name="Ref_Learner_Activity_Add_To_Grade_Book_Flag_Id" type="int" length="10" decimal="0" jt="4" />
 			<column name="Release_Date" type="date" length="10" decimal="0" jt="91" />
@@ -2655,8 +2655,8 @@
 			<column name="First_Instruction_Date" type="date" length="10" decimal="0" jt="91" />
 			<column name="Last_Instruction_Date" type="date" length="10" decimal="0" jt="91" />
 			<column name="Minutes_Per_Day" type="int" length="10" decimal="0" jt="4" />
-			<column name="Session_Start_Time" type="time" length="16" decimal="0" jt="92" />
-			<column name="Session_End_Time" type="time" length="16" decimal="0" jt="92" />
+			<column name="Session_Start_Time" type="time" length="16" decimal="7" jt="92" />
+			<column name="Session_End_Time" type="time" length="16" decimal="7" jt="92" />
 			<index name="PK_Organization_Calendar_Session" unique="PRIMARY_KEY" >
 				<column name="Organization_Calendar_Session_Id" />
 			</index>
@@ -5933,7 +5933,7 @@
 			</index>
 		</table>
 	</schema>
-	<connector name="SqlServer_CEDS_7.0_snake_case" database="SqlServer" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.3.1.jar" driver_desc="Jtds Driver - Windows Authentication, Current User" host="localhost" port="1433" instance="tsql_ceds7_sc" />
+	<connector name="SqlServer_CEDS_7.0_snake_case" database="SqlServer" driver_class="com.microsoft.sqlserver.jdbc.SQLServerDriver" driver_jar="sqljdbc42.jar" driver_desc="Native Driver - Windows Authentication, Current User" host="localhost" port="1433" instance="tsql_ceds7_sc" />
 	<layout name="Default Layout" id="Layout_1bb5407" joined_routing="y" show_relation="columns" >
 		<entity schema="dbo" name="Activity" color="bfd4f5" x="5385" y="3450" />
 		<entity schema="dbo" name="Activity_Recognition" color="bfd4f5" x="5580" y="3450" />

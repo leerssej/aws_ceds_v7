@@ -62,7 +62,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate Key'
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Foreign key - EL_Class_Section' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Class_Section_Service', @level2type=N'COLUMN',@level2name=N'Organization_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The youngest age of children a class/group is authorized or licensed to serve.  (_Age is specified in months)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Class_Section_Service', @level2type=N'COLUMN',@level2name=N'Youngest_Age_Served';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The youngest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Class_Section_Service', @level2type=N'COLUMN',@level2name=N'Youngest_Age_Served';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Early Learning Youngest Age Authorized to Serve' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Class_Section_Service', @level2type=N'COLUMN',@level2name=N'Youngest_Age_Served';
 
@@ -72,7 +72,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Class_Section_Service', @level2type=N'COLUMN',@level2name=N'Youngest_Age_Served';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The oldest age of children a class/group is authorized or licensed to serve.  (_Age is specified in months)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Class_Section_Service', @level2type=N'COLUMN',@level2name=N'Oldest_Age_Served';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The oldest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Class_Section_Service', @level2type=N'COLUMN',@level2name=N'Oldest_Age_Served';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Early Learning Oldest Age Authorized to Serve' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Class_Section_Service', @level2type=N'COLUMN',@level2name=N'Oldest_Age_Served';
 
@@ -324,7 +324,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Organization_Availability', @level2type=N'COLUMN',@level2name=N'Hours_Available_Per_Day';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The youngest age of children a class/group is authorized or licensed to serve.  (_Age is specified in months)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Organization_Availability', @level2type=N'COLUMN',@level2name=N'Youngest_Age_Served';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The youngest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Organization_Availability', @level2type=N'COLUMN',@level2name=N'Youngest_Age_Served';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Early Learning Youngest Age Authorized to Serve' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Organization_Availability', @level2type=N'COLUMN',@level2name=N'Youngest_Age_Served';
 
@@ -334,7 +334,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Organization_Availability', @level2type=N'COLUMN',@level2name=N'Youngest_Age_Served';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The oldest age of children a class/group is authorized or licensed to serve.  (_Age is specified in months)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Organization_Availability', @level2type=N'COLUMN',@level2name=N'Oldest_Age_Served';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The oldest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Organization_Availability', @level2type=N'COLUMN',@level2name=N'Oldest_Age_Served';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Early Learning Oldest Age Authorized to Serve' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EL_Organization_Availability', @level2type=N'COLUMN',@level2name=N'Oldest_Age_Served';
 
@@ -2545,7 +2545,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ses_School_Choice20_Percent_Obligation';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The type of use of the Rural Low-_Income Schools Program (RLIS) (_Title VI, Part B, Subpart 2) Grant Funds.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Rlis_Program_Use_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The type of use of the Rural Low-_Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Rlis_Program_Use_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Type of Use of the Rural Low-_Income Schools Program' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Rlis_Program_Use_Id';
 
@@ -3313,7 +3313,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate Key'
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key from K12_SEA_Federal_Funds' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Sea_Alternate_Fund_Use', @level2type=N'COLUMN',@level2name=N'Organization_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Purposes that funds available under ESEA section 6111 (_Grants for State Assessments and Related Activities) were used during the 2009-10 school year for purposes other than the costs of the development of the State assessments and standards required by section 1111(b).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Sea_Alternate_Fund_Use', @level2type=N'COLUMN',@level2name=N'Ref_Alternate_Fund_Uses_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Purposes that funds available under ESEA section 6111 (Grants for State Assessments and Related Activities) were used during the 2009-10 school year for purposes other than the costs of the development of the State assessments and standards required by section 1111(b).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Sea_Alternate_Fund_Use', @level2type=N'COLUMN',@level2name=N'Ref_Alternate_Fund_Uses_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Uses of Funds for Purposes other than Standards and Assessment Development' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Sea_Alternate_Fund_Use', @level2type=N'COLUMN',@level2name=N'Ref_Alternate_Fund_Uses_Id';
 
@@ -3323,7 +3323,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Sea_Alternate_Fund_Use', @level2type=N'COLUMN',@level2name=N'Ref_Alternate_Fund_Uses_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Purposes that funds available under ESEA section 6111 (_Grants for State Assessments and Related Activities) were used for purposes other than the costs of the development of the State assessments and standards required by section 1111(b).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Sea_Alternate_Fund_Use';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Purposes that funds available under ESEA section 6111 (Grants for State Assessments and Related Activities) were used for purposes other than the costs of the development of the State assessments and standards required by section 1111(b).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Sea_Alternate_Fund_Use';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Sea_Alternate_Fund_Use';
 
@@ -4025,7 +4025,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Student_Course_Section', @level2type=N'COLUMN',@level2name=N'Ref_Course_Section_Enrollment_Status_Type_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The process by which a student enters a school (_Course Section) during a given academic session.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Student_Course_Section', @level2type=N'COLUMN',@level2name=N'Ref_Course_Section_Entry_Type_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The process by which a student enters a school (Course Section) during a given academic session.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Student_Course_Section', @level2type=N'COLUMN',@level2name=N'Ref_Course_Section_Entry_Type_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Course Section Entry Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Student_Course_Section', @level2type=N'COLUMN',@level2name=N'Ref_Course_Section_Entry_Type_Id';
 
@@ -5658,7 +5658,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization', @level2type=N'COLUMN',@level2name=N'Name';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The type of organization.  (_Foreign key - Ref_Organization_Type)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization', @level2type=N'COLUMN',@level2name=N'Ref_Organization_Type_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The type of organization.  (Foreign key - Ref_Organization_Type)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization', @level2type=N'COLUMN',@level2name=N'Ref_Organization_Type_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization', @level2type=N'COLUMN',@level2name=N'Ref_Organization_Type_Id';
 
@@ -7027,7 +7027,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Address', @level2type=N'COLUMN',@level2name=N'Address_County_Name';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The county where the address is located.  (_Foreign key - Ref_County)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Address', @level2type=N'COLUMN',@level2name=N'Ref_County_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The county where the address is located.  (Foreign key - Ref_County)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Address', @level2type=N'COLUMN',@level2name=N'Ref_County_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Address', @level2type=N'COLUMN',@level2name=N'Ref_County_Id';
 
@@ -7748,7 +7748,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Inherited surro
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Homelessness', @level2type=N'COLUMN',@level2name=N'Person_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Children and youth who lack a fixed, regular, and adequate nighttime residence. Homeless children and youth include: 1) children and youth who are sharing the housing of other persons due to loss of housing, economic hardship, or a similar reason; are living in motels, hotels, trailer parks, or camping grounds due to the lack of alternative adequate accommodations; are living in emergency or transitional shelters; are abandoned in hospitals; or are awaiting foster care placement; 2) children and youth who have a primary nighttime residence that is a public or private place not designed for or originally used as a regular sleeping accommodation for human beings; or 3) children and youths who are living in cars, parks, public spaces, abandoned buildings, substandard housing, bus or train stations, or similar settings. 4) migratory children who qualify as homeless because the children are living in circumstances described in the above. (_See Section 103 of the Mc_Kinney Act for a more detailed description of this data element).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Homelessness', @level2type=N'COLUMN',@level2name=N'Homelessness_Status';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Children and youth who lack a fixed, regular, and adequate nighttime residence. Homeless children and youth include: 1) children and youth who are sharing the housing of other persons due to loss of housing, economic hardship, or a similar reason; are living in motels, hotels, trailer parks, or camping grounds due to the lack of alternative adequate accommodations; are living in emergency or transitional shelters; are abandoned in hospitals; or are awaiting foster care placement; 2) children and youth who have a primary nighttime residence that is a public or private place not designed for or originally used as a regular sleeping accommodation for human beings; or 3) children and youths who are living in cars, parks, public spaces, abandoned buildings, substandard housing, bus or train stations, or similar settings. 4) migratory children who qualify as homeless because the children are living in circumstances described in the above. (See Section 103 of the Mc_Kinney Act for a more detailed description of this data element).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Homelessness', @level2type=N'COLUMN',@level2name=N'Homelessness_Status';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Homelessness Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Homelessness', @level2type=N'COLUMN',@level2name=N'Homelessness_Status';
 
@@ -7826,7 +7826,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Immunization', @level2type=N'COLUMN',@level2name=N'Immunization_Date';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'An indication of the type of immunization that an individual has satisfactorily received. (_Note: The International Classification of Diseases (ICD) is maintained by the World Health Organization. The ICD is revised periodically to incorporate changes in the medical field, the most updated and detailed list of International Statistical Classification of Diseases and Related Health Problems can be found at http://www.who.int/classifications/apps/icd/icd10online).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Immunization', @level2type=N'COLUMN',@level2name=N'Ref_Immunization_Type_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'An indication of the type of immunization that an individual has satisfactorily received. (Note: The International Classification of Diseases (ICD) is maintained by the World Health Organization. The ICD is revised periodically to incorporate changes in the medical field, the most updated and detailed list of International Statistical Classification of Diseases and Related Health Problems can be found at http://www.who.int/classifications/apps/icd/icd10online).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Immunization', @level2type=N'COLUMN',@level2name=N'Ref_Immunization_Type_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Immunization Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Immunization', @level2type=N'COLUMN',@level2name=N'Ref_Immunization_Type_Id';
 
@@ -7970,7 +7970,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_D
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate Key from Organization Person Role.  Identifies the Person and the Program with effective dates.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Program_Participation', @level2type=N'COLUMN',@level2name=N'Organization_Person_Role_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Status types for a person''s participation in the program.  Either, a record represents Yes (_True) and it''s absence No (_False), or Participation_Status contains a status value.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Program_Participation', @level2type=N'COLUMN',@level2name=N'Ref_Participation_Type_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Status types for a person''s participation in the program.  Either, a record represents Yes (True) and it''s absence No (False), or Participation_Status contains a status value.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Program_Participation', @level2type=N'COLUMN',@level2name=N'Ref_Participation_Type_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'GED Preparation Program Participation Status, Gifted and Talented Indicator, Homeless Serviced Indicator, Migrant Education Program Participation Status, Neglected or Delinquent Status, Section 504 Status, Title III Immigrant Participation Status, Title I Schoolwide Program Participation, Title I Targeted Assistance Participation, Title III Limited English Proficient Participation Status, Kindergarten Program Participation Type  , Career Pathways Program Participation Indicator, Correctional Education Reentry Services Participation Indicator' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Program_Participation', @level2type=N'COLUMN',@level2name=N'Ref_Participation_Type_Id';
 
@@ -8148,7 +8148,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate Key'
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Foreign key - Person.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Status', @level2type=N'COLUMN',@level2name=N'Person_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Status types for a person where the possible condition is either Yes (_True) or No (_False).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Status', @level2type=N'COLUMN',@level2name=N'Ref_Person_Status_Type_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Status types for a person where the possible condition is either Yes (True) or No (False).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Status', @level2type=N'COLUMN',@level2name=N'Ref_Person_Status_Type_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Economic Disadvantage Status, Homeless Unaccompanied Youth Status, IDEA Indicator, Limited English Proficiency Status, Migrant Status, School Choice Applied for Transfer Status, School Choice Eligible for Transfer Status, School Choice Transfer Status, Title I School Supplemental Services Applied Status, Title I School Supplemental Services Eligible Status, Title I School Supplemental Services Received Status, Title III Immigrant Status, Truant Status, Single Parent Or Single Pregnant Woman Status, Perkins Limited English Proficiency Status, Low-income Status, Dislocated Worker Status, Public Assistance Status, Rural Residency Status, Professional Association Membership Status, State Approved Trainer Status, State Approved Technical Assistance Provider Status, Program Health Safety Checklist Use Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Status', @level2type=N'COLUMN',@level2name=N'Ref_Person_Status_Type_Id';
 
@@ -8428,7 +8428,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Professional_Development_Requirement', @level2type=N'COLUMN',@level2name=N'Required_Training_Clock_Hours';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The set of one or more competencies and criteria for completion of a learning goal, unit, course, program, degree, certification, or other achievement.   (_The criteria may be ''all'' competencies in the set or ''at-least'' # of competencies. Sets may be nested, e.g. all in subset A and 3 of 5 from subset B.)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Professional_Development_Requirement', @level2type=N'COLUMN',@level2name=N'Competency_Set_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The set of one or more competencies and criteria for completion of a learning goal, unit, course, program, degree, certification, or other achievement.   (The criteria may be ''all'' competencies in the set or ''at-least'' # of competencies. Sets may be nested, e.g. all in subset A and 3 of 5 from subset B.)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Professional_Development_Requirement', @level2type=N'COLUMN',@level2name=N'Competency_Set_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Professional_Development_Requirement', @level2type=N'COLUMN',@level2name=N'Competency_Set_Id';
 

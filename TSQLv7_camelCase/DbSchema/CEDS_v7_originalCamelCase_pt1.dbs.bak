@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="SqlServer_CEDS_7.0_camelCase" id="Project_1c460a6" template="Default" database="SqlServer" >
+	<schema name="dbo" catalogname="CEDS_TSQL_v7_0_CamelCase" schemaname="dbo" />
+	<connector name="SqlServer_CEDS_7.0_camelCase" database="SqlServer" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.3.1.jar" driver_desc="Jtds Driver - Windows Authentication, Current User" host="localhost" port="1433" instance="CEDS_TSQL_v7_0_CamelCase" />
+	<layout name="Default Layout" id="Layout_2f51dc1" joined_routing="y" show_relation="columns" />
+</project>

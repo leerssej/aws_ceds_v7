@@ -1763,7 +1763,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key 
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence the options in this option set should be ordered.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Alternate_Fund_Uses', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Purposes that funds available under ESEA section 6111 (_Grants for State Assessments and Related Activities) were used during the 2009-10 school year for purposes other than the costs of the development of the State assessments and standards required by section 1111(b).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Alternate_Fund_Uses';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Purposes that funds available under ESEA section 6111 (Grants for State Assessments and Related Activities) were used during the 2009-10 school year for purposes other than the costs of the development of the State assessments and standards required by section 1111(b).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Alternate_Fund_Uses';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Uses of Funds for Purposes other than Standards and Assessment Development' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Alternate_Fund_Uses';
 
@@ -2463,7 +2463,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key 
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence the options in this option set should be ordered.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Assessment_Need_Usage_Type', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (_Af_A) needs and preferences.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Assessment_Need_Usage_Type';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (Af_A) needs and preferences.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Assessment_Need_Usage_Type';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Assessment Need Usage Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Assessment_Need_Usage_Type';
 
@@ -4389,7 +4389,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key 
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence the options in this option set should be ordered.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Course_Section_Entry_Type', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The process by which a student enters a school (_Course Section) during a given academic session.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Course_Section_Entry_Type';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The process by which a student enters a school (Course Section) during a given academic session.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Course_Section_Entry_Type';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Course Section Entry Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Course_Section_Entry_Type';
 
@@ -7771,7 +7771,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key 
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence the options in this option set should be ordered.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Immunization_Type', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'An indication of the type of immunization that an individual has satisfactorily received. (_Note: The International Classification of Diseases (ICD) is maintained by the World Health Organization. The ICD is revised periodically to incorporate changes in the medical field, the most updated and detailed list of International Statistical Classification of Diseases and Related Health Problems can be found at http://www.who.int/classifications/apps/icd/icd10online).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Immunization_Type';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'An indication of the type of immunization that an individual has satisfactorily received. (Note: The International Classification of Diseases (ICD) is maintained by the World Health Organization. The ICD is revised periodically to incorporate changes in the medical field, the most updated and detailed list of International Statistical Classification of Diseases and Related Health Problems can be found at http://www.who.int/classifications/apps/icd/icd10online).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Immunization_Type';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Immunization Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Immunization_Type';
 

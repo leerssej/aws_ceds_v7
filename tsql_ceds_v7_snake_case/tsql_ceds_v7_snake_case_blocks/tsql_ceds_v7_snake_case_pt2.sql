@@ -6151,9 +6151,9 @@ AS
 SELECT 
 	  c.TABLE_NAME Table_Name
 	, c.COLUMN_NAME Column_Name
-	, LTRIM(ms._Item) [Global_Id]
-	, LTRIM(es._Item) [Element_Name]
-	, LTRIM(us._Item) [URL]
+	, LTRIM(ms.Item) [Global_Id]
+	, LTRIM(es.Item) [Element_Name]
+	, LTRIM(us.Item) [URL]
 FROM INFORMATION_SCHEMA.COLUMNS c 
 INNER JOIN INFORMATION_SCHEMA.TABLES t ON t.TABLE_NAME = c.TABLE_NAME 
 OUTER APPLY fn_listextendedproperty ('CEDS_Global_Id', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) m
@@ -6162,15 +6162,15 @@ OUTER APPLY fn_listextendedproperty ('CEDS_URL', 'schema', 'dbo', N'table', c.TA
 CROSS APPLY dbo.fn_Split(CAST(m.Value AS VARCHAR(MAX)), ',') ms
 CROSS APPLY dbo.fn_Split(CAST(e.Value AS VARCHAR(MAX)), ',') es
 CROSS APPLY dbo.fn_Split(CAST(u.Value AS VARCHAR(MAX)), ',') us
-WHERE ms._Row_Number = es._Row_Number
-	AND ms._Row_Number = us._Row_Number
+WHERE ms.Row_Number = es.Row_Number
+	AND ms.Row_Number = us.Row_Number
 UNION
 SELECT 
 	  T.TABLE_NAME
 	, NULL 
-	, LTRIM(ms._Item) [Global_Id]
-	, LTRIM(es._Item) [Element_Name]
-	, LTRIM(us._Item) [URL]
+	, LTRIM(ms.Item) [Global_Id]
+	, LTRIM(es.Item) [Element_Name]
+	, LTRIM(us.Item) [URL]
 FROM INFORMATION_SCHEMA.COLUMNS c 
 INNER JOIN INFORMATION_SCHEMA.TABLES t ON t.TABLE_NAME = c.TABLE_NAME 
 OUTER APPLY fn_listextendedproperty ('CEDS_Global_Id', 'schema', 'dbo', N'table', c.TABLE_NAME, NULL, DEFAULT) m
@@ -6179,8 +6179,8 @@ OUTER APPLY fn_listextendedproperty ('CEDS_URL', 'schema', 'dbo', N'table', c.TA
 CROSS APPLY dbo.fn_Split(CAST(m.Value AS VARCHAR(MAX)), ',') ms
 CROSS APPLY dbo.fn_Split(CAST(e.Value AS VARCHAR(MAX)), ',') es
 CROSS APPLY dbo.fn_Split(CAST(u.Value AS VARCHAR(MAX)), ',') us
-WHERE ms._Row_Number = es._Row_Number
-	AND ms._Row_Number = us._Row_Number
+WHERE ms.Row_Number = es.Row_Number
+	AND ms.Row_Number = us.Row_Number
 ;
 
 ALTER TABLE [dbo].[Person_Telephone] ADD  CONSTRAINT [DF_Person_Pho_Prima_50_E5_F592]  DEFAULT ((0)) FOR [Primary_Telephone_Number_Indicator];

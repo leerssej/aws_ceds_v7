@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="SqlServer_CEDS_7.0_snake_case" id="Project_402ecf0" template="Default" database="SqlServer" >
+	<schema name="dbo" catalogname="stepping_stone" schemaname="dbo" />
+	<connector name="SqlServer_CEDS_7.0_snake_case" database="SqlServer" driver_class="com.microsoft.sqlserver.jdbc.SQLServerDriver" driver_jar="sqljdbc42.jar" driver_desc="Native Driver - Windows Authentication, Current User" host="localhost" port="1433" instance="stepping_stone" />
+	<layout name="Default Layout" id="Layout_1bb5407" joined_routing="y" show_relation="columns" />
+</project>

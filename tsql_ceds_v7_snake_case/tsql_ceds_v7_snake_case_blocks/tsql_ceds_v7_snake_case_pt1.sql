@@ -75,27 +75,27 @@ SET QUOTED_IDENTIFIER ON;
 
 
 
-CREATE FUNCTION [dbo].[fn_Split](@_String varchar(MAX), @_Delimiter char(1))       
-returns @temptable TABLE (_Item varchar(MAX), Row_Number int)       
+CREATE FUNCTION [dbo].[fn_Split](@String varchar(MAX), @Delimiter char(1))       
+returns @temptable TABLE (Item varchar(MAX), Row_Number int)       
 as       
 begin      
     declare @idx int       
     declare @slice varchar(8000)   
     declare @rn int = 1 -- row number that increments with each value in the delimited string
     select @idx = 1       
-        if len(@_String)<1 or @_String is null  return       
+        if len(@String)<1 or @String is null  return       
     while @idx!= 0       
     begin       
-        set @idx = charindex(@_Delimiter,@_String)       
+        set @idx = charindex(@Delimiter,@String)       
         if @idx!=0       
-            set @slice = left(@_String,@idx - 1)   
+            set @slice = left(@String,@idx - 1)   
         else       
-            set @slice = @_String       
+            set @slice = @String       
         if(len(@slice)>0)  
-            insert into @temptable(_Item, Row_Number) values(@slice, @rn)       
-        set @_String = right(@_String,len(@_String) - @idx)       
+            insert into @temptable(Item, Row_Number) values(@slice, @rn)       
+        set @String = right(@String,len(@String) - @idx)       
         set @rn = @rn +1
-        if len(@_String) = 0 break       
+        if len(@String) = 0 break       
     end   
 return 
 end;

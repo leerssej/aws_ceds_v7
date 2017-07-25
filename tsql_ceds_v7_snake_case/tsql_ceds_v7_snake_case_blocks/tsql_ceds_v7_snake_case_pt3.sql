@@ -6688,7 +6688,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate Key'
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Foreign key - Assessment_Person_Need_Profile_Display.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Need_Braille', @level2type=N'COLUMN',@level2name=N'Assessment_Personal_Needs_Profile_Display_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (_Af_A) needs and preferences.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Need_Braille', @level2type=N'COLUMN',@level2name=N'Ref_Assessment_Need_Usage_Type_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (Af_A) needs and preferences.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Need_Braille', @level2type=N'COLUMN',@level2name=N'Ref_Assessment_Need_Usage_Type_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Assessment Need Usage Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Need_Braille', @level2type=N'COLUMN',@level2name=N'Ref_Assessment_Need_Usage_Type_Id';
 
@@ -6766,7 +6766,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate Key'
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Foreign key - Assessment_Personal_Needs_Profile_Display' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Need_Screen_Enhancement', @level2type=N'COLUMN',@level2name=N'Assessment_Personal_Needs_Profile_Display_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Defines as part of an Assessment Personal Needs Profile the Access for All (_Af_A) preference to invert the foreground and background Colors.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Need_Screen_Enhancement', @level2type=N'COLUMN',@level2name=N'Invert_Color_Choice';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Defines as part of an Assessment Personal Needs Profile the Access for All (Af_A) preference to invert the foreground and background Colors.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Need_Screen_Enhancement', @level2type=N'COLUMN',@level2name=N'Invert_Color_Choice';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Assessment Need Invert Color Choice' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Need_Screen_Enhancement', @level2type=N'COLUMN',@level2name=N'Invert_Color_Choice';
 
@@ -7060,7 +7060,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate Key'
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Foreign key - Assessment_Personnal_Needs_Profile_Display' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Personal_Need_Screen_Reader', @level2type=N'COLUMN',@level2name=N'Assessment_Personal_Needs_Profile_Display_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (_Af_A) needs and preferences.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Personal_Need_Screen_Reader', @level2type=N'COLUMN',@level2name=N'Ref_Assessment_Need_Usage_Type_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (Af_A) needs and preferences.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Personal_Need_Screen_Reader', @level2type=N'COLUMN',@level2name=N'Ref_Assessment_Need_Usage_Type_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Assessment Need Usage Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Personal_Need_Screen_Reader', @level2type=N'COLUMN',@level2name=N'Ref_Assessment_Need_Usage_Type_Id';
 
@@ -7318,7 +7318,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Registration', @level2type=N'COLUMN',@level2name=N'Ref_Grade_Level_When_Assessed_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Person registering for the Assessment.  (_Foreign Key - Person)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Registration', @level2type=N'COLUMN',@level2name=N'Person_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Person registering for the Assessment.  (Foreign Key - Person)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Registration', @level2type=N'COLUMN',@level2name=N'Person_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Assessment_Registration', @level2type=N'COLUMN',@level2name=N'Person_Id';
 
@@ -8491,7 +8491,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'001757' , @lev
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/CEDS_Element_Details.aspx?_Term_Id=12738' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item', @level2type=N'COLUMN',@level2name=N'Type_URL';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The unique identifier of an immediate prerequisite Competency Framework Item, a competency needed prior to learning this one. (_Some items may have no prerequisites others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item_Association', @level2type=N'COLUMN',@level2name=N'Associated_Entity_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The unique identifier of an immediate prerequisite Competency Framework Item, a competency needed prior to learning this one. (Some items may have no prerequisites others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item_Association', @level2type=N'COLUMN',@level2name=N'Associated_Entity_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Competency Framework Item Prerequisite Identifier' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item_Association', @level2type=N'COLUMN',@level2name=N'Associated_Entity_Id';
 
@@ -8603,7 +8603,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Set', @level2type=N'COLUMN',@level2name=N'Completion_Criteria_Threshold';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The set of one or more competencies and criteria for completion of a learning goal, unit, course, program, degree, certification, or other achievement.   (_The criteria may be ?all? competencies in the set or ?at-least? # of competencies. Sets may be nested, e.g. all in subset A and 3 of 5 from subset B.)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Set';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The set of one or more competencies and criteria for completion of a learning goal, unit, course, program, degree, certification, or other achievement.   (The criteria may be ?all? competencies in the set or ?at-least? # of competencies. Sets may be nested, e.g. all in subset A and 3 of 5 from subset B.)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Set';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Set';
 
