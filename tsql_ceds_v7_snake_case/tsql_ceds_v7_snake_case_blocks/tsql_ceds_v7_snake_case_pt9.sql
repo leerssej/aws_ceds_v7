@@ -1,3 +1,4 @@
+INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('lom', 'Loma (Liberia)', NULL, 341.90)
 INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('lon', 'Malawi Lomwe', NULL, 342.00)
@@ -2181,7 +2182,6 @@ INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sor
 VALUES ('nuj', 'Nyole', NULL, 450.90)
 INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('nuk', 'Nuu-chah-nulth', NULL, 451.00)
-END;
 INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('nul', 'Nusa Laut', NULL, 451.10)
 INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sort_Order])
@@ -9988,4 +9988,3 @@ VALUES ('Pre_And_Post_Test', 'The student took both a pre-test and post-test', '
 INSERT INTO dbo.[Ref_Pre_And_Post_Test_Indicator]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('Did_Not_Take_Both', 'The student did not take both a pre-test and a post-test', 'The student did not take both a pre-test and a post-test.', 2.00)
 END;
-

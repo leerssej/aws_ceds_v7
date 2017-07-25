@@ -1,4 +1,6 @@
 INSERT INTO dbo.[_CEDS_to_NDS_Mapping]([Global_ID], [Table_Name], [Column_Name])
+VALUES ('000627', 'Ref_Incident_Behavior_Secondary', NULL)
+INSERT INTO dbo.[_CEDS_to_NDS_Mapping]([Global_ID], [Table_Name], [Column_Name])
 VALUES ('000630', 'Assessment_Item', 'Identifier')
 INSERT INTO dbo.[_CEDS_to_NDS_Mapping]([Global_ID], [Table_Name], [Column_Name])
 VALUES ('000632', 'Facility', 'Building_Name')
@@ -2924,7 +2926,6 @@ INSERT INTO dbo.[_CEDS_to_NDS_Mapping]([Global_ID], [Table_Name], [Column_Name])
 VALUES ('001762', 'Assessment_Registration', 'LEA_Full_Academic_Year')
 INSERT INTO dbo.[_CEDS_to_NDS_Mapping]([Global_ID], [Table_Name], [Column_Name])
 VALUES ('001763', 'Assessment_Registration', 'School_Full_Academic_Year')
-END;
 
 USE [tsql_ceds7_sc];
 
@@ -9942,5 +9943,3 @@ VALUES ('Post911_GI_Bill', 'Post-9/11 GI Bill', 'Post-9/11 GI Bill', 1.00)
 INSERT INTO dbo.[Ref_Financial_Aid_Veterans_Benefit_Type]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('DOD_Tuition_Assistance', 'Department of Defense Tuition Assistance', 'Department of Defense Tuition Assistance', 3.00)
 END;
-
-PRINT N'Populate Ref_Financial_Expenditure_Function_Code table';

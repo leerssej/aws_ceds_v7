@@ -45,6 +45,9 @@
 			<fk name="FK_Ae_Provider_Organization" to_schema="dbo" to_table="Organization" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
 			</fk>
+			<fk name="FK_Ae_Provider_Ref_Level_Of_Institution" to_schema="dbo" to_table="Ref_Level_Of_Institution" >
+				<fk_column name="Ref_Level_Of_Institution_Id" pk="Ref_Level_Of_Institution_Id" />
+			</fk>
 		</table>
 		<table name="Ae_Staff" >
 			<column name="Organization_Person_Role_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -78,6 +81,12 @@
 			</index>
 			<fk name="FK_Ae_Student_Academic_Record_Organization_Person_Role" to_schema="dbo" to_table="Organization_Person_Role" >
 				<fk_column name="Organization_Person_Role_Id" pk="Organization_Person_Role_Id" />
+			</fk>
+			<fk name="FK_Ae_Student_Academic_Record_Ref_High_School_Diploma_Type" to_schema="dbo" to_table="Ref_High_School_Diploma_Type" >
+				<fk_column name="Ref_High_School_Diploma_Type_Id" pk="Ref_High_School_Diploma_Type_Id" />
+			</fk>
+			<fk name="FK_Ae_Student_Academic_Record_Ref_Prof_Technical_Credential_Type" to_schema="dbo" to_table="Ref_Professional_Technical_Credential_Type" >
+				<fk_column name="Ref_Professional_Technical_Credential_Type_Id" pk="Ref_Professional_Technical_Credential_Type_Id" />
 			</fk>
 		</table>
 		<table name="Ae_Student_Employment" >
@@ -251,6 +260,9 @@
 			<fk name="FK_Assessment_Asset_Ref_Assessment_Asset_Type" to_schema="dbo" to_table="Ref_Assessment_Asset_Type" >
 				<fk_column name="Ref_Assessment_Asset_Type_Id" pk="Ref_Assessment_Asset_Type_Id" />
 			</fk>
+			<fk name="FK_Assessment_Asset_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Ref_Assessment_Language_Id" pk="Ref_Language_Id" />
+			</fk>
 		</table>
 		<table name="Assessment_EL_Developmental_Domain" >
 			<column name="Assessment_EL_Developmental_Domain_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -298,6 +310,9 @@
 			</fk>
 			<fk name="FK_Assessment_Form_Learning_Resource" to_schema="dbo" to_table="Learning_Resource" >
 				<fk_column name="Learning_Resource_Id" pk="Learning_Resource_Id" />
+			</fk>
+			<fk name="FK_Assessment_Form_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Ref_Assessment_Language_Id" pk="Ref_Language_Id" />
 			</fk>
 		</table>
 		<table name="Assessment_Form_Assessment_Asset" >
@@ -426,6 +441,18 @@
 			<fk name="FK_Assessment_Item_Ref_Assessment_Item_Type" to_schema="dbo" to_table="Ref_Assessment_Item_Type" >
 				<fk_column name="Ref_Assessment_Item_Type_Id" pk="Ref_Assessment_Item_Type_Id" />
 			</fk>
+			<fk name="FK_Assessment_Item_Ref_NAEP_Aspects_Of_Reading" to_schema="dbo" to_table="Ref_Naep_Aspects_Of_Reading" >
+				<fk_column name="Ref_Naep_Aspects_Of_Reading_Id" pk="Ref_Naep_Aspects_Of_Reading_Id" />
+			</fk>
+			<fk name="FK_Assessment_Item_Ref_NAEP_Math_Complexity_Level" to_schema="dbo" to_table="Ref_Naep_Math_Complexity_Level" >
+				<fk_column name="Ref_Naep_Math_Complexity_Level_Id" pk="Ref_Naep_Math_Complexity_Level_Id" />
+			</fk>
+			<fk name="FK_Assessment_Item_Ref_Text_Complexity_System" to_schema="dbo" to_table="Ref_Text_Complexity_System" >
+				<fk_column name="Ref_Text_Complexity_System_Id" pk="Ref_Text_Complexity_System_Id" />
+			</fk>
+			<fk name="FK_Assessment_Item_Rubric" to_schema="dbo" to_table="Rubric" >
+				<fk_column name="Rubric_Id" pk="Rubric_Id" />
+			</fk>
 		</table>
 		<table name="Assessment_Item_Apip" >
 			<column name="Assessment_Item_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -479,6 +506,9 @@
 			</index>
 			<fk name="FK_Assessment_Item_Apip_Description_Assessment_Item_Apip" to_schema="dbo" to_table="Assessment_Item_Apip" >
 				<fk_column name="Assessment_Item_Id" pk="Assessment_Item_Id" />
+			</fk>
+			<fk name="FK_Assessment_Item_Apip_Description_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Ref_Keyword_Translation_Language_Id" pk="Ref_Language_Id" />
 			</fk>
 		</table>
 		<table name="Assessment_Item_Characteristic" >
@@ -548,6 +578,9 @@
 			<fk name="FK_Assessment_Item_Response_Ref_Assess_Item_Response_Status" to_schema="dbo" to_table="Ref_Assessment_Item_Response_Status" >
 				<fk_column name="Ref_Assess_Item_Response_Status_Id" pk="Ref_Assessment_Item_Response_Status_Id" />
 			</fk>
+			<fk name="FK_Assessment_Item_Response_Ref_Proficiency_Status" to_schema="dbo" to_table="Ref_Proficiency_Status" >
+				<fk_column name="Ref_Proficiency_Status_Id" pk="Ref_Proficiency_Status_Id" />
+			</fk>
 		</table>
 		<table name="Assessment_Item_Response_Theory" >
 			<column name="Assessment_Item_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -571,6 +604,12 @@
 			<fk name="FK_Assessment_Item_Response_Theory_Assessment_Item" to_schema="dbo" to_table="Assessment_Item" >
 				<fk_column name="Assessment_Item_Id" pk="Assessment_Item_Id" />
 			</fk>
+			<fk name="FK_Assessment_Item_Response_Theory_Ref_IRT_Difficulty_Category" to_schema="dbo" to_table="Ref_Item_Response_Theory_Difficulty_Category" >
+				<fk_column name="Ref_Item_Response_Theory_Difficulty_Category_Id" pk="Ref_Item_Response_Theory_Difficulty_Category_Id" />
+			</fk>
+			<fk name="FK_Assessment_Item_Response_Theory_Ref_IRT_Kappa_Algorithm" to_schema="dbo" to_table="Ref_Item_Response_Theory_Kappa_Algorithm" >
+				<fk_column name="Ref_Item_Response_Theory_Kappa_Algorithm_Id" pk="Ref_Item_Response_Theory_Kappa_Algorithm_Id" />
+			</fk>
 		</table>
 		<table name="Assessment_Item_Rubric_Criterion_Result" >
 			<column name="Assessment_Item_Response_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -581,6 +620,9 @@
 			</index>
 			<fk name="FK_Assess_Item_Rubric_Criterion_Result_Assess_Item_Response" to_schema="dbo" to_table="Assessment_Item_Response" >
 				<fk_column name="Assessment_Item_Response_Id" pk="Assessment_Item_Response_Id" />
+			</fk>
+			<fk name="FK_Assess_Item_Rubric_Criterion_Result_Rubric_Criterion_Level" to_schema="dbo" to_table="Rubric_Criterion_Level" >
+				<fk_column name="Rubric_Criterion_Level_Id" pk="Rubric_Criterion_Level_Id" />
 			</fk>
 		</table>
 		<table name="Assessment_Language" >
@@ -597,6 +639,9 @@
 			<fk name="FK_Assessment_Language_Assessment" to_schema="dbo" to_table="Assessment" >
 				<fk_column name="Assessment_Id" pk="Assessment_Id" />
 			</fk>
+			<fk name="FK_Assessment_Language_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Ref_Language_Id" pk="Ref_Language_Id" />
+			</fk>
 		</table>
 		<table name="Assessment_Levels_For_Which_Designed" >
 			<column name="Assessment_Levels_For_Which_Designed_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -611,6 +656,9 @@
 			</index>
 			<fk name="FK_Assessment_Levels_For_Which_Designed_Assessment" to_schema="dbo" to_table="Assessment" >
 				<fk_column name="Assessment_Id" pk="Assessment_Id" />
+			</fk>
+			<fk name="FK_Assessment_Levels_For_Which_Designed_Ref_Grade" to_schema="dbo" to_table="Ref_Grade_Level" >
+				<fk_column name="Ref_Grade_Level_Id" pk="Ref_Grade_Level_Id" />
 			</fk>
 		</table>
 		<table name="Assessment_Need_Apip_Content" >
@@ -641,6 +689,12 @@
 			</fk>
 			<fk name="FK_Assess_Need_Apip_Content_Ref_Assessment_Need_User_Spoken_Preference" to_schema="dbo" to_table="Ref_Assessment_Need_User_Spoken_Preference_Type" >
 				<fk_column name="Ref_Assessment_Need_User_Spoken_Preference_Type_Id" pk="Ref_Assessment_Need_User_Spoken_Preference_Type_Id" />
+			</fk>
+			<fk name="FK_Assessment_Need_Apip_Content_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Item_Translation_Display_Language_Type_Id" pk="Ref_Language_Id" />
+			</fk>
+			<fk name="FK_Assessment_Need_Apip_Content_Ref_Language1" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Keyword_Translation_Language_Type_Id" pk="Ref_Language_Id" />
 			</fk>
 		</table>
 		<table name="Assessment_Need_Apip_Control" >
@@ -769,6 +823,9 @@
 			<fk name="FK_Assess_Participant_Session_Ref_Assessment_Session_Special_Circumst" to_schema="dbo" to_table="Ref_Assessment_Session_Special_Circumstance_Type" >
 				<fk_column name="Ref_Assessment_Session_Special_Circumstance_Type_Id" pk="Ref_Assessment_Session_Special_Circumstance_Type_Id" />
 			</fk>
+			<fk name="FK_Assessment_Participant_Session_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Ref_Language_Id" pk="Ref_Language_Id" />
+			</fk>
 		</table>
 		<table name="Assessment_Participant_Session_Accommodation" >
 			<column name="Assessment_Participant_Session_Accommodation_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -878,6 +935,9 @@
 			<fk name="FK_Apn_Profile_Content_Ref_Assessment_Need_Support_Tool" to_schema="dbo" to_table="Ref_Assessment_Need_Support_Tool" >
 				<fk_column name="Ref_Assessment_Need_Support_Tool_Id" pk="Ref_Assessment_Need_Support_Tool_Id" />
 			</fk>
+			<fk name="FK_Assessment_Personal_Needs_Profile_Content_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Ref_Keyword_Translations_Language_Id" pk="Ref_Language_Id" />
+			</fk>
 		</table>
 		<table name="Assessment_Personal_Needs_Profile_Control" >
 			<column name="Assessment_Personal_Needs_Profile_Control_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -978,6 +1038,12 @@
 			<fk name="FK_Assessment_Registration_Ref_Assessment_Registration_Completion_Status" to_schema="dbo" to_table="Ref_Assessment_Registration_Completion_Status" >
 				<fk_column name="Ref_Assessment_Registration_Completion_Status_Id" pk="Ref_Assessment_Registration_Completion_Status_Id" />
 			</fk>
+			<fk name="FK_Assessment_Registration_Ref_Grade_Level" to_schema="dbo" to_table="Ref_Grade_Level" >
+				<fk_column name="Ref_Grade_Level_When_Assessed_Id" pk="Ref_Grade_Level_Id" />
+			</fk>
+			<fk name="FK_Assessment_Registration_Ref_Grade_Level1" to_schema="dbo" to_table="Ref_Grade_Level" >
+				<fk_column name="Ref_Grade_Level_To_Be_Assessed_Id" pk="Ref_Grade_Level_Id" />
+			</fk>
 		</table>
 		<table name="Assessment_Registration_Accommodation" >
 			<column name="Assessment_Registration_Accommodation_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -1037,6 +1103,12 @@
 			<fk name="FK_Assessment_Result_Ref_EL_Outcome_Measurement" to_schema="dbo" to_table="Ref_EL_Outcome_Measurement_Level" >
 				<fk_column name="Ref_EL_Outcome_Measurement_Level_Id" pk="Ref_EL_Outcome_Measurement_Level_Id" />
 			</fk>
+			<fk name="FK_Assessment_Result_Ref_Outcome_Time_Point" to_schema="dbo" to_table="Ref_Outcome_Time_Point" >
+				<fk_column name="Ref_Outcome_Time_Point_Id" pk="Ref_Outcome_Time_Point_Id" />
+			</fk>
+			<fk name="FK_Assessment_Result_Ref_Score_Metric_Type" to_schema="dbo" to_table="Ref_Score_Metric_Type" >
+				<fk_column name="Ref_Score_Metric_Type_Id" pk="Ref_Score_Metric_Type_Id" />
+			</fk>
 		</table>
 		<table name="Assessment_Result_Performance_Level" >
 			<column name="Assessment_Result_Performance_Level_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -1065,6 +1137,9 @@
 			</index>
 			<fk name="FK_Assessment_Result_Rubric_Criterion_Result_Assessment_Result" to_schema="dbo" to_table="Assessment_Result" >
 				<fk_column name="Assessment_Result_Id" pk="Assessment_Result_Id" />
+			</fk>
+			<fk name="FK_Assessment_Result_Rubric_Criterion_Result_Rubric_Criterion_Level" to_schema="dbo" to_table="Rubric_Criterion_Level" >
+				<fk_column name="Rubric_Criterion_Level_Id" pk="Rubric_Criterion_Level_Id" />
 			</fk>
 		</table>
 		<table name="Assessment_Session" >
@@ -1169,6 +1244,9 @@
 			<fk name="FK_Assessment_Subtest_Ref_Content_Standard_Type" to_schema="dbo" to_table="Ref_Content_Standard_Type" >
 				<fk_column name="Ref_Content_Standard_Type_Id" pk="Ref_Content_Standard_Type_Id" />
 			</fk>
+			<fk name="FK_Assessment_Subtest_Ref_Score_Metric_Type" to_schema="dbo" to_table="Ref_Score_Metric_Type" >
+				<fk_column name="Ref_Score_Metric_Type_Id" pk="Ref_Score_Metric_Type_Id" />
+			</fk>
 		</table>
 		<table name="Assessment_Subtest_Assessment_Item" >
 			<column name="Assessment_Subtest_Item_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -1236,6 +1314,9 @@
 			</index>
 			<fk name="FK_Assessment_Subtest_Levels_For_Which_Designed_Assessment_Subtest" to_schema="dbo" to_table="Assessment_Subtest" >
 				<fk_column name="Assessment_Sub_Test_Id" pk="Assessment_Subtest_Id" />
+			</fk>
+			<fk name="FK_Assessment_Subtest_Levels_For_Which_Designed_Ref_Grade" to_schema="dbo" to_table="Ref_Grade_Level" >
+				<fk_column name="Ref_Grade_Id" pk="Ref_Grade_Level_Id" />
 			</fk>
 		</table>
 		<table name="Authentication" >
@@ -1321,6 +1402,9 @@
 			<fk name="FK_Competency_Framework_Ref_Competency_Framework_Publication_Status" to_schema="dbo" to_table="Ref_Competency_Framework_Publication_Status" >
 				<fk_column name="Ref_Competency_Framework_Publication_Status_Id" pk="Ref_Competency_Framework_Publication_Status_Id" />
 			</fk>
+			<fk name="FK_Competency_Framework_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Ref_Language_Id" pk="Ref_Language_Id" />
+			</fk>
 		</table>
 		<table name="Competency_Framework_Item" >
 			<column name="Competency_Framework_Item_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -1372,6 +1456,12 @@
 			</fk>
 			<fk name="FK_Competency_Framework_Item_Ref_Competency_Framework_Item_Testability_Type" to_schema="dbo" to_table="Ref_Competency_Framework_Item_Testability_Type" >
 				<fk_column name="Ref_Competency_Framework_Item_Testability_Type_Id" pk="Ref_Competency_Framework_Item_Testability_Type_Id" />
+			</fk>
+			<fk name="FK_Competency_Framework_Item_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Ref_Language_Id" pk="Ref_Language_Id" />
+			</fk>
+			<fk name="FK_Competency_Framework_Item_Ref_Multiple_Intelligence_Type" to_schema="dbo" to_table="Ref_Multiple_Intelligence_Type" >
+				<fk_column name="Ref_Multiple_Intelligence_Type_Id" pk="Ref_Multiple_Intelligence_Type_Id" />
 			</fk>
 		</table>
 		<table name="Competency_Framework_Item_Association" >
@@ -1465,6 +1555,9 @@
 			<fk name="FK_Core_Knowledge_Area_Ref_Core_Knowledge_Area" to_schema="dbo" to_table="Ref_Core_Knowledge_Area" >
 				<fk_column name="Ref_Core_Knowledge_Area_Id" pk="Ref_Core_Knowledge_Area_Id" />
 			</fk>
+			<fk name="FK_Core_Knowledge_Area_Professional_Development_Activity" to_schema="dbo" to_table="Staff_Professional_Development_Activity" >
+				<fk_column name="Professional_Development_Activity_Id" pk="Staff_Professional_Development_Activity_Id" />
+			</fk>
 		</table>
 		<table name="Course" >
 			<column name="Organization_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -1493,6 +1586,9 @@
 			</fk>
 			<fk name="FK_Course_Ref_Course_Level_Characteristic" to_schema="dbo" to_table="Ref_Course_Level_Characteristic" >
 				<fk_column name="Ref_Course_Level_Characteristics_Id" pk="Ref_Course_Level_Characteristic_Id" />
+			</fk>
+			<fk name="FK_Course_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Ref_Instruction_Language" pk="Ref_Language_Id" />
 			</fk>
 		</table>
 		<table name="Course_Section" >
@@ -1531,6 +1627,12 @@
 			<fk name="FK_Course_Section_Ref_Credit_Type_Earned" to_schema="dbo" to_table="Ref_Credit_Type_Earned" >
 				<fk_column name="Ref_Credit_Type_Earned_Id" pk="Ref_Credit_Type_Earned_Id" />
 			</fk>
+			<fk name="FK_Course_Section_Ref_Language" to_schema="dbo" to_table="Ref_Language" >
+				<fk_column name="Ref_Instruction_Language_Id" pk="Ref_Language_Id" />
+			</fk>
+			<fk name="FK_Course_Section_Ref_Course_Section_Single_Sex_Class_Status" to_schema="dbo" to_table="Ref_Single_Sex_Class_Status" >
+				<fk_column name="Ref_Single_Sex_Class_Status_Id" pk="Ref_Single_Sex_Class_Status_Id" />
+			</fk>
 		</table>
 		<table name="Course_Section_Assessment_Reporting" >
 			<column name="Course_Section_Assessment_Reporting_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -1559,6 +1661,9 @@
 			</fk>
 			<fk name="FK_Course_Section_Location_Course_Section" to_schema="dbo" to_table="Course_Section" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_Course_Section_Location_Ref_Instruction_Location_Type" to_schema="dbo" to_table="Ref_Instruction_Location_Type" >
+				<fk_column name="Ref_Instruction_Location_Type_Id" pk="Ref_Instruction_Location_Type_Id" />
 			</fk>
 		</table>
 		<table name="Course_Section_Schedule" >
@@ -1612,6 +1717,9 @@
 			</fk>
 			<fk name="FK_Credential_Ref_Credential_Verification_Type" to_schema="dbo" to_table="Ref_Credential_Verification_Type" >
 				<fk_column name="Ref_Credential_Verification_Type_Id" pk="Ref_Credential_Verification_Type_Id" />
+			</fk>
+			<fk name="FK_Credential_Ref_ONETSOC_Occupation_Type" to_schema="dbo" to_table="Ref_ONETSOC_Occupation_Type" >
+				<fk_column name="Ref_ONETSOC_Occupation_Type_Id" pk="Ref_ONETSOC_Occupation_Type_Id" />
 			</fk>
 		</table>
 		<table name="Credential_Award" >
@@ -1844,6 +1952,12 @@
 			<fk name="FK_Cte_Course_Ref_Curriculum_Framework_Type" to_schema="dbo" to_table="Ref_Curriculum_Framework_Type" >
 				<fk_column name="Ref_Curriculum_Framework_Type_Id" pk="Ref_Curriculum_Framework_Type_Id" />
 			</fk>
+			<fk name="FK_Cte_Course_Ref_SCED_Course_Level" to_schema="dbo" to_table="Ref_SCED_Course_Level" >
+				<fk_column name="Ref_SCED_Course_Level_Id" pk="Ref_SCED_Course_Level_Id" />
+			</fk>
+			<fk name="FK_Cte_Course_Ref_SCED_Course_Subject_Area" to_schema="dbo" to_table="Ref_SCED_Course_Subject_Area" >
+				<fk_column name="Ref_SCED_Course_Subject_Area_Id" pk="Ref_SCED_Course_Subject_Area_Id" />
+			</fk>
 		</table>
 		<table name="Cte_Student_Academic_Record" >
 			<column name="Organization_Person_Role_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -1856,6 +1970,9 @@
 			</index>
 			<fk name="FK_Cte_Student_Academic_Record_Organization_Person_Role" to_schema="dbo" to_table="Organization_Person_Role" >
 				<fk_column name="Organization_Person_Role_Id" pk="Organization_Person_Role_Id" />
+			</fk>
+			<fk name="FK_Cte_Student_Academic_Record_Ref_Professional_Technical_Credential" to_schema="dbo" to_table="Ref_Professional_Technical_Credential_Type" >
+				<fk_column name="Ref_Professional_Technical_Credential_Type_Id" pk="Ref_Professional_Technical_Credential_Type_Id" />
 			</fk>
 		</table>
 		<table name="EL_Child_Demographic" >
@@ -1897,6 +2014,9 @@
 			<fk name="FK_EL_Child_Health_Person" to_schema="dbo" to_table="Person" >
 				<fk_column name="Person_Id" pk="Person_Id" />
 			</fk>
+			<fk name="FK_EL_Child_Health_Ref_Scheduled_Well_Child_Screening" to_schema="dbo" to_table="Ref_Scheduled_Well_Child_Screening" >
+				<fk_column name="Ref_Scheduled_Well_Child_Screening_Id" pk="Ref_Scheduled_Well_Child_Screening_Id" />
+			</fk>
 		</table>
 		<table name="EL_Child_Individualized_Program" >
 			<column name="Person_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -1911,6 +2031,12 @@
 			</fk>
 			<fk name="FK_EL_Child_Individualized_Program_Person" to_schema="dbo" to_table="Person" >
 				<fk_column name="Person_Id" pk="Person_Id" />
+			</fk>
+			<fk name="FK_EL_Child_Individualized_Program_Ref_IDEA_IEP_Status" to_schema="dbo" to_table="Ref_IDEA_IEP_Status" >
+				<fk_column name="Ref_IDEA_IEP_Status_Id" pk="Ref_IDEA_IEP_Status_Id" />
+			</fk>
+			<fk name="FK_EL_Child_Individualized_Program_Ref_IDEA_Part_C_Eligibility_Category" to_schema="dbo" to_table="Ref_IDEA_Part_C_Eligibility_Category" >
+				<fk_column name="Ref_IDEA_Part_C_Eligibility_Category_Id" pk="Ref_IDEA_Part_C_Eligibility_Category_Id" />
 			</fk>
 		</table>
 		<table name="EL_Child_Outcome_Summary" >
@@ -2011,6 +2137,9 @@
 			<fk name="FK_EL_Child_IDEA_Person" to_schema="dbo" to_table="Person" >
 				<fk_column name="Person_Id" pk="Person_Id" />
 			</fk>
+			<fk name="FK_EL_Child_IDEA_Ref_Reason_Delay_Transition_Conf" to_schema="dbo" to_table="Ref_Reason_Delay_Transition_Conf" >
+				<fk_column name="Ref_Reason_Delay_Transition_Conf_Id" pk="Ref_Reason_Delay_Transition_Conf_Id" />
+			</fk>
 		</table>
 		<table name="EL_Class_Section" >
 			<column name="Organization_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -2030,6 +2159,9 @@
 			<fk name="FK_EL_Class_Section_Ref_Environment_Setting" to_schema="dbo" to_table="Ref_Environment_Setting" >
 				<fk_column name="Ref_Environment_Setting_Id" pk="Ref_Environment_Setting_Id" />
 			</fk>
+			<fk name="FK_EL_Class_Section_Ref_Service_Option" to_schema="dbo" to_table="Ref_Service_Option" >
+				<fk_column name="Ref_Service_Option_Id" pk="Ref_Service_Option_Id" />
+			</fk>
 		</table>
 		<table name="EL_Class_Section_Service" >
 			<column name="EL_Class_Section_Service_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2048,6 +2180,9 @@
 			</fk>
 			<fk name="FK_EL_Class_Section_Service_Ref_EL_Group_Size_Standard_Met" to_schema="dbo" to_table="Ref_EL_Group_Size_Standard_Met" >
 				<fk_column name="Ref_EL_Group_Size_Standard_Met_Id" pk="Ref_EL_Group_Size_Standard_Met_Id" />
+			</fk>
+			<fk name="FK_EL_Class_Section_Service_Ref_Frequency_Of_Service_Id" to_schema="dbo" to_table="Ref_Frequency_Of_Service" >
+				<fk_column name="Ref_Frequency_Of_Service_Id" pk="Ref_Frequency_Of_Service_Id" />
 			</fk>
 		</table>
 		<table name="EL_Enrollment" >
@@ -2071,6 +2206,15 @@
 			</fk>
 			<fk name="FK_EL_Enrollment_Ref_EL_Federal_Funding_Type" to_schema="dbo" to_table="Ref_EL_Federal_Funding_Type" >
 				<fk_column name="Ref_EL_Federal_Funding_Type_Id" pk="Ref_EL_Federal_Funding_Type_Id" />
+			</fk>
+			<fk name="FK_El_Enrollment_Ref_Food_Service_Participation" to_schema="dbo" to_table="Ref_Food_Service_Participation" >
+				<fk_column name="Ref_Food_Service_Participation_Id" pk="Ref_Food_Service_Participation_Id" />
+			</fk>
+			<fk name="FK_El_Enrollment_Ref_IDEA_Environment_EL" to_schema="dbo" to_table="Ref_IDEA_Environment_EL" >
+				<fk_column name="Ref_IDEA_Environment_EL_Id" pk="Ref_IDEA_Environment_EL_Id" />
+			</fk>
+			<fk name="FK_EL_Enrollment_Ref_Service_Option" to_schema="dbo" to_table="Ref_Service_Option" >
+				<fk_column name="Ref_Service_Option_Id" pk="Ref_Service_Option_Id" />
 			</fk>
 		</table>
 		<table name="EL_Enrollment_Other_Funding" >
@@ -2101,6 +2245,9 @@
 			<fk name="FK_EL_Facility_Licensing_Ref_EL_Facility_Licensing_Status" to_schema="dbo" to_table="Ref_EL_Facility_Licensing_Status" >
 				<fk_column name="Ref_EL_Facility_Licensing_Status_Id" pk="Ref_EL_Facility_Licensing_Status_Id" />
 			</fk>
+			<fk name="FK_EL_Facility_Licensing_Ref_License_Exempt" to_schema="dbo" to_table="Ref_License_Exempt" >
+				<fk_column name="Ref_License_Exempt_Id" pk="Ref_License_Exempt_Id" />
+			</fk>
 		</table>
 		<table name="EL_Organization" >
 			<column name="Organization_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -2110,6 +2257,9 @@
 			</index>
 			<fk name="FK_EL_Organization_Organization" to_schema="dbo" to_table="Organization" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_EL_Organization_Ref_Profit_Status" to_schema="dbo" to_table="Ref_Profit_Status" >
+				<fk_column name="Ref_Profit_Status_Id" pk="Ref_Profit_Status_Id" />
 			</fk>
 		</table>
 		<table name="EL_Organization_Availability" >
@@ -2132,6 +2282,12 @@
 			</fk>
 			<fk name="FK_EL_Organization_Availability_Ref_Environment_Setting" to_schema="dbo" to_table="Ref_Environment_Setting" >
 				<fk_column name="Ref_Environment_Setting_Id" pk="Ref_Environment_Setting_Id" />
+			</fk>
+			<fk name="FK_EL_Organization_Availability_Ref_Population_Served" to_schema="dbo" to_table="Ref_Population_Served" >
+				<fk_column name="Ref_Population_Served_Id" pk="Ref_Population_Served_Id" />
+			</fk>
+			<fk name="FK_EL_Organization_Availability_Ref_Service_Option" to_schema="dbo" to_table="Ref_Service_Option" >
+				<fk_column name="Ref_Service_Option_Id" pk="Ref_Service_Option_Id" />
 			</fk>
 		</table>
 		<table name="EL_Organization_Funds" >
@@ -2163,6 +2319,9 @@
 			<fk name="FK_EL_Organization_Funds_Ref_EL_State_Revenue_Source" to_schema="dbo" to_table="Ref_EL_State_Revenue_Source" >
 				<fk_column name="Ref_EL_State_Revenue_Source_Id" pk="Ref_EL_State_Revenue_Source_Id" />
 			</fk>
+			<fk name="FK_EL_Organization_Funds_Ref_Reimbursement_Type" to_schema="dbo" to_table="Ref_Reimbursement_Type" >
+				<fk_column name="Ref_Reimbursement_Type_Id" pk="Ref_Reimbursement_Type_Id" />
+			</fk>
 		</table>
 		<table name="EL_Organization_Monitoring" >
 			<column name="EL_Organization_Monitoring_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2177,6 +2336,12 @@
 			</index>
 			<fk name="FK_EL_Organization_Monitoring_Organization" to_schema="dbo" to_table="Organization" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_EL_Organization_Monitoring_Ref_Organization_Monitoring_Notifications" to_schema="dbo" to_table="Ref_Organization_Monitoring_Notifications" >
+				<fk_column name="Ref_Organization_Monitoring_Notifications_Id" pk="Ref_Organization_Monitoring_Notifications_Id" />
+			</fk>
+			<fk name="FK_EL_Organization_Monitoring_Ref_Purpose_Of_Monitoring_Visit" to_schema="dbo" to_table="Ref_Purpose_Of_Monitoring_Visit" >
+				<fk_column name="Ref_Purpose_Of_Monitoring_Visit_Id" pk="Ref_Purpose_Of_Monitoring_Visit_Id" />
 			</fk>
 		</table>
 		<table name="EL_Program_Licensing" >
@@ -2198,6 +2363,9 @@
 			</fk>
 			<fk name="FK_EL_Program_Licensing_Ref_EL_Program_License_Status" to_schema="dbo" to_table="Ref_EL_Program_License_Status" >
 				<fk_column name="Ref_EL_Program_License_Status_Id" pk="Ref_EL_Program_License_Status_Id" />
+			</fk>
+			<fk name="FK_EL_Program_Licensing_Ref_License_Exempt" to_schema="dbo" to_table="Ref_License_Exempt" >
+				<fk_column name="Ref_License_Exempt_Id" pk="Ref_License_Exempt_Id" />
 			</fk>
 		</table>
 		<table name="EL_Quality_Initiative" >
@@ -2229,6 +2397,9 @@
 			</index>
 			<fk name="FK_EL_Quality_Rating_Improvement_Organization" to_schema="dbo" to_table="Organization" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_EL_Quality_Rating_Improvement_Ref_QRIS_Participation" to_schema="dbo" to_table="Ref_Qris_Participation" >
+				<fk_column name="Ref_Qris_Participation_Id" pk="Ref_Qris_Participation_Id" />
 			</fk>
 		</table>
 		<table name="EL_Service_Partner" >
@@ -2315,6 +2486,15 @@
 			<fk name="FK_EL_Staff_Employment_Ref_Employment_Status" to_schema="dbo" to_table="Ref_Employment_Status" >
 				<fk_column name="Ref_Employment_Status_Id" pk="Ref_Employment_Status_Id" />
 			</fk>
+			<fk name="FK_EL_Staff_Employment_Ref_Wage_Collection_Method" to_schema="dbo" to_table="Ref_Wage_Collection_Method" >
+				<fk_column name="Ref_Wage_Collection_Method_Id" pk="Ref_Wage_Collection_Method_Id" />
+			</fk>
+			<fk name="FK_EL_Staff_Employment_Ref_Wage_Verification" to_schema="dbo" to_table="Ref_Wage_Verification" >
+				<fk_column name="Ref_Wage_Verification_Id" pk="Ref_Wage_Verification_Id" />
+			</fk>
+			<fk name="FK_EL_Staff_Employment_Staff_Employment" to_schema="dbo" to_table="Staff_Employment" >
+				<fk_column name="Staff_Employment_Id" pk="Staff_Employment_Id" />
+			</fk>
 		</table>
 		<table name="Early_Childhood_Credential" >
 			<column name="Person_Credential_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -2377,6 +2557,9 @@
 			<fk name="FK_Facility_Ref_Building_Use_Type" to_schema="dbo" to_table="Ref_Building_Use_Type" >
 				<fk_column name="Ref_Building_Use_Type_Id" pk="Ref_Building_Use_Type_Id" />
 			</fk>
+			<fk name="FK_Facility_Ref_Space_Use_Type" to_schema="dbo" to_table="Ref_Space_Use_Type" >
+				<fk_column name="Ref_Space_Use_Type_Id" pk="Ref_Space_Use_Type_Id" />
+			</fk>
 		</table>
 		<table name="Financial_Account" >
 			<column name="Financial_Account_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2396,6 +2579,30 @@
 			<index name="PK_Financial_Account" unique="PRIMARY_KEY" >
 				<column name="Financial_Account_Id" />
 			</index>
+			<fk name="FK_Financial_Account_Ref_Financial_Balance_Sheet_Account_Code" to_schema="dbo" to_table="Ref_Financial_Account_Balance_Sheet_Code" >
+				<fk_column name="Ref_Financial_Account_Balance_Sheet_Code_Id" pk="Ref_Financial_Balance_Sheet_Account_Code_Id" />
+			</fk>
+			<fk name="FK_Financial_Account_Ref_Financial_Account_Category" to_schema="dbo" to_table="Ref_Financial_Account_Category" >
+				<fk_column name="Ref_Financial_Account_Category_Id" pk="Ref_Financial_Account_Category_Id" />
+			</fk>
+			<fk name="FK_Financial_Account_Ref_Financial_Account_Fund_Classification" to_schema="dbo" to_table="Ref_Financial_Account_Fund_Classification" >
+				<fk_column name="Ref_Financial_Account_Fund_Classification_Id" pk="Ref_Financial_Account_Fund_Classification_Id" />
+			</fk>
+			<fk name="FK_Financial_Account_Ref_Financial_Account_Program_Code" to_schema="dbo" to_table="Ref_Financial_Account_Program_Code" >
+				<fk_column name="Ref_Financial_Account_Program_Code_Id" pk="Ref_Financial_Account_Program_Code_Id" />
+			</fk>
+			<fk name="FK_Financial_Account_Ref_Financial_Account_Revenue_Code" to_schema="dbo" to_table="Ref_Financial_Account_Revenue_Code" >
+				<fk_column name="Ref_Financial_Account_Revenue_Code_Id" pk="Ref_Financial_Account_Revenue_Code_Id" />
+			</fk>
+			<fk name="FK_Financial_Account_Ref_Financial_Expenditure_Function_Code" to_schema="dbo" to_table="Ref_Financial_Expenditure_Function_Code" >
+				<fk_column name="Ref_Financial_Expenditure_Function_Code_Id" pk="Ref_Financial_Expenditure_Function_Code_Id" />
+			</fk>
+			<fk name="FK_Financial_Account_Ref_Financial_Expenditure_Level_Of_Instruction_Code" to_schema="dbo" to_table="Ref_Financial_Expenditure_Level_Of_Instruction_Code" >
+				<fk_column name="Ref_Financial_Expenditure_Level_Of_Instruction_Code_Id" pk="Ref_Financial_Expenditure_Level_Of_Instruction_Code_Id" />
+			</fk>
+			<fk name="FK_Financial_Account_Ref_Financial_Expenditure_Object_Code" to_schema="dbo" to_table="Ref_Financial_Expenditure_Object_Code" >
+				<fk_column name="Ref_Financial_Expenditure_Object_Code_Id" pk="Ref_Financial_Expenditure_Object_Code_Id" />
+			</fk>
 		</table>
 		<table name="Financial_Account_Program" >
 			<column name="Financial_Account_Program_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2416,6 +2623,9 @@
 			<fk name="FK_Financial_Aid_Application_Organization_Person_Role" to_schema="dbo" to_table="Organization_Person_Role" >
 				<fk_column name="Organization_Person_Role_Id" pk="Organization_Person_Role_Id" />
 			</fk>
+			<fk name="FK_Financial_Aid_Application_Ref_Financial_Aid_Appl_Type" to_schema="dbo" to_table="Ref_Financial_Aid_Application_Type" >
+				<fk_column name="Ref_Financial_Aid_Application_Type_Id" pk="Ref_Financial_Aid_Application_Type_Id" />
+			</fk>
 		</table>
 		<table name="Financial_Aid_Award" >
 			<column name="Financial_Aid_Award_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2429,6 +2639,12 @@
 			</index>
 			<fk name="FK_Financial_Aid_Award_Organization_Person_Role" to_schema="dbo" to_table="Organization_Person_Role" >
 				<fk_column name="Organization_Person_Role_Id" pk="Organization_Person_Role_Id" />
+			</fk>
+			<fk name="FK_Financial_Aid_Award_Ref_Financial_Aid_Award_Status" to_schema="dbo" to_table="Ref_Financial_Aid_Award_Status" >
+				<fk_column name="Ref_Financial_Aid_Status_Id" pk="Ref_Financial_Aid_Status_Id" />
+			</fk>
+			<fk name="FK_Financial_Aid_Award_Ref_Financial_Aid_Award_Type" to_schema="dbo" to_table="Ref_Financial_Aid_Award_Type" >
+				<fk_column name="Ref_Financial_Aid_Award_Type_Id" pk="Ref_Financial_Aid_Award_Type_Id" />
 			</fk>
 		</table>
 		<table name="Goal" >
@@ -2461,6 +2677,9 @@
 			<fk name="FK_Goal_Measurement_Goal" to_schema="dbo" to_table="Goal" >
 				<fk_column name="Goal_Id" pk="Goal_Id" />
 			</fk>
+			<fk name="FK_Goal_Measurement_Ref_Goal_Measurement_Type" to_schema="dbo" to_table="Ref_Goal_Measurement_Type" >
+				<fk_column name="Ref_Goal_Measurement_Type_Id" pk="Ref_Goal_Measurement_Type_Id" />
+			</fk>
 		</table>
 		<table name="Goal_Measurement_Criterion" >
 			<column name="Goal_Measurement_Criterion_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2489,6 +2708,9 @@
 			<fk name="FK_Goal_Performance_Goal" to_schema="dbo" to_table="Goal" >
 				<fk_column name="Goal_Id" pk="Goal_Id" />
 			</fk>
+			<fk name="FK_Goal_Performance_Ref_Goal_Status_Type" to_schema="dbo" to_table="Ref_Goal_Status_Type" >
+				<fk_column name="Ref_Goal_Status_Type_Id" pk="Ref_Goal_Status_Type_Id" />
+			</fk>
 		</table>
 		<table name="IDEA_Eligibility_Evaluation_Category" >
 			<column name="IDEA_Eligibility_Evaluation_Category_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2504,6 +2726,9 @@
 			<fk name="FK_IDEA_Eligibility_Evaluation_Category_Eligibility_Evaluation" to_schema="dbo" to_table="Eligibility_Evaluation" >
 				<fk_column name="Eligibility_Evaluation_Id" pk="Eligibility_Evaluation_Id" />
 			</fk>
+			<fk name="FK_IDEA_Eligibility_Evaluation_Category_Ref_IDEA_Eligibility_Evaluation_Category" to_schema="dbo" to_table="Ref_IDEA_Eligibility_Evaluation_Category" >
+				<fk_column name="Ref_IDEA_Eligibility_Evaluation_Category_Id" pk="Ref_IDEA_Eligibility_Evaluation_Category_Id" />
+			</fk>
 		</table>
 		<table name="IEP_Authorization" >
 			<column name="IEP_Authorization_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2518,6 +2743,9 @@
 			</fk>
 			<fk name="FK_IEP_Authorization_Individualized_Program" to_schema="dbo" to_table="Individualized_Program" >
 				<fk_column name="Individualized_Program_Id" pk="Individualized_Program_Id" />
+			</fk>
+			<fk name="FK_IEP_Authorization_Ref_IEP_Authorization_Document_Type" to_schema="dbo" to_table="Ref_IEP_Authorization_Document_Type" >
+				<fk_column name="Ref_IEP_Authorization_Document_Type_Id" pk="Ref_IEP_Authorization_Document_Type_Id" />
 			</fk>
 		</table>
 		<table name="IEP_Authorization_Rejected" >
@@ -2568,6 +2796,42 @@
 			<fk name="FK_IPEDS_Finance_Organization_Financial" to_schema="dbo" to_table="Organization_Financial" >
 				<fk_column name="Organization_Financial_Id" pk="Organization_Financial_Id" />
 			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDSFASB_Financial_Position" to_schema="dbo" to_table="Ref_IPEDSFASB_Financial_Position" >
+				<fk_column name="Ref_IPEDSFASB_Financial_Position_Id" pk="Ref_IPEDSFASB_Financial_Position_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDSFASB_Functional_Expense" to_schema="dbo" to_table="Ref_IPEDSFASB_Functional_Expense" >
+				<fk_column name="Ref_IPEDSFASB_Functional_Expense_Id" pk="Ref_IPEDSFASB_Functional_Expense_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDSFASB_Pell_Grant_Transactions" to_schema="dbo" to_table="Ref_IPEDSFASB_Pell_Grant_Transactions" >
+				<fk_column name="Ref_IPEDSFASB_Pell_Grant_Transactions_Id" pk="Ref_IPEDSFASB_Pell_Grant_Transactions_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDSFASB_Revenue" to_schema="dbo" to_table="Ref_IPEDSFASB_Revenue" >
+				<fk_column name="Ref_IPEDSFASB_Revenue_Id" pk="Ref_IPEDSFASB_Revenue_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDSFASB_Revenue_Restriction" to_schema="dbo" to_table="Ref_IPEDSFASB_Revenue_Restriction" >
+				<fk_column name="Ref_IPEDSFASB_Revenue_Restriction_Id" pk="Ref_IPEDSFASB_Revenue_Restriction_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDSFASB_Scholarshipsand_Fellowships_Revenue" to_schema="dbo" to_table="Ref_IPEDSFASB_Scholarshipsand_Fellowships_Revenue" >
+				<fk_column name="Ref_IPEDSFASB_Scholarshipsand_Fellowships_Revenue_Id" pk="Ref_IPEDSFASB_Scholarshipsand_Fellowships_Revenue_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDSGASB_Financial_Position" to_schema="dbo" to_table="Ref_IPEDSGASB_Financial_Position" >
+				<fk_column name="Ref_IPEDSGASB_Financial_Position_Id" pk="Ref_IPEDSGASB_Financial_Position_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDSGASB_Functional_Expense" to_schema="dbo" to_table="Ref_IPEDSGASB_Functional_Expense" >
+				<fk_column name="Ref_IPEDSGASB_Functional_Expense_Id" pk="Ref_IPEDSGASB_Functional_Expense_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDSGASB_Revenue" to_schema="dbo" to_table="Ref_IPEDSGASB_Revenue" >
+				<fk_column name="Ref_IPEDSGASB_Revenue_Id" pk="Ref_IPEDSGASB_Revenue_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDSGASB_Scholarshipsand_Fellowships_Revenue" to_schema="dbo" to_table="Ref_IPEDSGASB_Scholarshipsand_Fellowships_Revenue" >
+				<fk_column name="Ref_IPEDSGASB_Scholarshipsand_Fellowships_Revenue_Id" pk="Ref_IPEDSGASB_Scholarshipsand_Fellowships_Revenue_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDS_Intercollegiate_Athletics_Expenses" to_schema="dbo" to_table="Ref_IPEDS_Intercollegiate_Athletics_Expenses" >
+				<fk_column name="Ref_IPEDS_Intercollegiate_Athletics_Expenses_Id" pk="Ref_IPEDS_Intercollegiate_Athletics_Expenses_Id" />
+			</fk>
+			<fk name="FK_IPEDS_Finance_Ref_IPEDS_Natural_Expense" to_schema="dbo" to_table="Ref_IPEDS_Natural_Expense" >
+				<fk_column name="Ref_IPEDS_Natural_Expense_Id" pk="Ref_IPEDS_Natural_Expense_Id" />
+			</fk>
 		</table>
 		<table name="Incident" >
 			<column name="Incident_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2600,6 +2864,36 @@
 			<fk name="FK_Incident_Person" to_schema="dbo" to_table="Person" >
 				<fk_column name="Incident_Reporter_Id" pk="Person_Id" />
 			</fk>
+			<fk name="FK_Incident_Ref_Firearm_Type" to_schema="dbo" to_table="Ref_Firearm_Type" >
+				<fk_column name="Ref_Firearm_Type_Id" pk="Ref_Firearm_Type_Id" />
+			</fk>
+			<fk name="FK_Incident_Ref_Ref_Incident_Behavior" to_schema="dbo" to_table="Ref_Incident_Behavior" >
+				<fk_column name="Ref_Incident_Behavior_Id" pk="Ref_Incident_Behavior_Id" />
+			</fk>
+			<fk name="FK_Incident_Ref_Ref_Incident_Behavior_Secondary" to_schema="dbo" to_table="Ref_Incident_Behavior_Secondary" >
+				<fk_column name="Ref_Incident_Behavior_Secondary_Id" pk="Ref_Incident_Behavior_Secondary_Id" />
+			</fk>
+			<fk name="FK_Incident_Ref_Incident_Injury_Type" to_schema="dbo" to_table="Ref_Incident_Injury_Type" >
+				<fk_column name="Ref_Incident_Injury_Type_Id" pk="Ref_Incident_Injury_Type_Id" />
+			</fk>
+			<fk name="FK_Incident_Ref_Incident_Location" to_schema="dbo" to_table="Ref_Incident_Location" >
+				<fk_column name="Ref_Incident_Location_Id" pk="Ref_Incident_Location_Id" />
+			</fk>
+			<fk name="FK_Incident_Ref_Incident_Multiple_Offense_Type" to_schema="dbo" to_table="Ref_Incident_Multiple_Offense_Type" >
+				<fk_column name="Ref_Incident_Multiple_Offense_Type_Id" pk="Ref_Incident_Multiple_Offense_Type_Id" />
+			</fk>
+			<fk name="FK_Incident_Ref_Incident_Perpetrator_Injury_Type" to_schema="dbo" to_table="Ref_Incident_Perpetrator_Injury_Type" >
+				<fk_column name="Ref_Incident_Perpetrator_Injury_Type_Id" pk="Ref_Incident_Perpetrator_Injury_Type_Id" />
+			</fk>
+			<fk name="FK_Incident_Ref_Incident_Reporter_Type" to_schema="dbo" to_table="Ref_Incident_Reporter_Type" >
+				<fk_column name="Ref_Incident_Reporter_Type_Id" pk="Ref_Incident_Reporter_Type_Id" />
+			</fk>
+			<fk name="FK_Incident_Ref_Incident_Time_Description_Code" to_schema="dbo" to_table="Ref_Incident_Time_Description_Code" >
+				<fk_column name="Ref_Incident_Time_Description_Code_Id" pk="Ref_Incident_Time_Description_Code_Id" />
+			</fk>
+			<fk name="FK_Incident_Ref_Weapon_Type" to_schema="dbo" to_table="Ref_Weapon_Type" >
+				<fk_column name="Ref_Weapon_Type_Id" pk="Ref_Weapon_Type_Id" />
+			</fk>
 		</table>
 		<table name="Incident_Person" >
 			<column name="Incident_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -2617,6 +2911,12 @@
 			</fk>
 			<fk name="FK_Incident_Person_Person" to_schema="dbo" to_table="Person" >
 				<fk_column name="Person_Id" pk="Person_Id" />
+			</fk>
+			<fk name="FK_Incident_Person_Ref_Incident_Person_Role_Type" to_schema="dbo" to_table="Ref_Incident_Person_Role_Type" >
+				<fk_column name="Ref_Incident_Person_Role_Type_Id" pk="Ref_Incident_Person_Role_Type_Id" />
+			</fk>
+			<fk name="FK_Incident_Person_Ref_Incident_Person_Type" to_schema="dbo" to_table="Ref_Incident_Person_Type" >
+				<fk_column name="Ref_Incident_Person_Type_Id" pk="Ref_Incident_Person_Type_Id" />
 			</fk>
 		</table>
 		<table name="Individualized_Program" >
@@ -2643,6 +2943,21 @@
 			</index>
 			<fk name="FK_Individualized_Program_Organization_Person_Role" to_schema="dbo" to_table="Organization_Person_Role" >
 				<fk_column name="Organization_Person_Role_Id" pk="Organization_Person_Role_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Ref_Indiv_Program_Date_Type" to_schema="dbo" to_table="Ref_Individualized_Program_Date_Type" >
+				<fk_column name="Ref_Individualized_Program_Date_Type" pk="Ref_Individualized_Program_Date_Type_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Ref_Indiv_Program_Location" to_schema="dbo" to_table="Ref_Individualized_Program_Location" >
+				<fk_column name="Ref_Individualized_Program_Location_Id" pk="Ref_Individualized_Program_Location_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Ref_Indiv_Program_Transition_Type" to_schema="dbo" to_table="Ref_Individualized_Program_Transition_Type" >
+				<fk_column name="Ref_Individualized_Program_Transition_Type_Id" pk="Ref_Individualized_Program_Transition_Type_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Ref_Individualized_Program_Type" to_schema="dbo" to_table="Ref_Individualized_Program_Type" >
+				<fk_column name="Ref_Individualized_Program_Type_Id" pk="Ref_Individualized_Program_Type_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Ref_Student_Support_Service_Type" to_schema="dbo" to_table="Ref_Student_Support_Service_Type" >
+				<fk_column name="Ref_Student_Support_Service_Type_Id" pk="Ref_Student_Support_Service_Type_Id" />
 			</fk>
 		</table>
 		<table name="Individualized_Program_Accommodation" >
@@ -2674,6 +2989,9 @@
 			</index>
 			<fk name="FK_Individualized_Program_Accommodation_Subject_Individualized_Program_Accommodation" to_schema="dbo" to_table="Individualized_Program_Accommodation" >
 				<fk_column name="Individualized_Program_Accommodation_Id" pk="Individualized_Program_Accommodation_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Accommodation_Subject_Ref_SCED_Course_Subject_Area" to_schema="dbo" to_table="Ref_SCED_Course_Subject_Area" >
+				<fk_column name="Ref_SCED_Course_Subject_Area_Id" pk="Ref_SCED_Course_Subject_Area_Id" />
 			</fk>
 		</table>
 		<table name="Individualized_Program_Amendment" >
@@ -2748,6 +3066,9 @@
 			<fk name="FK_Individualized_Program_Eligibility_Evaluation_Individualized_Program_Eligibility" to_schema="dbo" to_table="Individualized_Program_Eligibility" >
 				<fk_column name="Individualized_Program_Eligibility_Id" pk="Individualized_Program_Eligibility_Id" />
 			</fk>
+			<fk name="FK_Individualized_Program_Eligibility_Evaluation_Ref_IEP_Eligibility_Evaluation_Type" to_schema="dbo" to_table="Ref_IEP_Eligibility_Evaluation_Type" >
+				<fk_column name="Ref_IEP_Eligibility_Evaluation_Type_Id" pk="Ref_IEP_Eligibility_Evaluation_Type_Id" />
+			</fk>
 		</table>
 		<table name="Individualized_Program_Goal" >
 			<column name="Individualized_Program_Goal_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2762,6 +3083,9 @@
 			</fk>
 			<fk name="FK_Individualized_Program_Goal_Individualized_Program" to_schema="dbo" to_table="Individualized_Program" >
 				<fk_column name="Individualized_Program_Id" pk="Individualized_Program_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Goal_Ref_IEP_Goal_Type" to_schema="dbo" to_table="Ref_IEP_Goal_Type" >
+				<fk_column name="Ref_IEP_Goal_Type_Id" pk="Ref_IEP_Goal_Type_Id" />
 			</fk>
 		</table>
 		<table name="Individualized_Program_Meeting" >
@@ -2827,6 +3151,9 @@
 			<fk name="FK_Individualized_Program_Progress_Report_Individualized_Program_Progress_Report_Plan" to_schema="dbo" to_table="Individualized_Program_Progress_Report_Plan" >
 				<fk_column name="Individualized_Program_Progress_Report_Plan_Id" pk="Individualized_Program_Progress_Report_Plan_Id" />
 			</fk>
+			<fk name="FK_Individualized_Program_Progress_Report_Ref_IPSP_Progress_Report_Type" to_schema="dbo" to_table="Ref_IPSP_Progress_Report_Type" >
+				<fk_column name="Ref_IPSP_Progress_Report_Type_Id" pk="Ref_IPSP_Progress_Report_Type_Id" />
+			</fk>
 		</table>
 		<table name="Individualized_Program_Progress_Report_Plan" >
 			<column name="Individualized_Program_Progress_Report_Plan_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2838,6 +3165,12 @@
 			</index>
 			<fk name="FK_Individualized_Program_Progress_Report_Plan_Individualized_Program" to_schema="dbo" to_table="Individualized_Program" >
 				<fk_column name="Individualized_Program_Id" pk="Individualized_Program_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Progress_Report_Plan_Ref_IPSP_Progress_Report_Schedule" to_schema="dbo" to_table="Ref_IPSP_Progress_Report_Schedule" >
+				<fk_column name="Ref_IPSP_Progress_Report_Schedule_Id" pk="Ref_IPSP_Progress_Report_Schedule_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Progress_Report_Plan_Ref_IPSP_Progress_Report_Type" to_schema="dbo" to_table="Ref_IPSP_Progress_Report_Type" >
+				<fk_column name="Ref_IPSP_Progress_Report_Type_Id" pk="Ref_IPSP_Progress_Report_Type_Id" />
 			</fk>
 		</table>
 		<table name="Individualized_Program_Service" >
@@ -2854,6 +3187,15 @@
 			<fk name="FK_Individualized_Program_Service_Person" to_schema="dbo" to_table="Person" >
 				<fk_column name="Person_Id" pk="Person_Id" />
 			</fk>
+			<fk name="FK_Individualized_Program_Service_Ref_Individualized_Program_Planned_Service_Type" to_schema="dbo" to_table="Ref_Individualized_Program_Planned_Service_Type" >
+				<fk_column name="Ref_Individualized_Program_Planned_Service_Type_Id" pk="Ref_Individualized_Program_Planned_Service_Type_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Service_Ref_Method_Of_Service_Delivery" to_schema="dbo" to_table="Ref_Method_Of_Service_Delivery" >
+				<fk_column name="Ref_Method_Of_Service_Delivery_Id" pk="Ref_Method_Of_Service_Delivery_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Service_Ref_Service_Frequency" to_schema="dbo" to_table="Ref_Service_Frequency" >
+				<fk_column name="Ref_Service_Frequency_Id" pk="Ref_Service_Frequency_Id" />
+			</fk>
 		</table>
 		<table name="Individualized_Program_Services_Received" >
 			<column name="Individualized_Program_Services_Received_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2868,6 +3210,9 @@
 			</index>
 			<fk name="FK_Individualized_Program_Services_Received_Individualized_Program" to_schema="dbo" to_table="Individualized_Program" >
 				<fk_column name="Individualized_Program_Id" pk="Individualized_Program_Id" />
+			</fk>
+			<fk name="FK_Individualized_Program_Services_Received_Services_Received" to_schema="dbo" to_table="Services_Received" >
+				<fk_column name="Services_Received_Id" pk="Services_Received_Id" />
 			</fk>
 		</table>
 		<table name="K12_Course" >
@@ -2919,6 +3264,18 @@
 			<fk name="FK_K12_Course_Ref_Curriculum_Framework_Type" to_schema="dbo" to_table="Ref_Curriculum_Framework_Type" >
 				<fk_column name="Ref_Curriculum_Framework_Type_Id" pk="Ref_Curriculum_Framework_Type_Id" />
 			</fk>
+			<fk name="FK_K12_Course_Ref_K12_End_Of_Course_Requirement" to_schema="dbo" to_table="Ref_K12_End_Of_Course_Requirement" >
+				<fk_column name="Ref_K12_End_Of_Course_Requirement_Id" pk="Ref_K12_End_Of_Course_Requirement_Id" />
+			</fk>
+			<fk name="FK_K12_Course_Ref_SCED_Course_Level" to_schema="dbo" to_table="Ref_SCED_Course_Level" >
+				<fk_column name="Ref_SCED_Course_Level_Id" pk="Ref_SCED_Course_Level_Id" />
+			</fk>
+			<fk name="FK_K12_Course_Ref_SCED_Course_Subject_Area" to_schema="dbo" to_table="Ref_SCED_Course_Subject_Area" >
+				<fk_column name="Ref_SCED_Course_Subject_Area_Id" pk="Ref_SCED_Course_Subject_Area_Id" />
+			</fk>
+			<fk name="FK_K12_Course_Ref_Workbased_Learning_Opportunity_Type" to_schema="dbo" to_table="Ref_Workbased_Learning_Opportunity_Type" >
+				<fk_column name="Ref_Workbased_Learning_Opportunity_Type_Id" pk="Ref_Workbased_Learning_Opportunity_Type_Id" />
+			</fk>
 		</table>
 		<table name="K12_Lea" >
 			<column name="Organization_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -2931,6 +3288,15 @@
 			</index>
 			<fk name="FK_K12_Lea_Organization" to_schema="dbo" to_table="Organization" delete_action="cascade" update_action="cascade" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_K12_Lea_Ref_LEA_Improvement_Status" to_schema="dbo" to_table="Ref_Lea_Improvement_Status" >
+				<fk_column name="Ref_LEA_Improvement_Status_Id" pk="Ref_Lea_Improvement_Status_Id" />
+			</fk>
+			<fk name="FK_K12_Lea_Ref_Lea_Type" to_schema="dbo" to_table="Ref_Lea_Type" >
+				<fk_column name="Ref_Lea_Type_Id" pk="Ref_Lea_Type_Id" />
+			</fk>
+			<fk name="FK_K12_Lea_Ref_Public_School_Choice_Status" to_schema="dbo" to_table="Ref_Public_School_Choice_Status" >
+				<fk_column name="Ref_Public_School_Choice_Status_Id" pk="Ref_Public_School_Choice_Status_Id" />
 			</fk>
 		</table>
 		<table name="K12_Lea_Federal_Funds" >
@@ -2958,6 +3324,18 @@
 			<fk name="FK_K12_LEA_Federal_Funds_K12_Lea1" to_schema="dbo" to_table="K12_Lea" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
 			</fk>
+			<fk name="FK_Organization_Federal_Funds_Ref_Federal_Funding_Allocation" to_schema="dbo" to_table="Ref_Federal_Program_Funding_Allocation_Type" >
+				<fk_column name="Ref_Federal_Program_Funding_Allocation_Type_Id" pk="Ref_Federal_Program_Funding_Allocation_Type_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Federal_Funds_Ref_LEA_Funds_Transfer_Type" to_schema="dbo" to_table="Ref_Lea_Funds_Transfer_Type" >
+				<fk_column name="Ref_Lea_Funds_Transfer_Type_Id" pk="Ref_Lea_Funds_Transfer_Type_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Federal_Funds_REAP_Alternative_Funding_Status" to_schema="dbo" to_table="Ref_Reap_Alternative_Funding_Status" >
+				<fk_column name="Ref_Reap_Alternative_Funding_Status_Id" pk="Ref_Reap_Alternative_Funding_Status_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Federal_Funds_Ref_RLIS_Program_Use" to_schema="dbo" to_table="Ref_Rlis_Program_Use" >
+				<fk_column name="Ref_Rlis_Program_Use_Id" pk="Ref_Rlis_Program_Use_Id" />
+			</fk>
 		</table>
 		<table name="K12_Lea_Federal_Reporting" >
 			<column name="Organization_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -2983,6 +3361,9 @@
 			<fk name="FK_K12_LEA_Federal_Reporting_Ref_Barrier_To_Educating_Homeless" to_schema="dbo" to_table="Ref_Barrier_To_Educating_Homeless" >
 				<fk_column name="Ref_Barrier_To_Educating_Homeless_Id" pk="Ref_Barrier_To_Educating_Homeless_Id" />
 			</fk>
+			<fk name="FK_K12_LEA_Federal_Reporting_Ref_Integrated_Technology_Status" to_schema="dbo" to_table="Ref_Integrated_Technology_Status" >
+				<fk_column name="Ref_Integrated_Technology_Status_Id" pk="Ref_Integrated_Technology_Status_Id" />
+			</fk>
 		</table>
 		<table name="K12_Lea_Pre_K_Eligibility" >
 			<column name="K12_LEA_Pre_K_Eligibility_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -2998,6 +3379,9 @@
 			<fk name="FK_K12_Lea_Pre_K_Eligibility_K12_Lea" to_schema="dbo" to_table="K12_Lea" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
 			</fk>
+			<fk name="FK_K12_Lea_Pre_K_Eligibility_Ref_Pre_Kindergarten_Eligibility" to_schema="dbo" to_table="Ref_Pre_Kindergarten_Eligibility" >
+				<fk_column name="Ref_Pre_Kindergarten_Eligibility_Id" pk="Ref_Pre_Kindergarten_Eligibility_Id" />
+			</fk>
 		</table>
 		<table name="K12_Lea_Pre_K_Eligible_Ages_IDEA" >
 			<column name="K12_LEA_Pre_K_Eligible_Ages_IDEA_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -3008,6 +3392,9 @@
 			</index>
 			<fk name="FK_K12_LEA_Pre_K_Eligible_Ages_IDEA_K12_Lea" to_schema="dbo" to_table="K12_Lea" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Pre_K_Eligible_Ages_IDEA_Ref_Pre_K_Eligible_Ages_Non_IDEA" to_schema="dbo" to_table="Ref_Pre_K_Eligible_Ages_Non_IDEA" >
+				<fk_column name="Ref_Pre_K_Eligible_Ages_Non_IDEA_Id" pk="Ref_Pre_K_Eligible_Ages_Non_IDEA_Id" />
 			</fk>
 		</table>
 		<table name="K12_Lea_Safe_Drug_Free" >
@@ -3041,6 +3428,9 @@
 			<fk name="FK_K12_LEA_Title_III_Professional_Dev_K12_Lea" to_schema="dbo" to_table="K12_Lea" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
 			</fk>
+			<fk name="FK_K12_LEA_Title_III_Professional_Dev_Title_III_Professional_Dev_Type" to_schema="dbo" to_table="Ref_Title_III_Professional_Development_Type" >
+				<fk_column name="Ref_Title_III_Professional_Development_Type_Id" pk="Ref_Title_III_Professional_Development_Type_Id" />
+			</fk>
 		</table>
 		<table name="K12_Lea_Title_I_Support_Service" >
 			<column name="K12_Lea_Title_I_Support_Service_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -3051,6 +3441,9 @@
 			</index>
 			<fk name="FK_K12_LEA_Title_I_Support_Service_K12_Lea" to_schema="dbo" to_table="K12_Lea" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Title_I_Support_Service_Ref_K12_LEA_Title_I_Support_Service" to_schema="dbo" to_table="Ref_K12_Lea_Title_I_Support_Service" >
+				<fk_column name="Ref_K12_Lea_Title_I_Support_Service_Id" pk="Ref_K12_LEA_Title_I_Support_Service_Id" />
 			</fk>
 		</table>
 		<table name="K12_Organization_Student_Responsibility" >
@@ -3066,6 +3459,9 @@
 			</index>
 			<fk name="FK_K12_Org_Student_Responsibility_Organization_Person_Role" to_schema="dbo" to_table="Organization_Person_Role" >
 				<fk_column name="Organization_Person_Role_Id" pk="Organization_Person_Role_Id" />
+			</fk>
+			<fk name="FK_K12_Org_Student_Responsibility_Ref_K12_Responsibility_Type" to_schema="dbo" to_table="Ref_K12_Responsibility_Type" >
+				<fk_column name="Ref_K12_Responsibility_Type_Id" pk="Ref_K12_Responsibility_Type_Id" />
 			</fk>
 		</table>
 		<table name="K12_Program_Or_Service" >
@@ -3083,6 +3479,27 @@
 			</index>
 			<fk name="FK_K12_Lea_Program_Or_Service_Organization" to_schema="dbo" to_table="Organization" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Program_Or_Service_Ref_MEP_Project_Type" to_schema="dbo" to_table="Ref_Mep_Project_Type" >
+				<fk_column name="Ref_Mep_Project_Type_Id" pk="Ref_Mep_Project_Type_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Program_Or_Service_Ref_MEP_Session_Type" to_schema="dbo" to_table="Ref_Mep_Session_Type" >
+				<fk_column name="Ref_Mep_Session_Type_Id" pk="Ref_Mep_Session_Type_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Program_Or_Service_Ref_Program_Day_Length" to_schema="dbo" to_table="Ref_Program_Day_Length" >
+				<fk_column name="Ref_Pre_Kindergarten_Daily_Length_Id" pk="Ref_Program_Day_Length_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Program_Or_Service_Ref_Program_Day_Length1" to_schema="dbo" to_table="Ref_Program_Day_Length" >
+				<fk_column name="Ref_Kindergarten_Daily_Length_Id" pk="Ref_Program_Day_Length_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Program_Or_Service_Ref_Program_Gifted_Eligibility" to_schema="dbo" to_table="Ref_Program_Gifted_Eligibility" >
+				<fk_column name="Ref_Program_Gifted_Eligibility_Id" pk="Ref_Program_Gifted_Eligibility_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Program_Or_Service_Ref_Title_I_Instruct_Services" to_schema="dbo" to_table="Ref_Title_I_Instructional_Services" >
+				<fk_column name="Ref_Title_I_Instructional_Services_Id" pk="Ref_Title_I_Instructional_Services_Id" />
+			</fk>
+			<fk name="FK_K12_LEA_Program_Or_Service_Ref_Title_I_Program_Type" to_schema="dbo" to_table="Ref_Title_I_Program_Type" >
+				<fk_column name="Ref_Title_I_Program_Type_Id" pk="Ref_Title_I_Program_Type_Id" />
 			</fk>
 		</table>
 		<table name="K12_School" >
@@ -3120,6 +3537,18 @@
 			<fk name="FK_K12_School_Ref_Charter_School_Type" to_schema="dbo" to_table="Ref_Charter_School_Type" >
 				<fk_column name="Ref_Charter_School_Type_Id" pk="Ref_Charter_School_Type_Id" />
 			</fk>
+			<fk name="FK_K12_School_Ref_Increased_Learning_Time_Type" to_schema="dbo" to_table="Ref_Increased_Learning_Time_Type" >
+				<fk_column name="Ref_Increased_Learning_Time_Type_Id" pk="Ref_Increased_Learning_Time_Type_Id" />
+			</fk>
+			<fk name="FK_K12_School_Ref_School_Level" to_schema="dbo" to_table="Ref_School_Level" >
+				<fk_column name="Ref_School_Level_Id" pk="Ref_School_Level_Id" />
+			</fk>
+			<fk name="FK_K12_School_Ref_School_Type" to_schema="dbo" to_table="Ref_School_Type" >
+				<fk_column name="Ref_School_Type_Id" pk="Ref_School_Type_Id" />
+			</fk>
+			<fk name="FK_K12_School_Ref_State_Poverty_Designation" to_schema="dbo" to_table="Ref_State_Poverty_Designation" >
+				<fk_column name="Ref_State_Poverty_Designation_Id" pk="Ref_State_Poverty_Designation_Id" />
+			</fk>
 		</table>
 		<table name="K12_School_Corrective_Action" >
 			<column name="K12_School_Corrective_Action_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -3145,6 +3574,9 @@
 			<fk name="FK_K12_School_Grade_Offered_K12_School" to_schema="dbo" to_table="K12_School" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
 			</fk>
+			<fk name="FK_K12_School_Grade_Offered_Ref_Grade_Level" to_schema="dbo" to_table="Ref_Grade_Level" >
+				<fk_column name="Ref_Grade_Level_Id" pk="Ref_Grade_Level_Id" />
+			</fk>
 		</table>
 		<table name="K12_School_Improvement" >
 			<column name="K12_School_Improvement_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -3158,6 +3590,15 @@
 			</index>
 			<fk name="FK_K12_School_Improvement_K12_School" to_schema="dbo" to_table="K12_School" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_K12_School_Improvement_Ref_School_Improvement_Funds" to_schema="dbo" to_table="Ref_School_Improvement_Funds" >
+				<fk_column name="Ref_School_Improvement_Funds_Id" pk="Ref_School_Improvement_Funds_Id" />
+			</fk>
+			<fk name="FK_K12_School_Improvement_Ref_School_Improvement_Status" to_schema="dbo" to_table="Ref_School_Improvement_Status" >
+				<fk_column name="Ref_School_Improvement_Status_Id" pk="Ref_School_Improvement_Status_Id" />
+			</fk>
+			<fk name="FK_K12_School_Improvement_Ref_SIG_Intervention_Type" to_schema="dbo" to_table="Ref_Sig_Intervention_Type" >
+				<fk_column name="Ref_Sig_Intervention_Type_Id" pk="Ref_Sig_Intervention_Type_Id" />
 			</fk>
 		</table>
 		<table name="K12_School_Status" >
@@ -3177,6 +3618,18 @@
 			<fk name="FK_K12_School_Status_Ref_Alternative_School_Focus" to_schema="dbo" to_table="Ref_Alternative_School_Focus" >
 				<fk_column name="Ref_Alternative_School_Focus_Id" pk="Ref_Alternative_School_Focus_Id" />
 			</fk>
+			<fk name="FK_K12_School_Status_Ref_Internet_Access" to_schema="dbo" to_table="Ref_Internet_Access" >
+				<fk_column name="Ref_Internet_Access_Id" pk="Ref_Internet_Access_Id" />
+			</fk>
+			<fk name="FK_K12_School_Status_Ref_Magnet_Special_Program" to_schema="dbo" to_table="Ref_Magnet_Special_Program" >
+				<fk_column name="Ref_Magnet_Special_Program_Id" pk="Ref_Magnet_Special_Program_Id" />
+			</fk>
+			<fk name="FK_K12_School_Status_Ref_Restructuring_Action" to_schema="dbo" to_table="Ref_Restructuring_Action" >
+				<fk_column name="Ref_Restructuring_Action_Id" pk="Ref_Restructuring_Action_Id" />
+			</fk>
+			<fk name="FK_K12_School_Status_Ref_Title_1_School_Status" to_schema="dbo" to_table="Ref_Title_I_School_Status" >
+				<fk_column name="Ref_Title_I_School_Status_Id" pk="Ref_Title_1_School_Status_Id" />
+			</fk>
 		</table>
 		<table name="K12_Sea" >
 			<column name="Organization_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -3186,6 +3639,9 @@
 			</index>
 			<fk name="FK_K12_Sea_Organization" to_schema="dbo" to_table="Organization" delete_action="cascade" update_action="cascade" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_K12_SEA_Ref_State_ANSI_Code" to_schema="dbo" to_table="Ref_State_ANSI_Code" >
+				<fk_column name="Ref_State_ANSI_Code" pk="Code" />
 			</fk>
 		</table>
 		<table name="K12_Sea_Alternate_Fund_Use" >
@@ -3217,6 +3673,9 @@
 			</index>
 			<fk name="FK_K12_SEA_Federal_Fund_Allocation_K12_SEA" to_schema="dbo" to_table="K12_Sea" >
 				<fk_column name="Organization_Id" pk="Organization_Id" />
+			</fk>
+			<fk name="FK_K12_SEA_Federal_Fund_Allocation_Ref_Federal_Funding_Allocation" to_schema="dbo" to_table="Ref_Federal_Program_Funding_Allocation_Type" >
+				<fk_column name="Ref_Federal_Program_Funding_Allocation_Type_Id" pk="Ref_Federal_Program_Funding_Allocation_Type_Id" />
 			</fk>
 		</table>
 		<table name="K12_Sea_Federal_Funds" >
@@ -3260,6 +3719,27 @@
 			<fk name="FK_K12_Staff_Assignment_Ref_Classroom_Position_Type" to_schema="dbo" to_table="Ref_Classroom_Position_Type" >
 				<fk_column name="Ref_Classroom_Position_Type_Id" pk="Ref_Classroom_Position_Type_Id" />
 			</fk>
+			<fk name="FK_K12_Staff_Assignment_Ref_Education_Staff_Classification" to_schema="dbo" to_table="Ref_K12_Staff_Classification" >
+				<fk_column name="Ref_K12_Staff_Classification_Id" pk="Ref_Education_Staff_Classification_Id" />
+			</fk>
+			<fk name="FK_K12_Staff_Assignment_Ref_Mep_Staff_Category" to_schema="dbo" to_table="Ref_Mep_Staff_Category" >
+				<fk_column name="Ref_Mep_Staff_Category_Id" pk="Ref_Mep_Staff_Category_Id" />
+			</fk>
+			<fk name="FK_K12_Staff_Assignment_Ref_Professional_Education_Job_Classification" to_schema="dbo" to_table="Ref_Professional_Education_Job_Classification" >
+				<fk_column name="Ref_Professional_Education_Job_Classification_Id" pk="Ref_Professional_Education_Job_Classification_Id" />
+			</fk>
+			<fk name="FK_K12_Staff_Assignment_Ref_Special_Education_Age_Group_Taught" to_schema="dbo" to_table="Ref_Special_Education_Age_Group_Taught" >
+				<fk_column name="Ref_Special_Education_Age_Group_Taught_Id" pk="Ref_Special_Education_Age_Group_Taught_Id" />
+			</fk>
+			<fk name="FK_K12_Staff_Assignment_Ref_Special_Education_Staff_Category" to_schema="dbo" to_table="Ref_Special_Education_Staff_Category" >
+				<fk_column name="Ref_Special_Education_Staff_Category_Id" pk="Ref_Special_Education_Staff_Category_Id" />
+			</fk>
+			<fk name="FK_K12_Staff_Assignment_Ref_Teaching_Assignment_Role" to_schema="dbo" to_table="Ref_Teaching_Assignment_Role" >
+				<fk_column name="Ref_Teaching_Assignment_Role_Id" pk="Ref_Teaching_Assignment_Role_Id" />
+			</fk>
+			<fk name="FK_K12_Staff_Assignment_Ref_Title_I_Program_Staff_Category" to_schema="dbo" to_table="Ref_Title_I_Program_Staff_Category" >
+				<fk_column name="Ref_Title_I_Program_Staff_Category_Id" pk="Ref_Title_I_Program_Staff_Category_Id" />
+			</fk>
 		</table>
 		<table name="K12_Staff_Employment" >
 			<column name="Staff_Employment_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -3280,6 +3760,12 @@
 			</index>
 			<fk name="FK_K12_Staff_Employment_Ref_Employment_Status" to_schema="dbo" to_table="Ref_Employment_Status" >
 				<fk_column name="Ref_Employment_Status_Id" pk="Ref_Employment_Status_Id" />
+			</fk>
+			<fk name="FK_K12_Staff_Employment_Ref_Edu_Staff_Classification" to_schema="dbo" to_table="Ref_K12_Staff_Classification" >
+				<fk_column name="Ref_K12_Staff_Classification_Id" pk="Ref_Education_Staff_Classification_Id" />
+			</fk>
+			<fk name="FK_K12_Staff_Employment_Staff_Employment" to_schema="dbo" to_table="Staff_Employment" >
+				<fk_column name="Staff_Employment_Id" pk="Staff_Employment_Id" />
 			</fk>
 		</table>
 		<table name="K12_Student_Academic_Honor" >
@@ -3321,6 +3807,30 @@
 			</index>
 			<fk name="FK_K12_Student_Academic_Record_Organization_Person" to_schema="dbo" to_table="Organization_Person_Role" delete_action="cascade" update_action="cascade" >
 				<fk_column name="Organization_Person_Role_Id" pk="Organization_Person_Role_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Academic_Record_Ref_Gpa_Weighted_Indicator" to_schema="dbo" to_table="Ref_Gpa_Weighted_Indicator" >
+				<fk_column name="Ref_Gpa_Weighted_Indicator_Id" pk="Ref_Gpa_Weighted_Indicator_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Academic_Record_Ref_HS_Diploma_Distinction_Type" to_schema="dbo" to_table="Ref_High_School_Diploma_Distinction_Type" >
+				<fk_column name="Ref_High_School_Diploma_Distinction_Type_Id" pk="Ref_High_School_Diploma_Distinction_Type_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Academic_Record_Ref_High_School_Diploma_Type" to_schema="dbo" to_table="Ref_High_School_Diploma_Type" >
+				<fk_column name="Ref_High_School_Diploma_Type_Id" pk="Ref_High_School_Diploma_Type_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Academic_Record_Ref_Pre_And_Post_Test_Indicator" to_schema="dbo" to_table="Ref_Pre_And_Post_Test_Indicator" >
+				<fk_column name="Ref_Pre_And_Post_Test_Indicator_Id" pk="Ref_Pre_And_Post_Test_Indicator_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Academic_Record_Ref_Professional_Technical_Credential" to_schema="dbo" to_table="Ref_Professional_Technical_Credential_Type" >
+				<fk_column name="Ref_Professional_Technical_Credential_Type_Id" pk="Ref_Professional_Technical_Credential_Type_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Academic_Record_Ref_Progress_Level" to_schema="dbo" to_table="Ref_Progress_Level" >
+				<fk_column name="Ref_Progress_Level_Id" pk="Ref_Progress_Level_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Academic_Record_Ref_PS_Enrollment_Action" to_schema="dbo" to_table="Ref_Ps_Enrollment_Action" >
+				<fk_column name="Ref_Ps_Enrollment_Action_Id" pk="Ref_Ps_Enrollment_Action_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Academic_Record_Ref_Technology_Literacy_Status" to_schema="dbo" to_table="Ref_Technology_Literacy_Status" >
+				<fk_column name="Ref_Technology_Literacy_Status_Id" pk="Ref_Technology_Literacy_Status_Id" />
 			</fk>
 		</table>
 		<table name="K12_Student_Activity" >
@@ -3397,6 +3907,18 @@
 			<fk name="FK_K12_Student_Course_Section_Ref_Credit_Type_Earned" to_schema="dbo" to_table="Ref_Credit_Type_Earned" >
 				<fk_column name="Ref_Credit_Type_Earned_Id" pk="Ref_Credit_Type_Earned_Id" />
 			</fk>
+			<fk name="FK_K12_Student_Course_Section_Ref_Exit_Or_Withdrawal_Status" to_schema="dbo" to_table="Ref_Exit_Or_Withdrawal_Status" >
+				<fk_column name="Ref_Exit_Or_Withdrawal_Status_Id" pk="Ref_Exit_Or_Withdrawal_Status_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Course_Section_Ref_Grade_Level" to_schema="dbo" to_table="Ref_Grade_Level" >
+				<fk_column name="Ref_Grade_Level_When_Course_Taken_Id" pk="Ref_Grade_Level_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Course_Section_Ref_Pre_And_Post_Test_Indicator" to_schema="dbo" to_table="Ref_Pre_And_Post_Test_Indicator" >
+				<fk_column name="Ref_Pre_And_Post_Test_Indicator_Id" pk="Ref_Pre_And_Post_Test_Indicator_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Course_Section_Ref_Progress_Level" to_schema="dbo" to_table="Ref_Progress_Level" >
+				<fk_column name="Ref_Progress_Level_Id" pk="Ref_Progress_Level_Id" />
+			</fk>
 		</table>
 		<table name="K12_Student_Course_Section_Mark" >
 			<column name="K12_Student_Course_Section_Mark_Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -3457,6 +3979,15 @@
 			</fk>
 			<fk name="FK_K12_Student_Discipline_Ref_Discipline_Reason1" to_schema="dbo" to_table="Ref_Discipline_Reason" >
 				<fk_column name="Ref_Discipline_Reason_Id" pk="Ref_Discipline_Reason_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Discipline_Ref_IDEA_Discipline_Method_Firearm" to_schema="dbo" to_table="Ref_IDEA_Discipline_Method_Firearm" >
+				<fk_column name="Ref_IDEA_Discipline_Method_Firearm_Id" pk="Ref_IDEA_Discipline_Method_Firearm_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Discipline_Ref_IDEA_Interim_Removal_Id" to_schema="dbo" to_table="Ref_IDEA_Interim_Removal" >
+				<fk_column name="Ref_Idea_Interim_Removal_Id" pk="Ref_IDEA_Interim_Removal_Id" />
+			</fk>
+			<fk name="FK_K12_Student_Discipline_Ref_IDES_Interim_Removal_Reason" to_schema="dbo" to_table="Ref_IDEA_Interim_Removal_Reason" >
+				<fk_column name="Ref_Idea_Interim_Removal_Reason_Id" pk="Ref_IDEA_Interim_Removal_Reason_Id" />
 			</fk>
 		</table>
 		<table name="K12_Student_Employment" >
@@ -11191,327 +11722,327 @@ WHERE ms.Row_Number = es.Row_Number
 		<entity schema="dbo" name="Ref_Environment_Setting" color="c8f5bf" x="585" y="6510" />
 		<entity schema="dbo" name="_CEDS_Elements" color="c8f5bf" x="390" y="6510" />
 		<entity schema="dbo" name="_CEDS_to_NDS_Mapping" color="f5ddbf" x="1260" y="5880" />
-		<entity schema="dbo" name="Ref_ERS_Rural_Urban_Continuum_Code" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Exit_Or_Withdrawal_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Exit_Or_Withdrawal_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Family_Income_Source" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Federal_Program_Funding_Allocation_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Account_Balance_Sheet_Code" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Account_Category" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Account_Fund_Classification" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Account_Program_Code" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Account_Revenue_Code" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Aid_Application_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Aid_Award_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Aid_Award_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Aid_Veterans_Benefit_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Aid_Veterans_Benefit_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Expenditure_Function_Code" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Expenditure_Level_Of_Instruction_Code" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Financial_Expenditure_Object_Code" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Firearm_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Food_Service_Eligibility" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Food_Service_Participation" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Frequency_Of_Service" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Frequency_Unit" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Full_Time_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Goal_Measurement_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Goal_Status_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Goals_For_Attending_Adult_Education" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Gpa_Weighted_Indicator" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Grade_Level" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Grade_Level_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Grade_Point_Average_Domain" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Graduate_Assistant_Ipeds_Category" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Graduate_Or_Doctoral_Exam_Results_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Gun_Free_Schools_Act_Reporting_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Health_Insurance_Coverage" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Hearing_Screening_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_High_School_Diploma_Distinction_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_High_School_Diploma_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_High_School_Graduation_Rate_Indicator" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Higher_Education_Institution_Accreditation_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Homeless_Nighttime_Residence" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IDEA_Disability_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IDEA_Discipline_Method_Firearm" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IDEA_Educational_Environment_EC" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IDEA_Educational_Environment_School_Age" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IDEA_Eligibility_Evaluation_Category" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IDEA_Environment_EL" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IDEA_IEP_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IDEA_Interim_Removal" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IDEA_Interim_Removal_Reason" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IDEA_Part_C_Eligibility_Category" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IEP_Authorization_Document_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IEP_Eligibility_Evaluation_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IEP_Goal_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDSFASB_Financial_Position" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDSFASB_Functional_Expense" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDSFASB_Pell_Grant_Transactions" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDSFASB_Revenue" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDSFASB_Revenue_Restriction" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDSFASB_Scholarshipsand_Fellowships_Revenue" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDSGASB_Financial_Position" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDSGASB_Functional_Expense" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDSGASB_Revenue" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDSGASB_Scholarshipsand_Fellowships_Revenue" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDS_Intercollegiate_Athletics_Expenses" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPEDS_Natural_Expense" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPSP_Progress_Report_Schedule" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_IPSP_Progress_Report_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_ISO6392_Language" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_ISO6393_Language" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_ISO6395_Language_Family" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Immunization_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Incident_Behavior" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Incident_Behavior_Secondary" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Incident_Injury_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Incident_Location" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Incident_Multiple_Offense_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Incident_Perpetrator_Injury_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Incident_Person_Role_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Incident_Person_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Incident_Reporter_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Incident_Time_Description_Code" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Income_Calculation_Method" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Increased_Learning_Time_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Individualized_Program_Date_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Individualized_Program_Location" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Individualized_Program_Planned_Service_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Individualized_Program_Transition_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Individualized_Program_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Institution_Telephone_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Instruction_Credit_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Instruction_Location_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Instructional_Activity_Hours" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Instructional_Staff_Contract_Length" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Instructional_Staff_Faculty_Tenure" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Integrated_Technology_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Internet_Access" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Ipeds_Occupational_Category" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Item_Response_Theory_Difficulty_Category" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Item_Response_Theory_Kappa_Algorithm" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_K12_End_Of_Course_Requirement" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_K12_Lea_Title_I_Support_Service" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_K12_Responsibility_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_K12_Staff_Classification" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Language" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Language_Use_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Lea_Funds_Transfer_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Lea_Improvement_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Lea_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learner_Action_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learner_Activity_Add_To_Grade_Book_Flag" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learner_Activity_Maximum_Time_Allowed_Units" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learner_Activity_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Access_API_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Access_Hazard_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Access_Mode_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Access_Rights_Url" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Author_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Book_Format_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Competency_Alignment_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Control_Flexibility_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Digital_Media_Sub_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Digital_Media_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Educational_Use" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Intended_End_User_Role" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Interaction_Mode" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Interactivity_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Media_Feature_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Physical_Media_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Learning_Resource_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Leave_Event_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Level_Of_Institution" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_License_Exempt" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Literacy_Assessment" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Magnet_Special_Program" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Medical_Alert_Indicator" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Mep_Enrollment_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Mep_Project_Based" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Mep_Project_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Mep_Service_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Mep_Session_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Mep_Staff_Category" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Method_Of_Service_Delivery" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Military_Active_Student_Indicator" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Military_Branch" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Military_Connected_Student_Indicator" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Military_Veteran_Student_Indicator" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Multiple_Intelligence_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_NCES_College_Course_Map_Code" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Naep_Aspects_Of_Reading" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Naep_Math_Complexity_Level" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Need_Determination_Method" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Neglected_Program_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Non_Promotion_Reason" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Non_Traditional_Gender_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_ONETSOC_Occupation_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Operational_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Operational_Status_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Organization_Element_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Organization_Identification_System" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Organization_Identifier_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Organization_Indicator" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Organization_Location_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Organization_Monitoring_Notifications" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Organization_Relationship" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Organization_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Other_Name_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Outcome_Time_Point" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PD_Activity_Approved_Purpose" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PD_Activity_Credit_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PD_Activity_Education_Levels_Addressed" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PD_Activity_Level" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PD_Activity_Target_Audience" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PD_Activity_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PD_Audience_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PD_Delivery_Method" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PD_Instructional_Delivery_Mode" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PD_Session_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PESC_Award_Level_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PS_Exit_Or_Withdrawal_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_PS_Program_Level" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Paraprofessional_Qualification" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Participation_Status_Ayp" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Participation_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Person_Identification_System" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Person_Identifier_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Person_Location_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Person_Relationship" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Person_Status_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Person_Telephone_Number_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Personal_Information_Verification" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Population_Served" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Pre_And_Post_Test_Indicator" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Pre_K_Eligible_Ages_Non_IDEA" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Pre_Kindergarten_Eligibility" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Predominant_Calendar_System" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Present_Attendance_Category" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Professional_Development_Financial_Support" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Professional_Education_Job_Classification" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Professional_Technical_Credential_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Proficiency_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Proficiency_Target_Ayp" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Profit_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Program_Day_Length" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Program_Exit_Reason" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Program_Gifted_Eligibility" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Program_Length_Hours_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Program_Sponsor_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Program_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Progress_Level" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Promotion_Reason" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Proof_Of_Residency_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Ps_Enrollment_Action" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Ps_Enrollment_Award_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Ps_Enrollment_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Ps_Enrollment_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Ps_Lep_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Ps_Student_Level" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Public_School_Choice_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Public_School_Residence" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Purpose_Of_Monitoring_Visit" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Qris_Participation" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Race" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Reap_Alternative_Funding_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Reason_Delay_Transition_Conf" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Reconstituted_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Referral_Outcome" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Reimbursement_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Restructuring_Action" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Rlis_Program_Use" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Role_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Role_Status_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_SCED_Course_Level" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_SCED_Course_Subject_Area" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Scheduled_Well_Child_Screening" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_School_Food_Service_Program" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_School_Improvement_Funds" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_School_Improvement_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_School_Level" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_School_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Score_Metric_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Service_Frequency" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Service_Option" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Services" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Session_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Sex" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Sig_Intervention_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Single_Sex_Class_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Space_Use_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Special_Education_Age_Group_Taught" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Special_Education_Exit_Reason" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Special_Education_Staff_Category" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Staff_Performance_Level" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Standardized_Admission_Test" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_State" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_State_ANSI_Code" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_State_Poverty_Designation" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Student_Support_Service_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Supervised_Clinical_Experience" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Teacher_Education_Credential_Exam" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Teacher_Education_Exam_Score_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Teacher_Education_Test_Company" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Teacher_Prep_Completer_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Teacher_Prep_Enrollment_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Teaching_Assignment_Role" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Teaching_Credential_Basis" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Teaching_Credential_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Technical_Assistance_Delivery_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Technical_Assistance_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Technology_Literacy_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Telephone_Number_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Tenure_System" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Text_Complexity_System" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Time_For_Completion_Units" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Title_III_Accountability" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Title_III_Language_Instruction_Program_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Title_III_Professional_Development_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Title_I_Indicator" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Title_I_Instructional_Services" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Title_I_Program_Staff_Category" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Title_I_Program_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Title_I_School_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Transfer_Out_Indicator" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Transfer_Ready" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Tribal_Affiliation" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Trimester_When_Prenatal_Care_Began" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Tuition_Residency_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Tuition_Unit" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_US_Citizenship_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Visa_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Vision_Screening_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Wage_Collection_Method" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Wage_Verification" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Weapon_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Wf_Program_Participation" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Ref_Workbased_Learning_Opportunity_Type" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Required_Immunization" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Role" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Role_Attendance" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Role_Attendance_Event" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Role_Status" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Rubric" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Rubric_Criterion" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Rubric_Criterion_Level" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Service_Frequency" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Service_Plan" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Service_Provided" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Service_Provider" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Service_Staff" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Services_Received" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Staff_Credential" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Staff_Employment" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Staff_Evaluation" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Staff_Experience" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Staff_Professional_Development_Activity" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Staff_Technical_Assistance" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Teacher_Education_Credential_Exam" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Teacher_Student_Data_Link_Exclusion" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Workforce_Employment_Quarterly_Data" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="Workforce_Program_Participation" color="1f5182" x="6480" y="3900" />
-		<entity schema="dbo" name="v_CEDS_Element_Details" color="1f5182" x="6540" y="3885" />
-		<entity schema="dbo" name="v_CEDS_Mapping" color="1f5182" x="6750" y="3885" />
+		<entity schema="dbo" name="Ref_ERS_Rural_Urban_Continuum_Code" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Exit_Or_Withdrawal_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Exit_Or_Withdrawal_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Family_Income_Source" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Federal_Program_Funding_Allocation_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Account_Balance_Sheet_Code" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Account_Category" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Account_Fund_Classification" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Account_Program_Code" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Account_Revenue_Code" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Aid_Application_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Aid_Award_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Aid_Award_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Aid_Veterans_Benefit_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Aid_Veterans_Benefit_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Expenditure_Function_Code" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Expenditure_Level_Of_Instruction_Code" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Financial_Expenditure_Object_Code" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Firearm_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Food_Service_Eligibility" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Food_Service_Participation" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Frequency_Of_Service" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Frequency_Unit" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Full_Time_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Goal_Measurement_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Goal_Status_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Goals_For_Attending_Adult_Education" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Gpa_Weighted_Indicator" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Grade_Level" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Grade_Level_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Grade_Point_Average_Domain" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Graduate_Assistant_Ipeds_Category" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Graduate_Or_Doctoral_Exam_Results_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Gun_Free_Schools_Act_Reporting_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Health_Insurance_Coverage" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Hearing_Screening_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_High_School_Diploma_Distinction_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_High_School_Diploma_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_High_School_Graduation_Rate_Indicator" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Higher_Education_Institution_Accreditation_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Homeless_Nighttime_Residence" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IDEA_Disability_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IDEA_Discipline_Method_Firearm" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IDEA_Educational_Environment_EC" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IDEA_Educational_Environment_School_Age" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IDEA_Eligibility_Evaluation_Category" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IDEA_Environment_EL" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IDEA_IEP_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IDEA_Interim_Removal" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IDEA_Interim_Removal_Reason" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IDEA_Part_C_Eligibility_Category" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IEP_Authorization_Document_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IEP_Eligibility_Evaluation_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IEP_Goal_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDSFASB_Financial_Position" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDSFASB_Functional_Expense" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDSFASB_Pell_Grant_Transactions" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDSFASB_Revenue" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDSFASB_Revenue_Restriction" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDSFASB_Scholarshipsand_Fellowships_Revenue" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDSGASB_Financial_Position" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDSGASB_Functional_Expense" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDSGASB_Revenue" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDSGASB_Scholarshipsand_Fellowships_Revenue" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDS_Intercollegiate_Athletics_Expenses" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPEDS_Natural_Expense" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPSP_Progress_Report_Schedule" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_IPSP_Progress_Report_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_ISO6392_Language" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_ISO6393_Language" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_ISO6395_Language_Family" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Immunization_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Incident_Behavior" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Incident_Behavior_Secondary" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Incident_Injury_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Incident_Location" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Incident_Multiple_Offense_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Incident_Perpetrator_Injury_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Incident_Person_Role_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Incident_Person_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Incident_Reporter_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Incident_Time_Description_Code" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Income_Calculation_Method" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Increased_Learning_Time_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Individualized_Program_Date_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Individualized_Program_Location" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Individualized_Program_Planned_Service_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Individualized_Program_Transition_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Individualized_Program_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Institution_Telephone_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Instruction_Credit_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Instruction_Location_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Instructional_Activity_Hours" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Instructional_Staff_Contract_Length" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Instructional_Staff_Faculty_Tenure" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Integrated_Technology_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Internet_Access" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Ipeds_Occupational_Category" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Item_Response_Theory_Difficulty_Category" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Item_Response_Theory_Kappa_Algorithm" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_K12_End_Of_Course_Requirement" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_K12_Lea_Title_I_Support_Service" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_K12_Responsibility_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_K12_Staff_Classification" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Language" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Language_Use_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Lea_Funds_Transfer_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Lea_Improvement_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Lea_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learner_Action_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learner_Activity_Add_To_Grade_Book_Flag" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learner_Activity_Maximum_Time_Allowed_Units" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learner_Activity_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Access_API_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Access_Hazard_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Access_Mode_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Access_Rights_Url" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Author_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Book_Format_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Competency_Alignment_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Control_Flexibility_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Digital_Media_Sub_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Digital_Media_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Educational_Use" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Intended_End_User_Role" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Interaction_Mode" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Interactivity_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Media_Feature_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Physical_Media_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Learning_Resource_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Leave_Event_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Level_Of_Institution" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_License_Exempt" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Literacy_Assessment" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Magnet_Special_Program" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Medical_Alert_Indicator" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Mep_Enrollment_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Mep_Project_Based" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Mep_Project_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Mep_Service_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Mep_Session_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Mep_Staff_Category" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Method_Of_Service_Delivery" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Military_Active_Student_Indicator" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Military_Branch" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Military_Connected_Student_Indicator" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Military_Veteran_Student_Indicator" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Multiple_Intelligence_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_NCES_College_Course_Map_Code" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Naep_Aspects_Of_Reading" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Naep_Math_Complexity_Level" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Need_Determination_Method" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Neglected_Program_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Non_Promotion_Reason" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Non_Traditional_Gender_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_ONETSOC_Occupation_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Operational_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Operational_Status_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Organization_Element_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Organization_Identification_System" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Organization_Identifier_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Organization_Indicator" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Organization_Location_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Organization_Monitoring_Notifications" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Organization_Relationship" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Organization_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Other_Name_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Outcome_Time_Point" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PD_Activity_Approved_Purpose" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PD_Activity_Credit_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PD_Activity_Education_Levels_Addressed" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PD_Activity_Level" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PD_Activity_Target_Audience" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PD_Activity_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PD_Audience_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PD_Delivery_Method" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PD_Instructional_Delivery_Mode" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PD_Session_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PESC_Award_Level_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PS_Exit_Or_Withdrawal_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_PS_Program_Level" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Paraprofessional_Qualification" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Participation_Status_Ayp" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Participation_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Person_Identification_System" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Person_Identifier_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Person_Location_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Person_Relationship" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Person_Status_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Person_Telephone_Number_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Personal_Information_Verification" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Population_Served" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Pre_And_Post_Test_Indicator" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Pre_K_Eligible_Ages_Non_IDEA" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Pre_Kindergarten_Eligibility" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Predominant_Calendar_System" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Present_Attendance_Category" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Professional_Development_Financial_Support" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Professional_Education_Job_Classification" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Professional_Technical_Credential_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Proficiency_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Proficiency_Target_Ayp" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Profit_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Program_Day_Length" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Program_Exit_Reason" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Program_Gifted_Eligibility" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Program_Length_Hours_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Program_Sponsor_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Program_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Progress_Level" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Promotion_Reason" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Proof_Of_Residency_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Ps_Enrollment_Action" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Ps_Enrollment_Award_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Ps_Enrollment_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Ps_Enrollment_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Ps_Lep_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Ps_Student_Level" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Public_School_Choice_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Public_School_Residence" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Purpose_Of_Monitoring_Visit" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Qris_Participation" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Race" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Reap_Alternative_Funding_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Reason_Delay_Transition_Conf" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Reconstituted_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Referral_Outcome" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Reimbursement_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Restructuring_Action" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Rlis_Program_Use" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Role_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Role_Status_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_SCED_Course_Level" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_SCED_Course_Subject_Area" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Scheduled_Well_Child_Screening" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_School_Food_Service_Program" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_School_Improvement_Funds" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_School_Improvement_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_School_Level" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_School_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Score_Metric_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Service_Frequency" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Service_Option" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Services" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Session_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Sex" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Sig_Intervention_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Single_Sex_Class_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Space_Use_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Special_Education_Age_Group_Taught" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Special_Education_Exit_Reason" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Special_Education_Staff_Category" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Staff_Performance_Level" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Standardized_Admission_Test" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_State" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_State_ANSI_Code" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_State_Poverty_Designation" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Student_Support_Service_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Supervised_Clinical_Experience" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Teacher_Education_Credential_Exam" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Teacher_Education_Exam_Score_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Teacher_Education_Test_Company" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Teacher_Prep_Completer_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Teacher_Prep_Enrollment_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Teaching_Assignment_Role" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Teaching_Credential_Basis" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Teaching_Credential_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Technical_Assistance_Delivery_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Technical_Assistance_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Technology_Literacy_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Telephone_Number_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Tenure_System" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Text_Complexity_System" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Time_For_Completion_Units" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Title_III_Accountability" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Title_III_Language_Instruction_Program_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Title_III_Professional_Development_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Title_I_Indicator" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Title_I_Instructional_Services" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Title_I_Program_Staff_Category" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Title_I_Program_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Title_I_School_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Transfer_Out_Indicator" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Transfer_Ready" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Tribal_Affiliation" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Trimester_When_Prenatal_Care_Began" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Tuition_Residency_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Tuition_Unit" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_US_Citizenship_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Visa_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Vision_Screening_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Wage_Collection_Method" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Wage_Verification" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Weapon_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Wf_Program_Participation" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Ref_Workbased_Learning_Opportunity_Type" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Required_Immunization" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Role" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Role_Attendance" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Role_Attendance_Event" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Role_Status" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Rubric" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Rubric_Criterion" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Rubric_Criterion_Level" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Service_Frequency" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Service_Plan" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Service_Provided" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Service_Provider" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Service_Staff" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Services_Received" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Staff_Credential" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Staff_Employment" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Staff_Evaluation" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Staff_Experience" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Staff_Professional_Development_Activity" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Staff_Technical_Assistance" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Teacher_Education_Credential_Exam" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Teacher_Student_Data_Link_Exclusion" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Workforce_Employment_Quarterly_Data" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="Workforce_Program_Participation" color="1f5182" x="5445" y="3675" />
+		<entity schema="dbo" name="v_CEDS_Element_Details" color="1f5182" x="5520" y="3660" />
+		<entity schema="dbo" name="v_CEDS_Mapping" color="1f5182" x="5715" y="3660" />
 	</layout>
 </project>

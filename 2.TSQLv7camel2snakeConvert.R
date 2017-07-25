@@ -24,7 +24,7 @@ createUpdateTSQLCEDSv7 <- read_lines("TSQLv7_camelCase/TSQLv7_camelCase_complete
 ##  humps (extra_Capital_Letters) can be left until last or when the pg_sql ignores them on the transform out of db_schema
 # tsql_ceds7_sc <- createUpdateTSQLCEDSv7
 # The main transform
-tsql_ceds7_sc <- gsub("((?<=[a-z0-9])[A-Z]|(?<![\\[\\'\\s+])[A-Z](?!to)(?=[a-z]))", "_\\1", createUpdateTSQLCEDSv7, perl = T)
+tsql_ceds7_sc <- gsub("((?<=[a-z0-9])[A-Z]|(?<![\\[\\'\\s+\\.@\\()])[A-Z](?!to)(?=[a-z]))", "_\\1", createUpdateTSQLCEDSv7, perl = T)
 # New Identity Resolution
 tsql_ceds7_sc %<>% gsub("\\[CEDS-NDS-V7\\]",  "\\[tsql_ceds7_sc\\]", .)
 
@@ -35,7 +35,6 @@ tsql_ceds7_sc %<>% gsub("Pre_*K(indergarten)*",  "Pre_K\\1_", ., perl = T, ignor
 tsql_ceds7_sc %<>% gsub("Title_*1",  "Title_1_", ., perl = T, ignore.case = T)
 tsql_ceds7_sc %<>% gsub("CENSUSID",  "CENSUS_ID", ., perl = T, ignore.case = T)
 tsql_ceds7_sc %<>% gsub("Is_User_Table",  "IsUserTable", ., perl = T, ignore.case = T)
-tsql_ceds7_sc %<>% gsub("\\._Value",  ".Value", ., perl = T, ignore.case = T)
 
 # Abbreviation Issues
 sc <- function(dat, ABBR) {
@@ -63,9 +62,9 @@ block_3 <- read_lines(clippablefile_path, skip = 18993, n_max = 9994)
 block_4 <- read_lines(clippablefile_path, skip = 28988, n_max = 9988)
 block_5 <- read_lines(clippablefile_path, skip = 38977, n_max = 9995)
 block_6 <- read_lines(clippablefile_path, skip = 48974, n_max = 9993)
-block_7 <- read_lines(clippablefile_path, skip = 58968, n_max = 9946)
+block_7 <- read_lines(clippablefile_path, skip = 58967, n_max = 9946)
 block_8 <- read_lines(clippablefile_path, skip = 68915, n_max = 9997)
-block_9 <- read_lines(clippablefile_path, skip = 78913, n_max = 9991)
+block_9 <- read_lines(clippablefile_path, skip = 78912, n_max = 9991)
 block_10 <- read_lines(clippablefile_path, skip = 88905, n_max = 10000)
 
 ###### 5. Write Out the Sliced Files ######
