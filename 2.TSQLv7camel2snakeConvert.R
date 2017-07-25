@@ -56,20 +56,29 @@ write_lines(tsql_ceds7_sc, clippablefile_path)
 
 # the full monty
 ###### 4. Slice Up Script into DbSchema executable size ######
-block_1 <- read_lines(clippablefile_path, n_max = 8990)
-block_2 <- read_lines(clippablefile_path, skip = 8990, n_max = 9000)
-block_3 <- read_lines(clippablefile_path, skip = 17990, n_max = 8893)
-block_4 <- read_lines(clippablefile_path, skip = 26884, n_max = 9955)
-block_5 <- read_lines(clippablefile_path, skip = 36839, n_max = 9988)
-block_6 <- read_lines(clippablefile_path, skip = 45443, n_max = 9988)
+block_1 <- read_lines(clippablefile_path, n_max = 9993)
+block_2 <- read_lines(clippablefile_path, skip = 9993, n_max = 9000)
+block_3 <- read_lines(clippablefile_path, skip = 18993, n_max = 9994)
+block_4 <- read_lines(clippablefile_path, skip = 28988, n_max = 9988)
+block_5 <- read_lines(clippablefile_path, skip = 38977, n_max = 9995)
+block_6 <- read_lines(clippablefile_path, skip = 48974, n_max = 9993)
+block_7 <- read_lines(clippablefile_path, skip = 58968, n_max = 9946)
+block_8 <- read_lines(clippablefile_path, skip = 68915, n_max = 9997)
+block_9 <- read_lines(clippablefile_path, skip = 78913, n_max = 9991)
+block_10 <- read_lines(clippablefile_path, skip = 88905, n_max = 10000)
 
 ###### 5. Write Out the Sliced Files ######
-clippablefile_root <- "tsql_ceds6_snake_case_redux/"
+clippablefile_root <- "tsql_ceds_v7_snake_case/tsql_ceds_v7_snake_case_blocks/"
+dir.create(clippablefile_root)
 # in DbSchema bite sized blocks
-write_lines(block_1, paste0(clippablefile_root, "tsql_ceds6sc_create_update_redux_pt1.sql"))
-write_lines(block_2, paste0(clippablefile_root, "tsql_ceds6sc_create_update_redux_pt2.sql"))
-write_lines(block_3, paste0(clippablefile_root, "tsql_ceds6sc_create_update_redux_pt3.sql"))
-write_lines(block_4, paste0(clippablefile_root, "tsql_ceds6sc_create_update_redux_pt4.sql"))
-write_lines(block_5, paste0(clippablefile_root, "tsql_ceds6sc_create_update_redux_pt5.sql"))
-write_lines(block_6, paste0(clippablefile_root, "tsql_ceds6sc_create_update_redux_pt6.sql"))
+write_lines(block_1, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt1.sql"))
+write_lines(block_2, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt2.sql"))
+write_lines(block_3, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt3.sql"))
+write_lines(block_4, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt4.sql"))
+write_lines(block_5, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt5.sql"))
+write_lines(block_6, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt6.sql"))
+write_lines(block_7, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt7.sql"))
+write_lines(block_8, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt8.sql"))
+write_lines(block_9, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt9.sql"))
+write_lines(block_10, paste0(clippablefile_root, "tsql_ceds_v7_snake_case_pt10.sql"))
 
