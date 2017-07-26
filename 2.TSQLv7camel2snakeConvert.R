@@ -24,7 +24,7 @@ createUpdateTSQLCEDSv7 <- read_lines("TSQLv7_camelCase/TSQLv7_camelCase_complete
 ##  humps (extra_Capital_Letters) can be left until last or when the pg_sql ignores them on the transform out of db_schema
 # tsql_ceds7_sc <- createUpdateTSQLCEDSv7
 # The main transform
-tsql_ceds7_sc <- gsub("((?<=[a-z0-9])[A-Z]|(?<![\\[\\'\\s+\\.@\\()])[A-Z](?!to)(?=[a-z]))", "_\\1", createUpdateTSQLCEDSv7, perl = T)
+tsql_ceds7_sc <- gsub("((?<=[a-z0-9])[A-Z]|(?<![\\[\\'\\s+\\.@\\(\\\"])[A-Z](?!to)(?=[a-z]))", "_\\1", createUpdateTSQLCEDSv7, perl = T)
 # New Identity Resolution
 tsql_ceds7_sc %<>% gsub("\\[CEDS-NDS-V7\\]",  "\\[tsql_ceds7_sc\\]", .)
 
