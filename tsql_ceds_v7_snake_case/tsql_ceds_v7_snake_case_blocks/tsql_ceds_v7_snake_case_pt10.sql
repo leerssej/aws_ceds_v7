@@ -4906,31 +4906,7 @@ BEGIN
 INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
 VALUES ('No', 'No', 'The person is NOT pursuing certification as a teacher.', 1.00, 4)
 INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
-VALUES ('Seeking_Candidacy', 'Seeking Candidacy', 'The person is seeking candidacy and pursuing certification as a teacher.', 2.00, 4)
-INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
-VALUES ('Enrolled', 'Enrolled', 'The person is enrolled in a program and pursuing certification as a teacher.', 3.00, 4)
-END;
-
-PRINT N'Populate Ref_Role_Status table';
-IF EXISTS(SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[Ref_Role_Status]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
-BEGIN
-INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
-VALUES ('Pre-registered', 'Pre-registered', 'Pre-registered is the status related to a student enrollment in an instance of a course.', 1.00, 5)
-INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
-VALUES ('Registered', 'Registered', 'Registered is the status related to a student enrollment in an instance of a course.', 2.00, 5)
-INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
-VALUES ('Enrolled', 'Enrolled', 'Enrolled is the status related to a student enrollment in an instance of a course.', 3.00, 5)
-INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
-VALUES ('Wait_Listed', 'Wait Listed', 'Wait Listed is the status related to a student enrollment in an instance of a course.', 4.00, 5)
-INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
-VALUES ('Dropped', 'Dropped', 'Dropped is the status related to a student enrollment in an instance of a course.', 5.00, 5)
-INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
-VALUES ('Completed', 'Completed', 'Completed is the status related to a student enrollment in an instance of a course.', 6.00, 5)
-END;
-
-
-PRINT N'Populate Ref_Employee_Benefit table';
-IF EXISTS(SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[Ref_Employee_Benefit]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+VALUES ('Seeking_Candidacy', 'Seeking Candidacy', 'The person is seeIF EXISTS(SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[Ref_Employee_Benefit]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
 BEGIN
 INSERT INTO dbo.[Ref_Employee_Benefit]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('01', 'Health insurance', 'Health insurance is offered by a program/facility/employer.', 1.00)
@@ -4988,5 +4964,29 @@ INSERT INTO dbo.[Ref_Employee_Benefit]([Code], [Description], [Definition], [Sor
 VALUES ('27', 'Child care fee assistance', 'Child care fee assistance is offered by a program/facility/employer.', 27.00)
 INSERT INTO dbo.[Ref_Employee_Benefit]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('28', 'Bonus', 'Bonus is offered by a program/facility/employer.', 28.00)
+END;king candidacy and pursuing certification as a teacher.', 2.00, 4)
+INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
+VALUES ('Enrolled', 'Enrolled', 'The person is enrolled in a program and pursuing certification as a teacher.', 3.00, 4)
 END;
+
+PRINT N'Populate Ref_Role_Status table';
+IF EXISTS(SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[Ref_Role_Status]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+BEGIN
+INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
+VALUES ('Pre-registered', 'Pre-registered', 'Pre-registered is the status related to a student enrollment in an instance of a course.', 1.00, 5)
+INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
+VALUES ('Registered', 'Registered', 'Registered is the status related to a student enrollment in an instance of a course.', 2.00, 5)
+INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
+VALUES ('Enrolled', 'Enrolled', 'Enrolled is the status related to a student enrollment in an instance of a course.', 3.00, 5)
+INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
+VALUES ('Wait_Listed', 'Wait Listed', 'Wait Listed is the status related to a student enrollment in an instance of a course.', 4.00, 5)
+INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
+VALUES ('Dropped', 'Dropped', 'Dropped is the status related to a student enrollment in an instance of a course.', 5.00, 5)
+INSERT INTO dbo.[Ref_Role_Status]([Code], [Description], [Definition], [Sort_Order], [Ref_Role_Status_Type_Id])
+VALUES ('Completed', 'Completed', 'Completed is the status related to a student enrollment in an instance of a course.', 6.00, 5)
+END;
+
+
+PRINT N'Populate Ref_Employee_Benefit table';
+
 
