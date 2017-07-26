@@ -8283,7 +8283,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000874' , @lev
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/CEDS_Element_Details.aspx?_Term_Id=11874' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item', @level2type=N'COLUMN',@level2name=N'URL';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The textual label identifying the class of the statement as designated by the promulgating body?e.g., "_Standard," "_Benchmark," "_Strand," or "_Topic." or "_Level 1, Level 2,..."' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item', @level2type=N'COLUMN',@level2name=N'Type';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The textual label identifying the class of the statement as designated by the promulgating body?e.g., "Standard," "Benchmark," "Strand," or "Topic." or "Level 1, Level 2,..."' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item', @level2type=N'COLUMN',@level2name=N'Type';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Competency Framework Item Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item', @level2type=N'COLUMN',@level2name=N'Type';
 
@@ -8363,7 +8363,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000876' , @lev
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/CEDS_Element_Details.aspx?_Term_Id=11876' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item', @level2type=N'COLUMN',@level2name=N'Ref_Multiple_Intelligence_Type_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The topicality of the competency framework item, e.g. "_Pythagorean Theorem" "_Trigonometric functions" "_Forces and energy" "_Scientific method" "_Oral history" etc.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item', @level2type=N'COLUMN',@level2name=N'Concept_Term';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The topicality of the competency framework item, e.g. "Pythagorean Theorem" "Trigonometric functions" "Forces and energy" "Scientific method" "Oral history" etc.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item', @level2type=N'COLUMN',@level2name=N'Concept_Term';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Competency Framework Item Concept Term' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Competency_Framework_Item', @level2type=N'COLUMN',@level2name=N'Concept_Term';
 

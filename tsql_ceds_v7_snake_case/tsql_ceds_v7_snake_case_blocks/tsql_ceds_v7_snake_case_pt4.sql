@@ -1582,7 +1582,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Incident', @level2type=N'COLUMN',@level2name=N'Incident_Reporter_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Information on the type of person who reported the incident. When known and/or if useful, use a more specific option code (e.g., "_Counselor" rather than "_Professional Staff").' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Incident', @level2type=N'COLUMN',@level2name=N'Ref_Incident_Reporter_Type_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Information on the type of person who reported the incident. When known and/or if useful, use a more specific option code (e.g., "Counselor" rather than "Professional Staff").' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Incident', @level2type=N'COLUMN',@level2name=N'Ref_Incident_Reporter_Type_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Incident Reporter Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Incident', @level2type=N'COLUMN',@level2name=N'Ref_Incident_Reporter_Type_Id';
 
@@ -9890,7 +9890,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Staff_Employment', @level2type=N'COLUMN',@level2name=N'Ref_Instructional_Staff_Faculty_Tenure_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The academic rank of staff whose primary responsibility is instruction, research, and/or public service.  Institutions without standard academic ranks should code staff whose primary responsibility is instruction, research, and/or public service as "_No Academic Rank."' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Staff_Employment', @level2type=N'COLUMN',@level2name=N'Ref_Academic_Rank_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The academic rank of staff whose primary responsibility is instruction, research, and/or public service.  Institutions without standard academic ranks should code staff whose primary responsibility is instruction, research, and/or public service as "No Academic Rank."' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Staff_Employment', @level2type=N'COLUMN',@level2name=N'Ref_Academic_Rank_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Academic Rank' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Staff_Employment', @level2type=N'COLUMN',@level2name=N'Ref_Academic_Rank_Id';
 

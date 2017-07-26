@@ -1118,7 +1118,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key 
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence the options in this option set should be ordered.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Academic_Rank', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The academic rank of staff whose primary responsibility is instruction, research, and/or public service.  Institutions without standard academic ranks should code staff whose primary responsibility is instruction, research, and/or public service as "_No Academic Rank."' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Academic_Rank';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The academic rank of staff whose primary responsibility is instruction, research, and/or public service.  Institutions without standard academic ranks should code staff whose primary responsibility is instruction, research, and/or public service as "No Academic Rank."' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Academic_Rank';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Academic Rank' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Academic_Rank';
 
@@ -8005,7 +8005,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key 
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence the options in this option set should be ordered.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Incident_Reporter_Type', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Information on the type of person who reported the incident. When known and/or if useful, use a more specific option code (e.g., "_Counselor" rather than "_Professional Staff").' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Incident_Reporter_Type';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Information on the type of person who reported the incident. When known and/or if useful, use a more specific option code (e.g., "Counselor" rather than "Professional Staff").' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Incident_Reporter_Type';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Incident Reporter Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Incident_Reporter_Type';
 

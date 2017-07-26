@@ -2182,6 +2182,7 @@ INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sor
 VALUES ('nuj', 'Nyole', NULL, 450.90)
 INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('nuk', 'Nuu-chah-nulth', NULL, 451.00)
+END;
 INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('nul', 'Nusa Laut', NULL, 451.10)
 INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sort_Order])
