@@ -2545,9 +2545,9 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ses_School_Choice20_Percent_Obligation';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The type of use of the Rural Low-_Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Rlis_Program_Use_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The type of use of the Rural Low-Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Rlis_Program_Use_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Type of Use of the Rural Low-_Income Schools Program' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Rlis_Program_Use_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Type of Use of the Rural Low-Income Schools Program' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Rlis_Program_Use_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000486' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Rlis_Program_Use_Id';
 
@@ -2555,7 +2555,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Rlis_Program_Use_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'An indication that the local education agency (LEA) notified the state of the LEA''s intention to use REAP-_Flex Alternative Uses of Funding Authority during the school year as specified in the Title VI, Section 6211 of ESEA as amended.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Reap_Alternative_Funding_Status_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'An indication that the local education agency (LEA) notified the state of the LEA''s intention to use REAP-Flex Alternative Uses of Funding Authority during the school year as specified in the Title VI, Section 6211 of ESEA as amended.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Reap_Alternative_Funding_Status_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Rural Education Achievement Program Alternative Funding Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Federal_Funds', @level2type=N'COLUMN',@level2name=N'Ref_Reap_Alternative_Funding_Status_Id';
 
@@ -2757,7 +2757,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Inherited surro
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Organization_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The baseline of the performance indicator of student behavior under the Safe and Drug-_Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Baseline';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The baseline of the performance indicator of student behavior under the Safe and Drug-Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Baseline';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Safe and Drug Free Baseline' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Baseline';
 
@@ -2777,7 +2777,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Baseline_Year';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N' The frequency of data collection for performance indicator under the Safe and Drug-_Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Collection_Frequency';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N' The frequency of data collection for performance indicator under the Safe and Drug-Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Collection_Frequency';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Safe and Drug Free Collection Frequency' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Collection_Frequency';
 
@@ -2787,7 +2787,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Collection_Frequency';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The name of the performance indicator for student behaviors under the Safe and Drug-_Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Indicator_Name';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The name of the performance indicator for student behaviors under the Safe and Drug-Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Indicator_Name';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Safe and Drug Free Indicator Name' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Indicator_Name';
 
@@ -2797,7 +2797,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Indicator_Name';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The instrument or data source for reported performance indicator of student behavior under the Safe and Drug-_Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Instrument';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The instrument or data source for reported performance indicator of student behavior under the Safe and Drug-Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Instrument';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Safe and Drug Free Instrument' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Instrument';
 
@@ -2807,7 +2807,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Instrument';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Actual performance for the given  indicator of student behavior under the Safe and Drug-_Free Schools and Communities Act' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Performance';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Actual performance for the given  indicator of student behavior under the Safe and Drug-Free Schools and Communities Act' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Performance';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Safe and Drug Free Performance' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Performance';
 
@@ -2817,7 +2817,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Performance';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The targeted performance for the given  indicator of student behavior under the Safe and Drug-_Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Target';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The targeted performance for the given  indicator of student behavior under the Safe and Drug-Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Target';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Safe and Drug Free Target' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Target';
 
@@ -2827,7 +2827,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Target';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The academic year of the most recent collection of the performance indicator under the Sage and Drug-_Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Most_Recent_Collection';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The academic year of the most recent collection of the performance indicator under the Sage and Drug-Free Schools and Communities Act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Most_Recent_Collection';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Safe and Drug Free Year Most Recent Collection' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Most_Recent_Collection';
 
@@ -2837,7 +2837,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free', @level2type=N'COLUMN',@level2name=N'Most_Recent_Collection';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Information about the LEA''s performance under the Safe and Drug-_Free Schools and Communities act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Information about the LEA''s performance under the Safe and Drug-Free Schools and Communities act.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Lea_Safe_Drug_Free';
 
@@ -5632,9 +5632,9 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Location_Address', @level2type=N'COLUMN',@level2name=N'Longitude';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Rural-_Urban Continuum Codes form a classification scheme that distinguishes metropolitan (metro) counties by the population size of their metro area, and nonmetropolitan (nonmetro) counties by degree of urbanization and adjacency to a metro area or areas. The metro and nonmetro categories have been subdivided into three metro and six nonmetro groupings, resulting in a nine-part county codification. The codes allow researchers working with county data to break such data into finer residential groups beyond a simple metro-nonmetro dichotomy, particularly for the analysis of trends in nonmetro areas that may be related to degree of rurality and metro proximity.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Location_Address', @level2type=N'COLUMN',@level2name=N'Ref_ERS_Rural_Urban_Continuum_Code_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Rural-Urban Continuum Codes form a classification scheme that distinguishes metropolitan (metro) counties by the population size of their metro area, and nonmetropolitan (nonmetro) counties by degree of urbanization and adjacency to a metro area or areas. The metro and nonmetro categories have been subdivided into three metro and six nonmetro groupings, resulting in a nine-part county codification. The codes allow researchers working with county data to break such data into finer residential groups beyond a simple metro-nonmetro dichotomy, particularly for the analysis of trends in nonmetro areas that may be related to degree of rurality and metro proximity.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Location_Address', @level2type=N'COLUMN',@level2name=N'Ref_ERS_Rural_Urban_Continuum_Code_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Economic Research Service Rural-_Urban Continuum Code' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Location_Address', @level2type=N'COLUMN',@level2name=N'Ref_ERS_Rural_Urban_Continuum_Code_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Economic Research Service Rural-Urban Continuum Code' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Location_Address', @level2type=N'COLUMN',@level2name=N'Ref_ERS_Rural_Urban_Continuum_Code_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000862' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Location_Address', @level2type=N'COLUMN',@level2name=N'Ref_ERS_Rural_Urban_Continuum_Code_Id';
 
@@ -6119,7 +6119,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_D
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The benefits offered by a program/facility/employer for full-time staff.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Full_Time_Benefit_Indicator';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Full-_Time Employee Benefits' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Full_Time_Benefit_Indicator';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Full-Time Employee Benefits' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Full_Time_Benefit_Indicator';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000866' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Full_Time_Benefit_Indicator';
 
@@ -6127,13 +6127,13 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The benefits offered by a program/facility/employer for part-time staff.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Part_Time_Benefit_Indicator';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Part-_Time Employee Benefits' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Part_Time_Benefit_Indicator';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Part-Time Employee Benefits' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Part_Time_Benefit_Indicator';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000867' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Part_Time_Benefit_Indicator';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/CEDS_Element_Details.aspx?_Term_Id=11867' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Part_Time_Benefit_Indicator';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Full-_Time Employee Benefits, Part-_Time Employee Benefits' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Ref_Employee_Benefit_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Full-Time Employee Benefits, Part-Time Employee Benefits' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Ref_Employee_Benefit_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000866, 000867' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Ref_Employee_Benefit_Id';
 
@@ -6223,7 +6223,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Amao_Progress_Attainment_Lep_Students';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'An indication of whether the school or local education agency (LEA) submitted a Gun-_Free Schools Act (GFSA) of 1994 report to the state, as defined by Title 18, Section 921.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Gun_Free_Schools_Act_Status_Reporting_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'An indication of whether the school or local education agency (LEA) submitted a Gun-Free Schools Act (GFSA) of 1994 report to the state, as defined by Title 18, Section 921.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Gun_Free_Schools_Act_Status_Reporting_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Gun Free Schools Act Reporting Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Gun_Free_Schools_Act_Status_Reporting_Id';
 
@@ -6305,7 +6305,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_G
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N' An indication of whether the school or district met the Elementary/_Middle Additional Indicator requirement in accordance with state definition for the purpose of determining Adequate Yearly Progress (AYP).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Elementary_Middle_Additional_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Elementary-_Middle Additional Indicator Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Elementary_Middle_Additional_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Elementary-Middle Additional Indicator Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Elementary_Middle_Additional_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000091' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Elementary_Middle_Additional_Id';
 
@@ -7494,7 +7494,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Family', @level2type=N'COLUMN',@level2name=N'Number_Of_People_In_Household';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Total income of family from all sources. Income includes money, wages or salary before deductions; net income from non-farm self-employment; net income from farm self-employment; regular payments from Social Security or railroad retirement; payments from unemployment compensation, strike benefits from union funds, workers? compensation, veterans benefits (with the exception noted below), public assistance (including Temporary Assistance for Needy Families, Supplemental Security Income, Emergency Assistance money payments, and non-_Federally funded General Assistance or General Relief money payments); training stipends; alimony, child support, and military family allotments or other regular support from an absent family member or someone not living in the household; private pensions, government employee pensions (including military retirement pay), and regular insurance or annuity payments; college or university scholarships, grants, fellowships, and assistantships; and dividends, interest, net rental income, net royalties, and periodic receipts from estates or trusts; and net gambling or lottery winnings.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Family', @level2type=N'COLUMN',@level2name=N'Family_Income';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Total income of family from all sources. Income includes money, wages or salary before deductions; net income from non-farm self-employment; net income from farm self-employment; regular payments from Social Security or railroad retirement; payments from unemployment compensation, strike benefits from union funds, workers? compensation, veterans benefits (with the exception noted below), public assistance (including Temporary Assistance for Needy Families, Supplemental Security Income, Emergency Assistance money payments, and non-Federally funded General Assistance or General Relief money payments); training stipends; alimony, child support, and military family allotments or other regular support from an absent family member or someone not living in the household; private pensions, government employee pensions (including military retirement pay), and regular insurance or annuity payments; college or university scholarships, grants, fellowships, and assistantships; and dividends, interest, net rental income, net royalties, and periodic receipts from estates or trusts; and net gambling or lottery winnings.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Family', @level2type=N'COLUMN',@level2name=N'Family_Income';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Family Income' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Family', @level2type=N'COLUMN',@level2name=N'Family_Income';
 
@@ -8718,7 +8718,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_G
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'A person who ; (A) (i) has worked primarily without remuneration to care for a home and family, and for that reason has diminished marketable skills;    (ii) has been dependent on the income of another family member but is no longer supported by that income; or    (iii) is a parent whose youngest dependent child will become ineligible to receive assistance under part A of title IV of the Social Security Act (42 U.S.C. 601 et seq.) not later than 2 years after the date on which the parent applies for assistance under such title; and (B)   is unemployed or underemployed and is experiencing difficulty in obtaining or upgrading employment.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Program_Participation_AE', @level2type=N'COLUMN',@level2name=N'Displaced_Homemaker_Indicator';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Career-_Technical-_Adult Education Displaced Homemaker Indicator' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Program_Participation_AE', @level2type=N'COLUMN',@level2name=N'Displaced_Homemaker_Indicator';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Career-Technical-Adult Education Displaced Homemaker Indicator' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Program_Participation_AE', @level2type=N'COLUMN',@level2name=N'Displaced_Homemaker_Indicator';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000084' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Program_Participation_AE', @level2type=N'COLUMN',@level2name=N'Displaced_Homemaker_Indicator';
 
@@ -8814,7 +8814,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_G
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'A person who ; (A) (i) has worked primarily without remuneration to care for a home and family, and for that reason has diminished marketable skills;    (ii) has been dependent on the income of another family member but is no longer supported by that income; or    (iii) is a parent whose youngest dependent child will become ineligible to receive assistance under part A of title IV of the Social Security Act (42 U.S.C. 601 et seq.) not later than 2 years after the date on which the parent applies for assistance under such title; and (B)   is unemployed or underemployed and is experiencing difficulty in obtaining or upgrading employment.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Program_Participation_Cte', @level2type=N'COLUMN',@level2name=N'Displaced_Homemaker_Indicator';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Career-_Technical-_Adult Education Displaced Homemaker Indicator' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Program_Participation_Cte', @level2type=N'COLUMN',@level2name=N'Displaced_Homemaker_Indicator';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Career-Technical-Adult Education Displaced Homemaker Indicator' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Program_Participation_Cte', @level2type=N'COLUMN',@level2name=N'Displaced_Homemaker_Indicator';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000084' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Program_Participation_Cte', @level2type=N'COLUMN',@level2name=N'Displaced_Homemaker_Indicator';
 
@@ -9586,7 +9586,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Price_Of_Attendance', @level2type=N'COLUMN',@level2name=N'Price_Of_Attendance';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The academic year, generally extending from September to June, in which IPEDS data is collected.  Most Institutional Characteristics, Salaries, Fall Staff, Fall Enrollment, and Employees by Assigned Position data are collected for the current year; Completions, 12-_Month Enrollment, Student Financial Aid, and Finance data collections cover the prior year.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Price_Of_Attendance', @level2type=N'COLUMN',@level2name=N'IPEDS_Collection_Year_Designator';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The academic year, generally extending from September to June, in which IPEDS data is collected.  Most Institutional Characteristics, Salaries, Fall Staff, Fall Enrollment, and Employees by Assigned Position data are collected for the current year; Completions, 12-Month Enrollment, Student Financial Aid, and Finance data collections cover the prior year.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Price_Of_Attendance', @level2type=N'COLUMN',@level2name=N'IPEDS_Collection_Year_Designator';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'IPEDS Collection Year Designator' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Price_Of_Attendance', @level2type=N'COLUMN',@level2name=N'IPEDS_Collection_Year_Designator';
 

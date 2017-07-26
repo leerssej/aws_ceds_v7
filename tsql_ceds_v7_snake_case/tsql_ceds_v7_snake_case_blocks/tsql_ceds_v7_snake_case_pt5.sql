@@ -563,7 +563,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_G
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The student resides in a residence hall or housing facility owned or controlled by an institution within the same reasonably contiguous geographic area and used by the institution in direct support of or in a manner related to, the institution''s educational purposes.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Student_Enrollment', @level2type=N'COLUMN',@level2name=N'Housing_On_Campus';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Postsecondary Student Housing On-_Campus' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Student_Enrollment', @level2type=N'COLUMN',@level2name=N'Housing_On_Campus';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Postsecondary Student Housing On-Campus' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Student_Enrollment', @level2type=N'COLUMN',@level2name=N'Housing_On_Campus';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000760' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Student_Enrollment', @level2type=N'COLUMN',@level2name=N'Housing_On_Campus';
 
@@ -757,7 +757,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Student_Financial_Aid', @level2type=N'COLUMN',@level2name=N'Ref_Need_Determination_Method_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'A person who receives Title IV aid.  Title IV aid includes grant aid, work study aid, and loan aid such as: Federal Pell Grant, Federal Supplemental Educational Opportunity Grant (FSEOG), Teacher Education Assistance for College and Higher Education (TEACH) Grant, Federal Work-_Study, Federal Perkins Loan, Subsidized Direct or FFEL Stafford Loan, and Unsubsidized Direct or FFEL Stafford Loan.  Title IV aid specifications are defined by the instructions for the IPEDS Student Financial Aid survey.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Student_Financial_Aid', @level2type=N'COLUMN',@level2name=N'Title_IV_Participant_And_Recipient';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'A person who receives Title IV aid.  Title IV aid includes grant aid, work study aid, and loan aid such as: Federal Pell Grant, Federal Supplemental Educational Opportunity Grant (FSEOG), Teacher Education Assistance for College and Higher Education (TEACH) Grant, Federal Work-Study, Federal Perkins Loan, Subsidized Direct or FFEL Stafford Loan, and Unsubsidized Direct or FFEL Stafford Loan.  Title IV aid specifications are defined by the instructions for the IPEDS Student Financial Aid survey.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Student_Financial_Aid', @level2type=N'COLUMN',@level2name=N'Title_IV_Participant_And_Recipient';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Title IV Participant and Recipient' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ps_Student_Financial_Aid', @level2type=N'COLUMN',@level2name=N'Title_IV_Participant_And_Recipient';
 
@@ -3947,7 +3947,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key 
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence the options in this option set should be ordered.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_County', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'County code as defined for the identification of counties and equivalent areas of the United States, Puerto Rico, and the insular areas as established by the American National Standards Institute (ANSI) Inter-_National Committee for Information Technology Standards (INCITS) in specification BSR INCITS 31-200x or more current updates.  See http://www.census.gov/geo/reference/codes/cou.html .' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_County';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'County code as defined for the identification of counties and equivalent areas of the United States, Puerto Rico, and the insular areas as established by the American National Standards Institute (ANSI) Inter-National Committee for Information Technology Standards (INCITS) in specification BSR INCITS 31-200x or more current updates.  See http://www.census.gov/geo/reference/codes/cou.html .' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_County';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'County ANSI Code' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_County';
 
@@ -5487,7 +5487,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence th
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N' An indication of whether the school or district met the Elementary/_Middle Additional Indicator requirement in accordance with state definition for the purpose of determining Adequate Yearly Progress (AYP).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Elementary_Middle_Additional';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Elementary-_Middle Additional Indicator Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Elementary_Middle_Additional';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Elementary-Middle Additional Indicator Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Elementary_Middle_Additional';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000091' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Elementary_Middle_Additional';
 
@@ -6035,7 +6035,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence th
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Employee_Benefit', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Full-_Time Employee Benefits, Part-_Time Employee Benefits' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Employee_Benefit';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Full-Time Employee Benefits, Part-Time Employee Benefits' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Employee_Benefit';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000866, 000867' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Employee_Benefit';
 
@@ -6359,9 +6359,9 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key 
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence the options in this option set should be ordered.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_ERS_Rural_Urban_Continuum_Code', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Rural-_Urban Continuum Codes form a classification scheme that distinguishes metropolitan (metro) counties by the population size of their metro area, and nonmetropolitan (nonmetro) counties by degree of urbanization and adjacency to a metro area or areas. The metro and nonmetro categories have been subdivided into three metro and six nonmetro groupings, resulting in a nine-part county codification. The codes allow researchers working with county data to break such data into finer residential groups beyond a simple metro-nonmetro dichotomy, particularly for the analysis of trends in nonmetro areas that may be related to degree of rurality and metro proximity.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_ERS_Rural_Urban_Continuum_Code';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'Rural-Urban Continuum Codes form a classification scheme that distinguishes metropolitan (metro) counties by the population size of their metro area, and nonmetropolitan (nonmetro) counties by degree of urbanization and adjacency to a metro area or areas. The metro and nonmetro categories have been subdivided into three metro and six nonmetro groupings, resulting in a nine-part county codification. The codes allow researchers working with county data to break such data into finer residential groups beyond a simple metro-nonmetro dichotomy, particularly for the analysis of trends in nonmetro areas that may be related to degree of rurality and metro proximity.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_ERS_Rural_Urban_Continuum_Code';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Economic Research Service Rural-_Urban Continuum Code' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_ERS_Rural_Urban_Continuum_Code';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Economic Research Service Rural-Urban Continuum Code' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_ERS_Rural_Urban_Continuum_Code';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000862' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_ERS_Rural_Urban_Continuum_Code';
 
@@ -7215,7 +7215,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key 
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence the options in this option set should be ordered.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Gun_Free_Schools_Act_Reporting_Status', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'An indication of whether the school or local education agency (LEA) submitted a Gun-_Free Schools Act (GFSA) of 1994 report to the state, as defined by Title 18, Section 921.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Gun_Free_Schools_Act_Reporting_Status';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'An indication of whether the school or local education agency (LEA) submitted a Gun-Free Schools Act (GFSA) of 1994 report to the state, as defined by Title 18, Section 921.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Gun_Free_Schools_Act_Reporting_Status';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Gun Free Schools Act Reporting Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Gun_Free_Schools_Act_Reporting_Status';
 
