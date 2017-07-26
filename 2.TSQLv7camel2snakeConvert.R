@@ -21,10 +21,10 @@ library(magrittr)
 createUpdateTSQLCEDSv7 <- read_lines("TSQLv7_camelCase/TSQLv7_camelCase_completeDebuggedCreateInsert.sql")
 
 ###### 2. Transform camels to snakes ######
-##  humps (extra_Capital_Letters) can be left until last or when the pg_sql ignores them on the transform out of db_schema
+##  humps (extra_Capital_Letters) will converted following the transform out of db_schema
 # tsql_ceds7_sc <- createUpdateTSQLCEDSv7
 # The main transform
-tsql_ceds7_sc <- gsub("((?<=[a-z0-9])[A-Z]|(?<![\\[\\'\\s+\\.@\\(\\\"-])[A-Z](?!to)(?=[a-z]))", "_\\1", createUpdateTSQLCEDSv7, perl = T)
+tsql_ceds7_sc <- gsub("((?<=[a-z0-9])[A-Z]|(?<![\\[\\'\\s+\\.@\\(\\\"-/])[A-Z](?!to)(?=[a-z]))", "_\\1", createUpdateTSQLCEDSv7, perl = T)
 # New Identity Resolution
 tsql_ceds7_sc %<>% gsub("\\[CEDS-NDS-V7\\]",  "\\[tsql_ceds7_sc\\]", .)
 
@@ -52,7 +52,7 @@ tsql_ceds7_sc %<>% gsub("_+",  "_", .)
 
 ###### 3. Write Out into Snake_Case directory ######
 # dir.create("tsql_ceds_v7_snake_case")
-clippablefile_path <- "tsql_ceds_v7_snake_case/tsql_ceds_v7_snake_case.sql"
+clippablefile_path <- "tsql_ceds_v7_snake_case/tsql_ceds_v7_sc.sql"
 write_lines(tsql_ceds7_sc, clippablefile_path)
 
 # the complete collection

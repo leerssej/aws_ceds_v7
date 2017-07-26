@@ -2917,7 +2917,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Program_Or_Service', @level2type=N'COLUMN',@level2name=N'Ref_Kindergarten_Daily_Length_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'State/local code used to determine a student''s eligibility for Gifted/_Talented program.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Program_Or_Service', @level2type=N'COLUMN',@level2name=N'Ref_Program_Gifted_Eligibility_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'State/local code used to determine a student''s eligibility for Gifted/Talented program.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Program_Or_Service', @level2type=N'COLUMN',@level2name=N'Ref_Program_Gifted_Eligibility_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Program Gifted Eligibility Criteria' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'K12_Program_Or_Service', @level2type=N'COLUMN',@level2name=N'Ref_Program_Gifted_Eligibility_Id';
 
@@ -6303,7 +6303,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Reconstituted_Status_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N' An indication of whether the school or district met the Elementary/_Middle Additional Indicator requirement in accordance with state definition for the purpose of determining Adequate Yearly Progress (AYP).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Elementary_Middle_Additional_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N' An indication of whether the school or district met the Elementary/Middle Additional Indicator requirement in accordance with state definition for the purpose of determining Adequate Yearly Progress (AYP).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Elementary_Middle_Additional_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Elementary-Middle Additional Indicator Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organization_Federal_Accountability', @level2type=N'COLUMN',@level2name=N'Ref_Elementary_Middle_Additional_Id';
 
@@ -8158,7 +8158,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Status', @level2type=N'COLUMN',@level2name=N'Ref_Person_Status_Type_Id';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'1 = Yes/_True, 0 = No/_False' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Status', @level2type=N'COLUMN',@level2name=N'Status_Value';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'1 = Yes/True, 0 = No/False' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Status', @level2type=N'COLUMN',@level2name=N'Status_Value';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Person_Status', @level2type=N'COLUMN',@level2name=N'Status_Value';
 

@@ -9968,3 +9968,11 @@ COMMENT ON COLUMN rs_ceds7_sc.el_class_section.language_translation_policy IS 'S
 
 COMMENT ON COLUMN rs_ceds7_sc.el_class_section.group_size IS 'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.';
 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 1, 'Entry Grade Level', '000100', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 2, 'Grade Level When Course Taken', '000125', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 3, 'Grade Level When Assessed', '000126', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 4, 'Grades Offered', '000131', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 5, 'Assessment Level for Which Designed', '000177', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 6, 'Assessment Registration Grade Level To Be Assessed', '001057', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 7, 'Exit Grade Level', '001210', null, null, null ); 
+

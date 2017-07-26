@@ -1,3 +1,11 @@
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 1, 'Entry Grade Level', '000100', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 2, 'Grade Level When Course Taken', '000125', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 3, 'Grade Level When Assessed', '000126', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 4, 'Grades Offered', '000131', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 5, 'Assessment Level for Which Designed', '000177', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 6, 'Assessment Registration Grade Level To Be Assessed', '001057', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 7, 'Exit Grade Level', '001210', null, null, null ); 
+
 INSERT INTO rs_ceds7_sc.Ref_ISO6392_Language( Ref_ISO6392_Language_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 1, 'Afar', 'aar', null, null, 1.00 ); 
 INSERT INTO rs_ceds7_sc.Ref_ISO6392_Language( Ref_ISO6392_Language_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 2, 'Abkhazian', 'abk', null, null, 2.00 ); 
 INSERT INTO rs_ceds7_sc.Ref_ISO6392_Language( Ref_ISO6392_Language_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 3, 'Achinese', 'ace', null, null, 3.00 ); 
@@ -5041,15 +5049,6 @@ INSERT INTO rs_ceds7_sc.ref_goal_status_type( Ref_Goal_Status_Type_Id, Descripti
 INSERT INTO rs_ceds7_sc.ref_gpa_weighted_indicator( Ref_Gpa_Weighted_Indicator_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 1, 'Weighted', 'Weighted', 'The reported GPA is weighted.', null, 1.00 ); 
 INSERT INTO rs_ceds7_sc.ref_gpa_weighted_indicator( Ref_Gpa_Weighted_Indicator_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 2, 'Unweighted', 'Unweighted', 'The reported GPA is unweighted.', null, 2.00 ); 
 
-INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 1, 'Entry Grade Level', '000100', null, null, null ); 
-INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 2, 'Grade Level When Course Taken', '000125', null, null, null ); 
-INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 3, 'Grade Level When Assessed', '000126', null, null, null ); 
-INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 4, 'Grades Offered', '000131', null, null, null ); 
-INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 5, 'Assessment Level for Which Designed', '000177', null, null, null ); 
-INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 6, 'Assessment Registration Grade Level To Be Assessed', '001057', null, null, null ); 
-INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 7, 'Exit Grade Level', '001210', null, null, null ); 
-
-INSERT INTO rs_ceds7_sc.ref_graduate_assistant_ipeds_category( Ref_Graduate_Assistant_Ipeds_Category_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 1, 'Teaching', '01', 'Teaching is the Integrated Postsecondary Education Data System (IPEDS) occupational category used to report graduate assistants.', null, 1.00 ); 
 INSERT INTO rs_ceds7_sc.ref_graduate_assistant_ipeds_category( Ref_Graduate_Assistant_Ipeds_Category_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 2, 'Research', '02', 'Research is the Integrated Postsecondary Education Data System (IPEDS) occupational category used to report graduate assistants.', null, 2.00 ); 
 INSERT INTO rs_ceds7_sc.ref_graduate_assistant_ipeds_category( Ref_Graduate_Assistant_Ipeds_Category_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 3, 'Management Occupations', '03', 'Management Occupations is the Integrated Postsecondary Education Data System (IPEDS) occupational category used to report graduate assistants.', null, 3.00 ); 
 INSERT INTO rs_ceds7_sc.ref_graduate_assistant_ipeds_category( Ref_Graduate_Assistant_Ipeds_Category_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 4, 'Business and Financial Occupations', '04', 'Business and Financial Occupations is the Integrated Postsecondary Education Data System (IPEDS) occupational category used to report graduate assistants.', null, 4.00 ); 

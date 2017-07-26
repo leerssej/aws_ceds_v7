@@ -8813,7 +8813,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Course_Section', @level2type=N'COLUMN',@level2name=N'Virtual_Indicator';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The session during which the Class/_Section is held.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Course_Section', @level2type=N'COLUMN',@level2name=N'Organization_Calendar_Session_Id';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The session during which the Class/Section is held.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Course_Section', @level2type=N'COLUMN',@level2name=N'Organization_Calendar_Session_Id';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Course Begin Date, Course End Date' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Course_Section', @level2type=N'COLUMN',@level2name=N'Organization_Calendar_Session_Id';
 
@@ -8853,7 +8853,7 @@ EXEC sys.sp_addextendedproperty @name=N'CEDS_Global_Id', @value=N'000231' , @lev
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_URL', @value=N'https://ceds.ed.gov/CEDS_Element_Details.aspx?_Term_Id=11231' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Course_Section', @level2type=N'COLUMN',@level2name=N'Related_Competency_Framework_Items';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'A setting in which organized instruction of course content is provided to one or more students (including cross-age groupings) for a given period of time. (A course may be offered to more than one class/section.) Instruction, provided by one or more teachers or other staff members, may be delivered in person or via a different medium. Classes/_Sections that share space should be considered as separate classes/sections if they function as separate units for more than 50 percent of the time. ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Course_Section';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'A setting in which organized instruction of course content is provided to one or more students (including cross-age groupings) for a given period of time. (A course may be offered to more than one class/section.) Instruction, provided by one or more teachers or other staff members, may be delivered in person or via a different medium. Classes/Sections that share space should be considered as separate classes/sections if they function as separate units for more than 50 percent of the time. ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Course_Section';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'See the CEDS_Def_Desc extended property.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Course_Section';
 

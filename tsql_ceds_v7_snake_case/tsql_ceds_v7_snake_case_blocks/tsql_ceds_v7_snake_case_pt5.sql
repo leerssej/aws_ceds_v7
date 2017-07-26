@@ -5485,7 +5485,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Surrogate key 
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N'The sequence the options in this option set should be ordered.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Elementary_Middle_Additional', @level2type=N'COLUMN',@level2name=N'Sort_Order';
 
-EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N' An indication of whether the school or district met the Elementary/_Middle Additional Indicator requirement in accordance with state definition for the purpose of determining Adequate Yearly Progress (AYP).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Elementary_Middle_Additional';
+EXEC sys.sp_addextendedproperty @name=N'CEDS_Def_Desc', @value=N' An indication of whether the school or district met the Elementary/Middle Additional Indicator requirement in accordance with state definition for the purpose of determining Adequate Yearly Progress (AYP).' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Elementary_Middle_Additional';
 
 EXEC sys.sp_addextendedproperty @name=N'CEDS_Element', @value=N'Elementary-Middle Additional Indicator Status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Ref_Elementary_Middle_Additional';
 
