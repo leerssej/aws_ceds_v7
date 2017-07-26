@@ -55,7 +55,7 @@ tsql_ceds7_sc %<>% gsub("_+",  "_", .)
 clippablefile_path <- "tsql_ceds_v7_snake_case/tsql_ceds_v7_snake_case.sql"
 write_lines(tsql_ceds7_sc, clippablefile_path)
 
-# the full monty
+# the complete collection
 ###### 4. Slice Up Script into DbSchema executable size ######
 block_1 <- read_lines(clippablefile_path, n_max = 9993)
 block_2 <- read_lines(clippablefile_path, skip = 9993, n_max = 9000)
