@@ -9995,3 +9995,4 @@ INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sor
 VALUES ('lok', 'Loko', NULL, 341.70)
 INSERT INTO dbo.[Ref_ISO6393_Language]([Code], [Description], [Definition], [Sort_Order])
 VALUES ('lol', 'Mongo', NULL, 341.80)
+END;

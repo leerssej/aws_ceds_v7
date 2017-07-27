@@ -1,5 +1,3 @@
---drop schema rs_ceds7_sc cascade;
-
 CREATE SCHEMA rs_ceds7_sc;
 
 CREATE TABLE rs_ceds7_sc.eligibility_evaluation ( 

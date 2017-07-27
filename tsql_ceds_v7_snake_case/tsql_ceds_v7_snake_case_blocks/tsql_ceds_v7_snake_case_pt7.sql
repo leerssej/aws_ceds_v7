@@ -2926,7 +2926,6 @@ INSERT INTO dbo.[_CEDS_to_NDS_Mapping]([Global_ID], [Table_Name], [Column_Name])
 VALUES ('001762', 'Assessment_Registration', 'LEA_Full_Academic_Year')
 INSERT INTO dbo.[_CEDS_to_NDS_Mapping]([Global_ID], [Table_Name], [Column_Name])
 VALUES ('001763', 'Assessment_Registration', 'School_Full_Academic_Year')
-END;
 
 USE [tsql_ceds7_sc];
 
