@@ -7787,83 +7787,6 @@ COMMENT ON COLUMN rs_ceds7_sc.workforce_program_participation.ref_professional_t
 
 COMMENT ON COLUMN rs_ceds7_sc.workforce_program_participation.diploma_or_credential_award_date IS 'See the CEDS_Global_Id, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.';
 
-CREATE VIEW rs_ceds7_sc.v_ceds_mapping AS CREATE VIEW [dbo].[v_CEDS_Mapping]
-AS 
-SELECT 
-	  c.TABLE_NAME Table_Name
-	, c.COLUMN_NAME Column_Name
-	, LTRIM(ms.Item) [Global_Id]
-	, LTRIM(es.Item) [Element_Name]
-	, LTRIM(us.Item) [URL]
-FROM INFORMATION_SCHEMA.COLUMNS c 
-INNER JOIN INFORMATION_SCHEMA.TABLES t ON t.TABLE_NAME = c.TABLE_NAME 
-OUTER APPLY fn_listextendedproperty ('CEDS_Global_Id', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) m
-OUTER APPLY fn_listextendedproperty ('CEDS_Element', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) e
-OUTER APPLY fn_listextendedproperty ('CEDS_URL', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) u
-CROSS APPLY rs_ceds7_sc.fn_Split(CAST(m.Value AS VARCHAR(MAX)), ',') ms
-CROSS APPLY rs_ceds7_sc.fn_Split(CAST(e.Value AS VARCHAR(MAX)), ',') es
-CROSS APPLY rs_ceds7_sc.fn_Split(CAST(u.Value AS VARCHAR(MAX)), ',') us
-WHERE ms.Row_Number = es.Row_Number
-	AND ms.Row_Number = us.Row_Number
-UNION
-SELECT 
-	  T.TABLE_NAME
-	, NULL 
-	, LTRIM(ms.Item) [Global_Id]
-	, LTRIM(es.Item) [Element_Name]
-	, LTRIM(us.Item) [URL]
-FROM INFORMATION_SCHEMA.COLUMNS c 
-INNER JOIN INFORMATION_SCHEMA.TABLES t ON t.TABLE_NAME = c.TABLE_NAME 
-OUTER APPLY fn_listextendedproperty ('CEDS_Global_Id', 'schema', 'dbo', N'table', c.TABLE_NAME, NULL, DEFAULT) m
-OUTER APPLY fn_listextendedproperty ('CEDS_Element', 'schema', 'dbo', N'table', c.TABLE_NAME, NULL, DEFAULT) e
-OUTER APPLY fn_listextendedproperty ('CEDS_URL', 'schema', 'dbo', N'table', c.TABLE_NAME, NULL, DEFAULT) u
-CROSS APPLY rs_ceds7_sc.fn_Split(CAST(m.Value AS VARCHAR(MAX)), ',') ms
-CROSS APPLY rs_ceds7_sc.fn_Split(CAST(e.Value AS VARCHAR(MAX)), ',') es
-CROSS APPLY rs_ceds7_sc.fn_Split(CAST(u.Value AS VARCHAR(MAX)), ',') us
-WHERE ms.Row_Number = es.Row_Number
-	AND ms.Row_Number = us.Row_Number;
-
-CREATE VIEW rs_ceds7_sc.v_ceds_element_details AS CREATE VIEW [dbo].[v_CEDS_Element_Details]
-AS 
-SELECT 
-	  c.TABLE_NAME Table_Name
-	, c.COLUMN_NAME Column_Name
-	, data_type as Data_Type
-	, character_maximum_length as [Max_Length]
-	, c.ORDINAL_POSITION Column_Postion
-	, CAST(ISNULL(de.value,me.value) AS varchar(MAX)) [Description]
-	, CAST(el.value AS varchar(MAX)) [Ceds_Element]
-	, CAST(ur.value AS varchar(MAX)) [Url]
-	, CAST(gi.value as VARCHAR(MAX)) [Global_Id]
-FROM INFORMATION_SCHEMA.COLUMNS c 
-INNER JOIN INFORMATION_SCHEMA.TABLES t ON t.TABLE_NAME = c.TABLE_NAME 
-OUTER APPLY fn_listextendedproperty ('MS_Description', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) me
-OUTER APPLY fn_listextendedproperty ('CEDS_Def_Desc', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) de
-OUTER APPLY fn_listextendedproperty ('CEDS_Element', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) el
-OUTER APPLY fn_listextendedproperty ('CEDS_URL', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) ur
-OUTER APPLY fn_listextendedproperty ('CEDS_Global_Id', 'schema', 'dbo', N'table', c.TABLE_NAME, N'column', c.COLUMN_NAME) gi
-WHERE t.table_type = 'BASE TABLE'
-	AND me.Value IS NOT NULL
-UNION
-SELECT 
-	  t.TABLE_NAME Table_Name
-	, NULL Column_Name
-	, NULL as Data_Type
-	, NULL as [Max_Length]
-	, NULL Column_Postion
-	, CAST(ISNULL(de.value,me.value) AS varchar(MAX)) [Description]
-	, CAST(el.value AS varchar(MAX)) [Ceds_Element]
-	, CAST(ur.value AS varchar(MAX)) [Url]
-	, CAST(gi.value as VARCHAR(MAX)) [Global_Id]
-FROM INFORMATION_SCHEMA.TABLES t 
-OUTER APPLY fn_listextendedproperty ('MS_Description', 'schema', 'dbo', N'table', t.TABLE_NAME, NULL, DEFAULT) me
-OUTER APPLY fn_listextendedproperty ('CEDS_Def_Desc', 'schema', 'dbo', N'table', t.TABLE_NAME, NULL, DEFAULT) de
-OUTER APPLY fn_listextendedproperty ('CEDS_Element', 'schema', 'dbo', N'table', t.TABLE_NAME, NULL, DEFAULT) el
-OUTER APPLY fn_listextendedproperty ('CEDS_URL', 'schema', 'dbo', N'table', t.TABLE_NAME, NULL, DEFAULT) ur
-OUTER APPLY fn_listextendedproperty ('CEDS_Global_Id', 'schema', 'dbo', N'table', t.TABLE_NAME, NULL, DEFAULT) gi
-WHERE t.table_type = 'BASE TABLE'
-	AND me.Value IS NOT NULL
-;;
 
 ALTER TABLE rs_ceds7_sc.activity_recognition ADD CONSTRAINT fk_activity_recognition_organization_person_role FOREIGN KEY ( organization_person_role_id ) REFERENCES rs_ceds7_sc.organization_person_role( organization_person_role_id );
 
@@ -9992,4 +9915,11 @@ COMMENT ON CONSTRAINT FK_Ref_Credit_Type_Earned_Organization ON rs_ceds7_sc.ref_
 ALTER TABLE rs_ceds7_sc.ref_cte_graduation_rate_inclusion ADD CONSTRAINT fk_ref_cte_graduation_rate_inclusion_organization FOREIGN KEY ( ref_jurisdiction_id ) REFERENCES rs_ceds7_sc.organization( organization_id );
 
 COMMENT ON CONSTRAINT FK_Ref_CTE_Graduation_Rate_Inclusion_Organization ON rs_ceds7_sc.ref_cte_graduation_rate_inclusion IS '';
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 1, 'Entry Grade Level', '000100', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 2, 'Grade Level When Course Taken', '000125', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 3, 'Grade Level When Assessed', '000126', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 4, 'Grades Offered', '000131', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 5, 'Assessment Level for Which Designed', '000177', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 6, 'Assessment Registration Grade Level To Be Assessed', '001057', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_grade_level_type( Ref_Grade_Level_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 7, 'Exit Grade Level', '001210', null, null, null ); 
 
