@@ -1,4 +1,4 @@
-drop schema rs_ceds7_sc cascade;
+--drop schema rs_ceds7_sc cascade;
 
 CREATE SCHEMA rs_ceds7_sc;
 

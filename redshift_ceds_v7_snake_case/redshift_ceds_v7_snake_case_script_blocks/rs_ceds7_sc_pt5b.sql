@@ -1,0 +1,3 @@
+INSERT INTO rs_ceds7_sc.ref_operational_status_type( Ref_Operational_Status_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 1, 'Local Education Agency Operational Status', '000174', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_operational_status_type( Ref_Operational_Status_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 2, 'School Operational Status', '000533', null, null, null ); 
+INSERT INTO rs_ceds7_sc.ref_operational_status_type( Ref_Operational_Status_Type_Id, Description, Code, Definition, Ref_Jurisdiction_Id, Sort_Order ) VALUES ( 3, 'Organization Operational Status', '001418', null, null, null ); 
