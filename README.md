@@ -34,4 +34,12 @@ WHERE T.NAME like ('Ref%')
 ### 3) Load up snake_case version into DatabaseTool
 1) Convert project to Redshift.
 2) Export data and files
-3) Slice up into <10K line chuncles
+3) Slice up into <10K line chunks
+4) Load into SQL designing tool (I used DbSchema 7.6.0)or another SQL flavor conversion device.
+5) Check that all tables are full: query is the same as above as we are still in TSQL.
+6) Convert project properties into AmazonRedshift
+7) Export Schema and Data
+
+### 4) Debug schema in the postgres compatible Amazon Redshift environment
+1) Change names of schemas to match postgresql standards
+2) 
