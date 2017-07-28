@@ -174,4 +174,4 @@ library(tidyverse)
 new_ceds <- read_lines("redshift_ceds_v7_snake_case/rs_ceds7_sc_COMPLETE.sql")
 ceds7_comparable_for_ceds6 <- 
     new_ceds %>% gsub("\\s+rs_ceds7_sc\\.", " ceds6.", .)
-write_lines(ceds7_comparable_for_ceds6, "redshift_ceds_v7_snake_case/rs_ceds_v7_sc_disguised_as_ceds6_for_GitComparisons")
+write_lines(ceds7_comparable_for_ceds6, "redshift_ceds_v7_snake_case/rs_ceds_v7_sc_disguised_as_ceds6_for_GitComparisons.sql")

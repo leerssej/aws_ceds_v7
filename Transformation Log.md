@@ -13,6 +13,17 @@
 5) Removed semicolons and line-endings in the Element Tables
 6) Confirmed that the Populate scripts were in `Western (Windows 1252)` or converted them.
 7) Confirm that all tables have foreign keys attached and are fully loaded.
+8) Use the script below to determine all tables that are empty.
+```
+SELECT 
+    T.NAME AS 'TABLE NAME',
+    P.[ROWS] AS 'NO OF ROWS'
+FROM SYS.TABLES T 
+INNER JOIN  SYS.PARTITIONS P ON T.OBJECT_ID = P.OBJECT_ID
+WHERE T.NAME like ('Ref%')
+    AND P.[ROWS] = 0;
+```
+9) Search and confirm that these tables are not in the load script. Contacted CEDS to confirm that these tables are not available: Duane Brown has been extremely receptive and helpful and many improvements have been made in the current 7th release.
 
 ### 2) Collect All Debugged Files and Convert to SnakeCase
 1) load and bind all .sql script blocks - [1.TSQLv7camelCaseLoadScriptCollectBind](https://github.com/leerssej/aws_ceds_v7/blob/master/1.TSQLv7camelCaseLoadScriptCollectBind.R)
@@ -21,6 +32,6 @@
     * Complete script sliced down into <10k line blocks.
     
 ### 3) Load up snake_case version into DatabaseTool
-1) Convert project to alternative SQL flavor.
-2) Check that all files are present
-3) Export data and files
+1) Convert project to Redshift.
+2) Export data and files
+3) Slice up into <10K line chuncles
