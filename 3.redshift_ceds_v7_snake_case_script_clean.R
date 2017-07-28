@@ -169,8 +169,7 @@ write_lines(rs_ceds7_sc_pt_4, paste0(clippable_fileroot, "rs_ceds7_sc_COMPLETE.s
 write_lines(rs_ceds7_sc_pt_5, paste0(clippable_fileroot, "rs_ceds7_sc_COMPLETE.sql"), append = TRUE)
 
 ###### 5. Load Up comparison version to allow GitHub to detect changes ######
-# more selectively than the name of the Schema 
-library(tidyverse)
+# allows git to identify changes more selectively than the name of the Schema
 new_ceds <- read_lines("redshift_ceds_v7_snake_case/rs_ceds7_sc_COMPLETE.sql")
 ceds7_comparable_for_ceds6 <- 
     new_ceds %>% gsub("\\s+rs_ceds7_sc\\.", " ceds6.", .)

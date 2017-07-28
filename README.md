@@ -42,4 +42,18 @@ WHERE T.NAME like ('Ref%')
 
 ### 4) Debug schema in the postgres compatible Amazon Redshift environment
 1) Change names of schemas to match postgresql standards
-2) 
+2) Clean up errors in the translation process [3.redshift_ceds_v7_snake_case_script_clean.R](https://github.com/leerssej/aws_ceds_v7/blob/master/3.redshift_ceds_v7_snake_case_script_clean.R) identified most easily with the help of your favorite text editor's highlighting features. (My preference is Sublime Text 3)
+    * possessives inside single apostrophe redshift/postgreSQL insert statement
+    * plural abbreviations
+    * proper nouns with apostrophes included
+3) Trim down into <10k files
+4) Load into Redshift environment
+5) Fix all errors on Upload
+    * resequence the order of table loads where necessary. i.e.: ref_role_status_type table needs to be filled in before the ref_role_status table which possesses a foreign key that references the former.
+    * use the interpreter to further identify the syntax errors introduced in the translation process.
+6) After a complete, correct loading of all the script blocks is achieved, combine the scripts into one single file (that is now in the proper sequence to load correctly.)
+
+##### Please let me know if you encounter any issues or have any questions: Issues and especially Pull Requests are always appreciated. 
+
+Happy loading!
+Jens
