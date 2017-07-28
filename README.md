@@ -51,9 +51,18 @@ WHERE T.NAME like ('Ref%')
 5) Fix all errors on Upload
     * resequence the order of table loads where necessary. i.e.: ref_role_status_type table needs to be filled in before the ref_role_status table which possesses a foreign key that references the former.
     * use the interpreter to further identify the syntax errors introduced in the translation process.
-6) After a complete, correct loading of all the script blocks is achieved, combine the scripts into one single file (that is now in the proper sequence to load correctly.)
+6) Check the completeness of the loads with this 
+```
+SELECT schemaname, relname, n_tup_ins
+FROM pg_stat_all_tables 
+WHERE schemaname = 'rs_ceds7_sc' 
+    and relname like ('ref%') 
+ORDER BY n_tup_ins 
+```
+7) After a complete, correct loading of all the script blocks is achieved, combine the scripts into one single file (that is now in the proper sequence to load correctly.)
 
-##### Please let me know if you encounter any issues or have any questions: Issues and especially Pull Requests are always appreciated. 
 
-Happy loading!
-Jens
+- Please let me know if you encounter any issues or have any questions: `Issues` and especially `Pull requests` are always appreciated. 
+
+    Happy loading! 
+    Jens
