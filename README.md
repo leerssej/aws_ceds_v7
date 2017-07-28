@@ -61,8 +61,6 @@ ORDER BY n_tup_ins
 ```
 7) After a complete, correct loading of all the script blocks is achieved, combine the scripts into one single file (that is now in the proper sequence to load correctly.)
 
-
-- Please let me know if you encounter any issues or have any questions: `Issues` and especially `Pull requests` are always appreciated. 
+##### Please let me know if you have any questions, or encounter any problems: `Issues` and especially `Pull requests` are always appreciated!
 
     Happy loading! 
-    Jens
