@@ -23310,5 +23310,9 @@
 		<entity schema="rs_ceds7_sc" name="staff_technical_assistance" color="1f5182" x="4470" y="3225" />
 		<entity schema="rs_ceds7_sc" name="teacher_student_data_link_exclusion" color="1f5182" x="4470" y="3225" />
 		<entity schema="rs_ceds7_sc" name="workforce_program_participation" color="1f5182" x="4470" y="3225" />
+		<script name="Sql" id="Query_3d61254" language="SQL" >
+			<string><![CDATA[select schemaname, relname, n_tup_ins from pg_stat_all_tables WHERE schemaname = 'rs_ceds7_sc' and relname like ('ref%') ORDER BY n_tup_ins 
+]]></string>
+		</script>
 	</layout>
 </project>

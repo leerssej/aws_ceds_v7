@@ -113,7 +113,12 @@ block_2a <- read_lines(clippable_filepath, skip =  9970, n_max = 7789)  # to 177
 block_2b <- read_lines(clippable_filepath, skip = 17836, n_max = 2128)  # to 19964
 block_3  <- read_lines(clippable_filepath, skip = 19965, n_max = 9595)  # to 29560
 block_4a <- read_lines(clippable_filepath, skip = 29560, n_max = 2983)  # to 32543
-block_4b <- read_lines(clippable_filepath, skip = 32542, n_max = 4)     # to 32545
+block_4b <- read
+
+
+
+
+_lines(clippable_filepath, skip = 32542, n_max = 4)     # to 32545
 block_4c <- read_lines(clippable_filepath, skip = 32545, n_max = 2058)  # to 34603-
 block_4d <- read_lines(clippable_filepath, skip = 34603, n_max = 8)     # to 34611 (ref_gpa_weighted_indicator_id)
 block_4e <- read_lines(clippable_filepath, skip = 34611, n_max = 4945)  # to 39556
@@ -158,5 +163,15 @@ rs_ceds7_sc_pt_5 <- read_lines(paste0(clippable_fileroot, "rs_ceds7_sc_pt5.sql")
 write_lines(rs_ceds7_sc_pt_1, paste0(clippable_fileroot, "rs_ceds7_sc_COMPLETE.sql"))
 write_lines(rs_ceds7_sc_pt_2, paste0(clippable_fileroot, "rs_ceds7_sc_COMPLETE.sql"), append = TRUE)
 write_lines(rs_ceds7_sc_pt_3, paste0(clippable_fileroot, "rs_ceds7_sc_COMPLETE.sql"), append = TRUE)
+
+
 write_lines(rs_ceds7_sc_pt_4, paste0(clippable_fileroot, "rs_ceds7_sc_COMPLETE.sql"), append = TRUE)
 write_lines(rs_ceds7_sc_pt_5, paste0(clippable_fileroot, "rs_ceds7_sc_COMPLETE.sql"), append = TRUE)
+
+###### 5. Load Up comparison version to allow GitHub to detect changes ######
+# more selectively than the name of the Schema 
+library(tidyverse)
+new_ceds <- read_lines("redshift_ceds_v7_snake_case/rs_ceds7_sc_COMPLETE.sql")
+ceds7_comparable_for_ceds6 <- 
+    new_ceds %>% gsub("\\s+rs_ceds7_sc\\.", " ceds6.", .)
+write_lines(ceds7_comparable_for_ceds6, "redshift_ceds_v7_snake_case/rs_ceds_v7_sc_disguised_as_ceds6_for_GitComparisons")
