@@ -1,14 +1,15 @@
 # Transforming `ceds-nds-v7.sql` 
-### and its Element and Ref Populate Scripts into snake_case, Redshift-ready, postgreSQL
+### and its `Element` and `Ref` Populate Scripts into snake_case, Redshift-ready, postgreSQL
 
 ## Steps
 
-### 1) Load the Original v7 TSQL CamelCase Script
+### 0) Download the Original v7 TSQL CamelCase Script
 Found here: https://ceds.ed.gov/dataModelNDS.aspx
+
+### 1) Prepare T-SQL PascalCase Script for loading
 #### Debug the Original Source File loading scripts before making any substantive modifications
 ###### Tool Used: DbSchema 7.6.0
 ##### Procedure Log:
-### 1) Prepare T-SQL PascalCase Script for loading
 1) Convert create script from `UTF-16 BE` into `UTF-8`
 2) Switch `\nGO$` to `;\n`
 3) Extra white space needs to be removed until the interpreter stopped throwing errors
